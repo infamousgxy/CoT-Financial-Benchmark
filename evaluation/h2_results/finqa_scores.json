@@ -1,0 +1,1130 @@
+{
+  "task": "finqa",
+  "version": "v2_strict",
+  "scores": [
+    {
+      "sample_id": 393,
+      "model": "thinking",
+      "gold_answer": "-305.0",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 3,
+        "logical_coherence_reason": "有分步骤推理并校验，总体思路通顺，但在正负值与绝对值的选择上反复犹豫、自相矛盾，导致过程冗长且结论摇摆不定。",
+        "factual_fidelity": 3,
+        "factual_fidelity_reason": "引用的表格数据基本正确，但对‘value’是否指含符号数值还是绝对值有片面解读，中间一度偏向305且未严格依据题意最终选择正确方向，存在轻微曲解。",
+        "execution_precision": 3,
+        "execution_precision_reason": "中间计算 -677 - (-372) 得出 -305 的公式与数值是正确的，但最终在选择结果时倒向了305，最后答案错误；思路基本对但执行到最后一步发生偏差。"
+      }
+    },
+    {
+      "sample_id": 393,
+      "model": "instruct_v6",
+      "gold_answer": "-305.0",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "分步识别数据、确定运算、执行计算和给出结果，推理顺畅且无明显跳跃，仅有少量重复表述。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "从表格中准确提取了总额-677和欧元-372，并正确理解为需要从总额中剔除欧元部分，没有错误引用或歪曲原文信息。",
+        "execution_precision": 4,
+        "execution_precision_reason": "选择的公式（总额减去欧元）正确，符号处理正确，最终计算结果-305与标准答案一致，且最终输出格式符合要求。"
+      }
+    },
+    {
+      "sample_id": 907,
+      "model": "thinking",
+      "gold_answer": "0.51221",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 2,
+        "logical_coherence_reason": "前面步骤推理和计算都较清晰，但在最后一步突然把应为0.512左右的结果写成0，结论与前文推理自相矛盾，存在明显逻辑断裂。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "引用的关键数字（goodwill 411.1、net assets 802.6）来自原文且无误，也未捏造新数据，只是在结果表达上有误。",
+        "execution_precision": 3,
+        "execution_precision_reason": "选择了正确的数值和公式并计算出约0.5122的比例，计算过程基本正确，但最终输出答案写成0，导致最终结果错误；在答错前提下按上限给3分。"
+      }
+    },
+    {
+      "sample_id": 907,
+      "model": "instruct_v6",
+      "gold_answer": "0.51221",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "步骤清晰，按题目要求列出数字、确定计算方法并执行，没有明显跳跃或冗余。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "引用的总净资产802.6和商誉411.1均与原文表格一致，无虚构信息或曲解。",
+        "execution_precision": 4,
+        "execution_precision_reason": "公式和计算过程正确，结果与标准答案仅在最后一位小数略有截断(0.5122 vs 0.51221)，属轻微精度差异。"
+      }
+    },
+    {
+      "sample_id": 653,
+      "model": "thinking",
+      "gold_answer": "-0.01623",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 3,
+        "logical_coherence_reason": "推理步骤基本正确且连贯，但有大量重复确认与啰嗦描述，没有简洁推进计算。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "引用的2011与2012年total sales数值正确，增长率公式理解也与题意一致，没有捏造事实，仅在结果舍入上与标准答案存在轻微差异。",
+        "execution_precision": 3,
+        "execution_precision_reason": "采用了正确的同比增长率公式并进行了合理计算，但最终输出为-0.0162而标准答案为-0.01623，存在计算/精度偏差，且最终答案与标准不完全一致。"
+      }
+    },
+    {
+      "sample_id": 653,
+      "model": "instruct_v6",
+      "gold_answer": "-0.01623",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤识别数据、给出公式、计算并得出结论，结构清晰无明显跳跃或冗余。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "从表中准确提取了2011和2012年的total sales数据，并未捏造或误引其他信息。",
+        "execution_precision": 4,
+        "execution_precision_reason": "增长率公式正确，数值代入与计算均正确，最终答案与标准答案完全一致。"
+      }
+    },
+    {
+      "sample_id": 766,
+      "model": "thinking",
+      "gold_answer": "0.12027",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 3,
+        "logical_coherence_reason": "推理步骤基本正确但有明显反复和犹豫，多次纠结是否要四舍五入到三位小数，逻辑上有来回，但主线仍然清晰。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "引用的各列总额（619、1782、10527、8026、3828、3465、562）与原表一致，总和28809也正确，无事实性错误。",
+        "execution_precision": 4,
+        "execution_precision_reason": "计算总现金流和养老金金额正确，比例3,465/28,809≈0.120275，与标准答案0.12027一致；虽然对输出位数有些纠结，但最终给出的小数精度足以匹配正确答案。"
+      }
+    },
+    {
+      "sample_id": 766,
+      "model": "instruct_v6",
+      "gold_answer": "0.12027",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "步骤完整，先找出养老金总额和总现金流，再说明要做比例计算，最后给出计算结果，逻辑顺畅无明显跳跃。",
+        "factual_fidelity": 2,
+        "factual_fidelity_reason": "养老金总额3465与表中一致，但将总现金流认定为15236是对的，却没有明确从表格中逐项相加验证；更重要的是，未包含所有项目求和得到总现金流的正确逻辑，且没有体现表中总额3828等信息的关系，存在对数据结构理解不够精确的问题。",
+        "execution_precision": 3,
+        "execution_precision_reason": "采用的公式是合理的（养老金/总现金流），但计算和/或理解有误，正确结果应为约0.12027，模型给出0.2274，属于思路对但计算错误的情况。由于答案错误，按规则最高给到3分。"
+      }
+    },
+    {
+      "sample_id": 912,
+      "model": "thinking",
+      "gold_answer": "79437.0",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 2,
+        "logical_coherence_reason": "有尝试按步骤推理并多次重算，但反复纠结于表内数值差异，逻辑来回摇摆，未能收敛到明确结论，整体较混乱。",
+        "factual_fidelity": 3,
+        "factual_fidelity_reason": "引用的起始余额28,114、期末余额107,551以及各项变动数字与原文一致，但对表中不平衡现象的解释不清晰，存在困惑但未明显捏造新数据。",
+        "execution_precision": 3,
+        "execution_precision_reason": "用于回答问题的核心公式期末减期初是正确的，计算107,551-28,114=79,437也正确，但在中途被不平衡现象干扰，推理过程混乱。虽最终未明确给出最终答案格式，但思路和计算到正确数值，按答错上限规则给3分。"
+      }
+    },
+    {
+      "sample_id": 912,
+      "model": "instruct_v6",
+      "gold_answer": "79437.0",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "分步清晰，从提取期初期末余额到做差计算，逻辑连贯无明显跳跃或重复。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "引用了原文中的2016年期初和期末未确认税收优惠余额数字并保持单位一致，没有捏造或误引。",
+        "execution_precision": 4,
+        "execution_precision_reason": "公式正确，计算28,114到107,551的差额为79,437，与标准答案一致，最终按要求给出纯数字答案。"
+      }
+    },
+    {
+      "sample_id": 914,
+      "model": "thinking",
+      "gold_answer": "46.4",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 3,
+        "logical_coherence_reason": "推理步骤基本顺畅，但有明显的重复和啰嗦，多次重复相同结论与检查，存在不必要的自我确认。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "引用的数字380.2和426.6均来自原文表格，理解“净变动”为两年差额且无曲解原文，但没有达到逐点精确核对的严密程度。",
+        "execution_precision": 4,
+        "execution_precision_reason": "识别了正确数值并进行了正确的减法计算，得到正确答案46.4，公式和结果均无误，但解释不够简洁严谨，未达到完美程度。"
+      }
+    },
+    {
+      "sample_id": 914,
+      "model": "instruct_v6",
+      "gold_answer": "46.4",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "分步识别数据、确定计算方法并给出差值，结构清晰，无明显跳跃或冗余。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "准确引用了原文中的2002和2003净收入数值，无捏造或曲解。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确采用差值公式，计算426.6-380.2=46.4，最终答案与标准答案一致。解释简单但完整。"
+      }
+    },
+    {
+      "sample_id": 915,
+      "model": "thinking",
+      "gold_answer": "494.0",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤从表中取数、说明是做差、进行减法并复核，推理顺畅但有少量重复确认和解释，略显冗余，未达严密无冗余的满分标准。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "从表中准确读取2014和2013年的compensation and benefits数值8368和7874，并正确理解为两年之间的变动，没有引入表外信息或曲解含义。",
+        "execution_precision": 4,
+        "execution_precision_reason": "识别正确数字，使用正确公式（2014减2013），计算过程无误，得到正确结果494，并按要求只输出数字。"
+      }
+    },
+    {
+      "sample_id": 915,
+      "model": "instruct_v6",
+      "gold_answer": "494.0",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤识别数据、说明需要做的运算并完成减法计算，结构清晰无跳步，仅为简单任务未体现特别严密的多层推理，因此给4分。",
+        "factual_fidelity": 5,
+        "factual_fidelity_reason": "2014年和2013年的补偿与福利负债数字均与原文表格完全一致，没有引入多余或错误信息。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确选择了差额计算方法，8,368 - 7,874 = 494 计算无误，最终答案与标准答案一致，但未涉及复杂边界或额外检查，给4分。"
+      }
+    },
+    {
+      "sample_id": 277,
+      "model": "thinking",
+      "gold_answer": "0.4655",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 3,
+        "logical_coherence_reason": "步骤完整但反复纠结小数位和取舍，叙述冗长，有多次重复论述，整体逻辑仍是通顺的。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "从原文正确提取了各年份金额和总额，并正确识别\"thereafter\"为2020年之后的承诺，没有虚构或误引数字。",
+        "execution_precision": 4,
+        "execution_precision_reason": "计算思路和公式正确，560/1203 的近似计算过程正确，最终给出的数值0.4655与标准答案一致，但在小数位取舍上有不必要犹豫，未达到极致严谨。"
+      }
+    },
+    {
+      "sample_id": 277,
+      "model": "instruct_v6",
+      "gold_answer": "0.4655",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "步骤清晰，先取数再设定公式并给出中间结果和最终比例，逻辑连贯无跳跃，仅有一点赘述，不到严密无懈可击的程度。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "金额560和1203准确引用自原文对应的thereafter与total，未引入无关或错误信息，整体忠实。",
+        "execution_precision": 4,
+        "execution_precision_reason": "识别公式正确，计算560/1203≈0.4655正确，按题意以小数形式给出答案，满足标准，无计算错误。"
+      }
+    },
+    {
+      "sample_id": 21,
+      "model": "thinking",
+      "gold_answer": "1.1363",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "推理步骤完整，先找数值再计算各自收益率再求差并转为小数，逻辑正确但有多次重复确认和赘述，故不满分。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "引用的表格数值311.81和198.18与原文一致，对起始100和含义的理解也正确，无事实性错误，但没有达到逐点严谨对照的极致程度。",
+        "execution_precision": 4,
+        "execution_precision_reason": "公式正确：(311.81−100)/100 与 (198.18−100)/100 的差值=1.1363，计算准确，最终答案数值与标准答案一致，且按要求用小数形式输出，但解释未扩展到更复杂边界情况，因此给4分。"
+      }
+    },
+    {
+      "sample_id": 21,
+      "model": "instruct_v6",
+      "gold_answer": "1.1363",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "步骤清晰，先提取数据，再说明要算相对差异，然后计算差值和比率，逻辑顺畅无明显跳跃，但对题意理解有偏差。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "引用的数值311.81和198.18均与原文一致，没有捏造或误引信息，只是对‘difference in percentage’的理解有偏差但未篡改原始数据。",
+        "execution_precision": 3,
+        "execution_precision_reason": "计算过程内部自洽，差值和比率算对了，但误将题目所需的绝对百分比差（1.1363）理解为相对差异比率（0.5734），导致最终答案错误；思路合理但解读题意错误。"
+      }
+    },
+    {
+      "sample_id": 923,
+      "model": "thinking",
+      "gold_answer": "170.0",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 3,
+        "logical_coherence_reason": "有逐步识别相关行并相加的推理，整体思路连贯，但反复纠结于“grants vs shares”、“千股 vs 实际股数”等问题，啰嗦且多次重复同一观点，未能简洁收敛到正确标度。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对表中-79和-91为千股的理解、年份对应、总和为170等信息都忠实于原文，没有捏造额外数据；问题主要在于将千股错误放大为实际股数170000而不是题目期望的170。",
+        "execution_precision": 3,
+        "execution_precision_reason": "正确识别2012和2013被forfeited的数量为79和91并求和为170，但在单位层面误将‘以千股计’扩展为170000，未与题目标准答案保持一致；思路基本对但最终数值答案错误。"
+      }
+    },
+    {
+      "sample_id": 923,
+      "model": "instruct_v6",
+      "gold_answer": "170.0",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "步骤清晰，先识别两年forfeited数量，然后求和并给出结果，逻辑顺畅无明显跳跃。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "准确引用了2012年和2013年的forfeited数值79和91，并正确理解为需要求和，没有曲解原文。",
+        "execution_precision": 4,
+        "execution_precision_reason": "计算79+91=170正确，最终答案与标准答案一致，过程和结果均无错误。"
+      }
+    },
+    {
+      "sample_id": 159,
+      "model": "thinking",
+      "gold_answer": "33.33333",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 3,
+        "logical_coherence_reason": "推理链条基本正确，但在确认0.3333这一结果时多次反复、赘述，显得冗长重复，未做到简洁清晰。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "准确引用了原文中家具、固定装置和设备的使用年限为3-10年，并据此计算折旧率，没有捏造或曲解信息。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确理解为直线折旧率=1/使用年限，选择最短3年得到最大折旧率1/3，计算结果与标准答案一致，但未给出更多关于精确度或边界情况的讨论，难以评为满分。"
+      }
+    },
+    {
+      "sample_id": 159,
+      "model": "instruct_v6",
+      "gold_answer": "33.33333",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "步骤清晰，从使用年限到折旧率的推导合理，没有明显跳跃或矛盾。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "正确引用了原文中‘3-10年’的使用年限范围，并据此计算最大折旧率，无捏造信息。",
+        "execution_precision": 3,
+        "execution_precision_reason": "思路与公式正确，但最终答案0.333未按要求给出更精确的小数（应为0.333333…），与标准答案33.33333%存在精度偏差。"
+      }
+    },
+    {
+      "sample_id": 930,
+      "model": "thinking",
+      "gold_answer": "2.57143",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 2,
+        "logical_coherence_reason": "有基本推理思路（用2016年债务72%与股权28%计算比率），但反复纠结小数位与表示方式，冗长且多次自我重复，逻辑不够简洁清晰。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "正确从原文提取2016实际配置：债务72%、股权28%，未捏造额外数据；对表格结构理解基本准确，仅在表述上有些啰嗦但不影响事实。",
+        "execution_precision": 3,
+        "execution_precision_reason": "计算思路正确，用72/28=18/7≈2.571428…，但最终未给到标准答案2.57143而是停在2.5714，属于四舍五入精度不符，答案错误但方法正确，按规则最高3分。"
+      }
+    },
+    {
+      "sample_id": 930,
+      "model": "instruct_v6",
+      "gold_answer": "2.57143",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "分步清晰，从提取数据到确定公式再到计算和给出结果，逻辑顺畅且无多余跳跃。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "准确引用了2016年实际资产配置中债务72%和权益28%的数据，无篡改或遗漏关键信息。",
+        "execution_precision": 4,
+        "execution_precision_reason": "公式正确，计算72/28得到2.5714，与标准答案2.57143只存在正常四舍五入差异，属于精度允许范围。"
+      }
+    },
+    {
+      "sample_id": 675,
+      "model": "thinking",
+      "gold_answer": "0.56374",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 3,
+        "logical_coherence_reason": "步骤基本完整，先找数再设定公式再计算，但有较多来回纠结小数位和如何四舍五入的冗余讨论，逻辑略显拖沓。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "引用的2010年长期债务47162和总额83659与表格一致，没有捏造或误读原文信息。",
+        "execution_precision": 3,
+        "execution_precision_reason": "公式选择正确，计算比值过程也正确到0.56374，但最终输出为0.5637而非更精确的0.56374，与标准答案不完全一致，属于思路对但数值精度略有偏差。"
+      }
+    },
+    {
+      "sample_id": 675,
+      "model": "instruct_v6",
+      "gold_answer": "0.56374",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "步骤清晰，先取数再给出公式并按步骤计算，没有明显跳跃或矛盾，略有赘述但不严重。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "引用的2010年长期债务和总义务数字与表中数据一致，无篡改或误读。",
+        "execution_precision": 4,
+        "execution_precision_reason": "公式正确，计算比值约为0.5638，与标准答案0.56374仅有四舍五入差异，最终按要求给出小数形式，精度足够。"
+      }
+    },
+    {
+      "sample_id": 1079,
+      "model": "thinking",
+      "gold_answer": "11.0",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 3,
+        "logical_coherence_reason": "推理步骤基本完整：识别三年数据、取绝对值、计算最大最小差，得到区间，但存在多次重复确认与啰嗦表述，结构不够精炼。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "正确引用了表中2018、2017、2016的数值(-14、-11、-3)并解释为对应的损失金额，没有篡改或误读原文信息。",
+        "execution_precision": 4,
+        "execution_precision_reason": "明确采用最大值14与最小值3计算区间范围，14-3=11，计算及最终答案均正确，但解释中对括号数值含义的讨论略显冗余，未达到极致严谨。"
+      }
+    },
+    {
+      "sample_id": 1079,
+      "model": "instruct_v6",
+      "gold_answer": "11.0",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "步骤清晰，先列数据再讨论两种range理解，最终采用正确公式并计算，虽有一点啰嗦但无实质跳跃或矛盾。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "从表中抽取的-14、-11、-3均与原文一致，无捏造或曲解，仅对“range”含义做了补充解释但未偏离原文事实。",
+        "execution_precision": 4,
+        "execution_precision_reason": "识别出最大值-3与最小值-14，正确计算range为11，最终答案数值正确，公式和计算过程均无误。"
+      }
+    },
+    {
+      "sample_id": 572,
+      "model": "thinking",
+      "gold_answer": "5.36667",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 3,
+        "logical_coherence_reason": "步骤基本完整，先找数再求和再取平均，但在最后反复纠结取几位小数、来回摇摆，显得拖沓且有些混乱。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "从原文中提取的各年度金额（9.2, 4.6, 2.3 百万）正确，未篡改或遗漏关键信息，但对是否需要四舍五入的讨论有主观判断。",
+        "execution_precision": 3,
+        "execution_precision_reason": "计算步骤和公式正确，16.1/3=5.366666…无误，但最终没有给出应有的精确平均值5.36667，而是倾向于近似5.4，导致与标准答案不一致。"
+      }
+    },
+    {
+      "sample_id": 572,
+      "model": "instruct_v6",
+      "gold_answer": "5.36667",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "步骤清晰：先列数据，再说明需要求平均，给出求和与除法过程，逻辑顺畅，无明显跳跃；仅有一句关于四舍五入和格式的讨论略显多余，故不满分。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "从原文正确提取了2003、2004、2005年construction-in-progress的减值金额9.2、4.6、2.3百万，没有捏造或遗漏关键信息，引用准确。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确求和得到16.1并除以3得到5.3667，与标准答案一致，计算无误；最终输出保留四位小数，虽与参考答案5.36667在精度上略有差别，但在题目要求范围内可接受。"
+      }
+    },
+    {
+      "sample_id": 317,
+      "model": "thinking",
+      "gold_answer": "1.25714",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 3,
+        "logical_coherence_reason": "有完整推理链条，但围绕题意是否是贡献与给付还是年份间对比反复犹豫，冗长啰嗦，逻辑有些摇摆不定。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "引用的264和210数值及其来源基本准确，没有捏造数字，但对“US和国际”的含义有些主观揣测，不过未产生实质性事实错误。",
+        "execution_precision": 4,
+        "execution_precision_reason": "识别出应比较2015与2014的公司贡献并正确计算了264/210≈1.25714，最终数值答案正确，计算步骤也合理。"
+      }
+    },
+    {
+      "sample_id": 317,
+      "model": "instruct_v6",
+      "gold_answer": "1.25714",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 2,
+        "logical_coherence_reason": "大量篇幅在反复纠结题意是否可解，思路来回摇摆，没有形成清晰的计算路径，最终也未给出任何明确的结论或步骤，逻辑较为混乱。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "引用的数值（2014和2015年的缴费金额、2016年以后的给付数据等）与原文基本一致，没有明显捏造数字或曲解事实，仅对题意存在困惑。",
+        "execution_precision": 1,
+        "execution_precision_reason": "没有建立正确的计算公式，更未进行任何有效的数值计算或给出结果，与标准答案偏离严重，属于公式与解法都未落实的情况。"
+      }
+    },
+    {
+      "sample_id": 62,
+      "model": "thinking",
+      "gold_answer": "373153158.3",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 3,
+        "logical_coherence_reason": "推理主线清楚，先找出相关数字，再确定乘法公式并分步计算，但后半段在是否保留小数、是否取整上来回犹豫，出现冗余和反复，影响整体连贯性。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "引用的关键数字（1,211,143份期权和308.10行权价）都与原文一致，未捏造额外数据，仅在对答案格式的理解上有犹豫，但未歪曲原始信息本身。",
+        "execution_precision": 2,
+        "execution_precision_reason": "核心公式和中间乘法计算都是正确的，得到的中间结果373,153,158.3也正确，但在最终输出时未给出明确的最终数值（被截断在37315315），导致答案错误，属于思路对但执行失败。"
+      }
+    },
+    {
+      "sample_id": 62,
+      "model": "instruct_v6",
+      "gold_answer": "373153158.3",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "步骤清楚：找数值、确定乘法、给出计算和结果，结构完整无明显跳跃，但未检查或解释与精确答案的差异。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "从原文正确提取了数量和行权价，未捏造数字或曲解含义，但在最终结果上与精确乘积不符，显示中间计算存在偏差。",
+        "execution_precision": 3,
+        "execution_precision_reason": "思路和公式正确（数量×加权平均行权价），但1,211,143×308.10的乘积计算错误，导致最终数值与标准答案不一致。答案错误时按规则最高给3分。"
+      }
+    },
+    {
+      "sample_id": 836,
+      "model": "thinking",
+      "gold_answer": "0.81238",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 3,
+        "logical_coherence_reason": "步骤基本清晰：找出总里程和自有里程，建立比例并计算。但在小数位数和如何四舍五入上反复纠结，叙述冗长，有不必要的反复推敲，影响整体连贯性。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "引用的原文数字32070和26053正确，计算思路与原文信息一致，没有捏造额外数据或曲解含义。但在最终保留位数上与标准答案存在细微偏差。",
+        "execution_precision": 3,
+        "execution_precision_reason": "核心公式和计算过程是对的，26053/32070≈0.812379，与标准答案0.81238一致，但最终输出为0.8124而非0.81238，导致与正确答案不完全一致，在数值精度上有偏差，因此在答错上限内给3分。"
+      }
+    },
+    {
+      "sample_id": 836,
+      "model": "instruct_v6",
+      "gold_answer": "0.81238",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "分步清晰：提取数据、建立公式、计算比例并转换为小数形式，推理顺畅无明显跳跃，但解释略有冗余，难达满分严谨度。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "引用的关键数字（总里程32,070，拥有里程26,053）与原文一致，无捏造或曲解，信息使用准确。",
+        "execution_precision": 4,
+        "execution_precision_reason": "公式正确，计算得到0.8123，与标准答案0.81238仅有四舍五入微小差距，属正常近似，整体执行精度高但未精确到同一位数。"
+      }
+    },
+    {
+      "sample_id": 581,
+      "model": "thinking",
+      "gold_answer": "0.15421",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 3,
+        "logical_coherence_reason": "有明确步骤并最终得出正确公式，但对表格格式进行了大量反复、冗长的自我纠结和猜测，存在明显的无关思考，降低了整体连贯性。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "关键数字（2006年577.8和2007年666.9）引用正确，计算基于原文数据，没有捏造数值；但对表头含义存在多次猜测性解读，虽未影响最终使用的数据，略影响严谨性，难以给满分。",
+        "execution_precision": 4,
+        "execution_precision_reason": "识别了正确的起始值和终值，使用了正确的百分比变化公式，计算得到约0.1542，与标准答案0.15421一致到四位小数；未讨论边界或误差来源，属标准正确执行。"
+      }
+    },
+    {
+      "sample_id": 581,
+      "model": "instruct_v6",
+      "gold_answer": "0.15421",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "步骤清晰，先找数再列公式再计算，没有明显跳跃或矛盾，但也比较简单直接，未达到极端严密程度。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "从原文中正确提取了2006和2007年的total managed consumer loans数值(542.9和618.3)，没有捏造或误引，但未额外核对表中重复行，保守给4分。",
+        "execution_precision": 3,
+        "execution_precision_reason": "使用的百分比变化公式正确，代入数值也正确，但中间除法计算有误，导致最终比例与标准答案不符，在答错情况下思路正确，给到最高的3分。"
+      }
+    },
+    {
+      "sample_id": 838,
+      "model": "thinking",
+      "gold_answer": "0.25699",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 3,
+        "logical_coherence_reason": "步骤基本完整，先找数再列公式再长除计算，但有较多重复和啰嗦过程，多次往复确认，逻辑虽通顺但不够精炼紧凑。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "引用的2017年外汇风险收入2435和总收入9475均与表格一致，无数字或定义错误。",
+        "execution_precision": 4,
+        "execution_precision_reason": "计算2435/9475得到约0.25699，最终给出0.257，四舍五入后一致，公式和计算均正确。"
+      }
+    },
+    {
+      "sample_id": 838,
+      "model": "instruct_v6",
+      "gold_answer": "0.25699",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "步骤清晰，先找数、再定公式、再计算、最后给出结果，结构合理无明显跳跃。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "引用的2017年外汇风险收入2435和总收入9475均与原文一致，无捏造或误引。",
+        "execution_precision": 4,
+        "execution_precision_reason": "计算思路正确，比例2,435/9,475≈0.25699，与标准答案一致，最终四舍五入为0.257在精度允许范围内。"
+      }
+    },
+    {
+      "sample_id": 583,
+      "model": "thinking",
+      "gold_answer": "53382250.0",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 3,
+        "logical_coherence_reason": "步骤基本清晰，先定位期间、再取数量和价格并计算，但有多次重复确认与啰嗦自我校验，略显冗余，达不到严谨紧凑的高分标准。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "引用的区间、股数335000和均价159.35均与原文表格一致，没有捏造数据或曲解含义，但未对“November”与跨月区间的潜在歧义做更精细讨论，略逊于满分标准。",
+        "execution_precision": 4,
+        "execution_precision_reason": "识别了正确的期间和数据，计算335000×159.35过程正确，最终数值与标准答案一致，属于公式与计算均正确，但未涉及更复杂或边界情况说明，给4分。"
+      }
+    },
+    {
+      "sample_id": 583,
+      "model": "instruct_v6",
+      "gold_answer": "53382250.0",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 3,
+        "logical_coherence_reason": "步骤完整，有识别数字、选择公式和计算，逻辑基本通顺，但将月份区间与问题中“during november 2018”的含义混为一谈，有理解跳跃。",
+        "factual_fidelity": 3,
+        "factual_fidelity_reason": "引用的表格数据（205000股、160.20美元）本身与原文一致，但错误地把11/25–12/29这一整个区间当作“11月期间”，对原文的时间含义有轻微曲解。",
+        "execution_precision": 3,
+        "execution_precision_reason": "思路是用‘份额×均价’计算回购现金流，公式正确，但选错了应使用的期间，且与标准答案数值不符，因此答案错误，在答错前提下给出最高3分。"
+      }
+    },
+    {
+      "sample_id": 197,
+      "model": "thinking",
+      "gold_answer": "60829.2",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 3,
+        "logical_coherence_reason": "有清晰的步骤并完成了正确计算，但在“in thousands, except per share data”的含义上反复犹豫、自我质疑，整体叙述冗长且带来不必要的混淆，降低了连贯性。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "引用了正确的原文数字（2770股、21.96每股），过程未篡改数值，但对“in thousands”的解释有来回摇摆，虽未最终给出错误结论，但表现出对原文的理解不够干脆。",
+        "execution_precision": 4,
+        "execution_precision_reason": "识别了正确的数值并用正确公式计算出2770×21.96=60829.2，最终数值答案与标准答案一致，属于公式和计算均正确。但解释中对是否需要再乘以千存在反复纠结，严谨性略受影响，不能给满分。"
+      }
+    },
+    {
+      "sample_id": 197,
+      "model": "instruct_v6",
+      "gold_answer": "60829.2",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "步骤清晰，先找数再定公式再计算，逻辑顺畅，没有明显跳跃或自相矛盾。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "引用了正确的股数2770和加权平均公允价值21.96，整体忠实原文，只是在单位解释上有一点不严谨（未充分利用“in thousands”信息来核对数量级）。",
+        "execution_precision": 3,
+        "execution_precision_reason": "思路和公式正确，但乘法计算结果有误，应为2770×21.96=60829.2而非60729.2，导致最终答案与标准答案不一致。"
+      }
+    },
+    {
+      "sample_id": 972,
+      "model": "thinking",
+      "gold_answer": "98180.0",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "步骤清晰，先确认起始与结束数值，再计算倍数、最终价值和收益额；中间有少量重复确认概念的冗余描述，但无逻辑矛盾。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "准确引用了表中S&P 500在12/11为100.00、12/16为198.18，并正确理解为$100投资的累积价值；未引入额外数字或曲解原文。",
+        "execution_precision": 4,
+        "execution_precision_reason": "公式和计算均正确：198.18/100=1.9818，100000×1.9818=198180，收益=98180，最终答案正确且符合题意。"
+      }
+    },
+    {
+      "sample_id": 972,
+      "model": "instruct_v6",
+      "gold_answer": "98180.0",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "步骤清晰，先找数据再给公式再计算，逻辑顺畅无明显跳跃，但没有更深入检查‘total return’定义是否需要减去本金。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "引用的指数起始值100.00、结束值198.18以及投资额100000均与原文一致，没有捏造或误引数字。",
+        "execution_precision": 3,
+        "execution_precision_reason": "计算过程和公式正确，但将最终投资价值198180当作‘total return’，未按题意给出收益额98180，最终答案错误，在答错情况下最高给3分。"
+      }
+    },
+    {
+      "sample_id": 719,
+      "model": "thinking",
+      "gold_answer": "0.40879",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 3,
+        "logical_coherence_reason": "步骤基本完整，从找数到除法再到百分比换算，但有较多重复计算和犹豫性讨论（精度、保留位数等），逻辑略显啰嗦。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "正确引用了表中2016-之后的相关数字（3321与8124），未捏造或误引数据；但对精确值与四舍五入位数的讨论略显反复，不够干净利落，故不给满分。",
+        "execution_precision": 4,
+        "execution_precision_reason": "识别了正确公式 3321/8124 并给出合理小数0.40879…，最终答案0.409与标准答案0.40879仅为四舍五入差异，属于计算和思路均正确。"
+      }
+    },
+    {
+      "sample_id": 719,
+      "model": "instruct_v6",
+      "gold_answer": "0.40879",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "分步骤识别数据、确定计算方法并给出结果，推理顺畅无明显跳跃，仅有极少赘述。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "金额3321和8124均准确来自表格，没有杜撰或误引信息。",
+        "execution_precision": 4,
+        "execution_precision_reason": "公式和计算方法正确，结果四舍五入略有差异但在允许误差范围内，与标准答案一致到四位小数。"
+      }
+    },
+    {
+      "sample_id": 81,
+      "model": "thinking",
+      "gold_answer": "26.42857",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 2,
+        "logical_coherence_reason": "推理过程反复犹豫、多次自相矛盾，在37和37/1.4之间来回摇摆，未形成清晰结论性步骤，整体较混乱。",
+        "factual_fidelity": 3,
+        "factual_fidelity_reason": "引用的关键信息（37百万、1.4年）来自原文且数值正确，但对这些信息含义的理解出现摇摆和模糊，属于一般水平的忠实度。",
+        "execution_precision": 2,
+        "execution_precision_reason": "虽然识别出应使用37/1.4的思路，但最终没有明确给出正确结果，答案错误；计算框架有一定正确性但未执行到位。"
+      }
+    },
+    {
+      "sample_id": 81,
+      "model": "instruct_v6",
+      "gold_answer": "26.42857",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "步骤清晰：找数值→确定需要除以1.4→计算结果→给出答案，逻辑连贯无明显跳跃，仅有少量赘述。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "正确引用了原文中37百万未确认费用和1.4年的加权平均期限，没有捏造额外数据或曲解含义。",
+        "execution_precision": 4,
+        "execution_precision_reason": "计算37/1.4=26.42857正确，最终答案只是在小数位保留上与标准答案精度不同，但数值本身是正确的。"
+      }
+    },
+    {
+      "sample_id": 593,
+      "model": "thinking",
+      "gold_answer": "1.33488",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 3,
+        "logical_coherence_reason": "步骤完整但非常啰嗦，一再重复同样的计算和取舍讨论，有明显冗余。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "从表格中提取的数值86.1和64.5均正确，未曲解原文，但对结果保留位数的讨论略显犹疑。",
+        "execution_precision": 4,
+        "execution_precision_reason": "公式和计算均正确，得到的比值与标准答案一致（1.3348…），只是最终输出保留三位小数，与标准答案更多小数位略有差异但数值正确。"
+      }
+    },
+    {
+      "sample_id": 593,
+      "model": "instruct_v6",
+      "gold_answer": "1.33488",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "步骤清晰，从提取数字到计算比值再到给出结果，结构完整，无明显跳跃，仅在精度处理上略显随意。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "正确引用了2017年和2016年票据的剩余折扣金额(86.1和64.5)，未引入无关或错误信息。",
+        "execution_precision": 4,
+        "execution_precision_reason": "公式和计算方向正确，给出的未四舍五入中间值约1.33519，与标准答案1.33488极为接近，差异来自小数精度处理，属轻微数值偏差。"
+      }
+    },
+    {
+      "sample_id": 979,
+      "model": "thinking",
+      "gold_answer": "0.1822",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 3,
+        "logical_coherence_reason": "整体推理步骤正确，但在小数保留位数上反复犹豫，前后在0.1821、0.1822、0.182之间来回，存在一定冗余和纠结。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "引用的表格数据（2008年total debt=129、lease=117、purchase=462、total=708）均与原文一致，没有篡改或遗漏关键信息。",
+        "execution_precision": 4,
+        "execution_precision_reason": "识别的数值和公式都正确，计算129/708并得出约0.1822，与标准答案一致，但在最终取值时对保留几位小数有犹豫，缺乏干净利落的定稿。"
+      }
+    },
+    {
+      "sample_id": 979,
+      "model": "instruct_v6",
+      "gold_answer": "0.1822",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "分步清晰：先取2008年总债务和总义务，再说明需要做比例计算，然后给出明确公式和结果，没有明显跳跃或冗余。",
+        "factual_fidelity": 5,
+        "factual_fidelity_reason": "从表中准确引用了2008年的total debt 129和total 708，没有引入不存在的数字或曲解原文含义。",
+        "execution_precision": 4,
+        "execution_precision_reason": "计算思路和公式正确，129/708≈0.1822，与标准答案完全一致。步骤和结果都准确，但没有额外的边界或敏感性考虑，因此给4分。"
+      }
+    },
+    {
+      "sample_id": 1115,
+      "model": "thinking",
+      "gold_answer": "0.52946",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 3,
+        "logical_coherence_reason": "步骤清晰，先找数再除法并检验，但在小数位和取舍上反复纠结，存在较多冗余与自我矛盾的讨论。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "从原文中提取的数值27318和51596均正确，没有捏造或曲解原文信息。",
+        "execution_precision": 3,
+        "execution_precision_reason": "公式正确，27318/51596的思路无误，但最终未给出精确到题目标准的0.52946，而是在0.5294与0.5295之间摇摆，最终答案与标准值不一致。"
+      }
+    },
+    {
+      "sample_id": 1115,
+      "model": "instruct_v6",
+      "gold_answer": "0.52946",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "步骤完整清晰：找数、定公式、算比例，过程有条理且无明显跳跃，仅略有赘述，未达到极致严密。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "正确从表中提取2006年的main line为27318和total为51596，无虚构或误引信息。",
+        "execution_precision": 4,
+        "execution_precision_reason": "公式正确，计算比例约为0.5295，与标准答案0.52946在四舍五入精度范围内一致，最终数值合理。"
+      }
+    },
+    {
+      "sample_id": 95,
+      "model": "thinking",
+      "gold_answer": "364400.0",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 2,
+        "logical_coherence_reason": "推理过程中大量重复“wait”式自我纠正，结论在362400与是否需要额外加上2000间来回犹豫，逻辑表达较为混乱，虽最终得到合理方向但过程不够清晰紧凑。",
+        "factual_fidelity": 3,
+        "factual_fidelity_reason": "对脚注(10)和(1)的内容基本引用正确，但忽略了题目问的是“counting indirect shares”下的总持股，应将表中数字视为包含间接持股的总数，而正确答案应为364400，说明对原文数值关系理解仍有偏差。",
+        "execution_precision": 1,
+        "execution_precision_reason": "最终给出的答案是362400，而参考正确答案为364400，数值错误且没有清晰的计算步骤得出正确结果，属于公式/计算未正确应用的情况。"
+      }
+    },
+    {
+      "sample_id": 95,
+      "model": "instruct_v6",
+      "gold_answer": "364400.0",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 3,
+        "logical_coherence_reason": "有分步骤推理，结构基本清晰，但在理解表格含义时出现混淆，把362,400当作仅直接持有，导致后续计算逻辑存在跳跃和自相矛盾之处。",
+        "factual_fidelity": 2,
+        "factual_fidelity_reason": "错误理解了表中362,400这一数值的含义。原文脚注(10)说明该数已包含2000间接持股和100,000期权，而回答中将其视为仅直接持股并再次加总，属于对原文含义的曲解。",
+        "execution_precision": 3,
+        "execution_precision_reason": "识别了相关数字，并试图按‘直接+间接+期权’来计算，思路方向与题意大体一致，但由于误解基数，将已包含的间接持股和期权重复计入，最终数值错误。依据规则，答错且思路部分正确，给3分上限。"
+      }
+    },
+    {
+      "sample_id": 363,
+      "model": "thinking",
+      "gold_answer": "0.22006",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 3,
+        "logical_coherence_reason": "推理步骤基本正确，从表中取数、建立比例关系并进行除法计算，但过程反复纠结于保留几位小数，有较多冗余和重复论述，影响整体连贯性。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "正确引用了2009年的1088和总额4944两个数字，理解题意也基本准确，没有编造额外数据，但对中间近似值描述略有反复（0.2199与0.22006），虽不严重但略显不精确。",
+        "execution_precision": 3,
+        "execution_precision_reason": "公式和思路正确（用2009金额除以总额），中间也给出了更精确的0.22006，但最终答案没有按该精度给出而是给出约值0.22，未与标准答案完全一致；属于计算思路正确但最终执行不精确。"
+      }
+    },
+    {
+      "sample_id": 363,
+      "model": "instruct_v6",
+      "gold_answer": "0.22006",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "分步清晰：找到相关数字、确定比例计算、展示公式和结果，逻辑顺畅无明显跳跃，仅为常规解题流程，未到极度严密程度。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "引用的2009年数额1088和总额4944与原表一致，无捏造或曲解，仅在结果保留位数上与标准答案略有差异，但不涉及对原文事实的错误引用。",
+        "execution_precision": 4,
+        "execution_precision_reason": "思路和公式正确，使用1088/4944进行计算，数值近似为0.2199，与标准答案0.22006存在轻微四舍五入差异但属正常近似，最终答案基本正确。"
+      }
+    },
+    {
+      "sample_id": 235,
+      "model": "thinking",
+      "gold_answer": "19.66667",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 3,
+        "logical_coherence_reason": "推理步骤完整但有多次反复纠结取几位小数、是否四舍五入等冗余讨论，逻辑虽正确但不够干净利落。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "从原文准确提取了2013-2015年的费用数据并未篡改或误读，仅在讨论呈现精度时有些主观猜测但不影响事实本身。",
+        "execution_precision": 4,
+        "execution_precision_reason": "识别数字正确，计算总和59并除以3得到19.666…，最终给出19.67，与标准答案在合理四舍五入范围内，步骤和公式都正确。"
+      }
+    },
+    {
+      "sample_id": 235,
+      "model": "instruct_v6",
+      "gold_answer": "19.66667",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤识别数据、确定需要取平均、展示求和与除法过程，结构清晰，无明显跳跃或冗余。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "从原文正确提取了2013–2015三年的费用数字并未引入额外信息，引用准确无误。",
+        "execution_precision": 4,
+        "execution_precision_reason": "计算过程正确，求和与除法无误，最终数值与标准答案一致，仅在小数位保留上与参考答案精度不同，但不影响正确性。"
+      }
+    },
+    {
+      "sample_id": 493,
+      "model": "thinking",
+      "gold_answer": "77.0",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "逐步识别数据、求和、取平均，过程清晰，仅有少量重复确认导致略显冗余。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "准确引用了2006-2008三年的摊销费用数值，未篡改或遗漏关键信息。",
+        "execution_precision": 4,
+        "execution_precision_reason": "公式和计算过程正确，最终数值与标准答案一致，符合任务格式要求。"
+      }
+    },
+    {
+      "sample_id": 493,
+      "model": "instruct_v6",
+      "gold_answer": "77.0",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按照要求分步：找数值、确定需要求平均、展示加总和除法、给出结果，结构清晰无明显跳跃，仅属常规推理未到极其严密。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "准确引用了原文中2006-2008三年的摊销费用数值90、77、64，无捏造或误引。",
+        "execution_precision": 4,
+        "execution_precision_reason": "计算步骤正确：90+77+64=231，231/3=77，最终答案与标准答案一致。"
+      }
+    },
+    {
+      "sample_id": 495,
+      "model": "thinking",
+      "gold_answer": "0.25279",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 3,
+        "logical_coherence_reason": "步骤完整且思路正确，但有反复校验和啰嗦描述，多次重复同一计算过程，存在一定冗余。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "引用的2014年相关数字（134223、45410、179633）均与原文一致，无捏造或误引，但未对上下文做更精细核对，故不给满分。",
+        "execution_precision": 4,
+        "execution_precision_reason": "公式和计算过程正确，先算比例再精化到0.25279，最终给出0.2528，属于合理四舍五入，答案在精度要求内。"
+      }
+    },
+    {
+      "sample_id": 495,
+      "model": "instruct_v6",
+      "gold_answer": "0.25279",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "步骤清晰：取数、设定公式、逐步计算并给出结果，没有明显跳步或矛盾，虽不算极其严密但已较完整。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "引用的2014年总GCLA 179,633和非美元GCLA 45,410均与原文数值一致，无虚构或误引。",
+        "execution_precision": 4,
+        "execution_precision_reason": "计算思路和公式正确，数值比值约0.25279，被正确近似为0.2528，最终答案与标准答案在精度要求内一致。"
+      }
+    },
+    {
+      "sample_id": 1136,
+      "model": "thinking",
+      "gold_answer": "0.52573",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 3,
+        "logical_coherence_reason": "步骤完整但多次反复讨论保留几位小数、该取0.5257还是0.526，存在明显冗余和犹豫。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "引用的数值（3698、7034等）与原文一致，没有捏造或曲解，但对精确值0.525732…的描述略显含糊。",
+        "execution_precision": 3,
+        "execution_precision_reason": "核心公式3698/7034正确，计算过程基本正确，但最终答案给成0.526，与标准答案0.52573不一致，属于思路正确但取舍错误。"
+      }
+    },
+    {
+      "sample_id": 1136,
+      "model": "instruct_v6",
+      "gold_answer": "0.52573",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤识别数据、确定计算方式并给出比例和百分比，推理顺畅且无明显跳跃或冗余。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "引用的2015年客户终端设备支出3698和总资本支出7034均与原文表格一致，无曲解或捏造。",
+        "execution_precision": 4,
+        "execution_precision_reason": "公式正确，计算为3698/7034≈0.5257，与标准答案0.52573仅有四舍五入差异，最终答案在要求精度内正确。"
+      }
+    },
+    {
+      "sample_id": 1138,
+      "model": "thinking",
+      "gold_answer": "3462694.66",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 3,
+        "logical_coherence_reason": "整体推理步骤完整，但有明显冗余与反复验证计算的啰嗦过程，最后在输出格式上产生犹豫和未给出最终纯数字答案。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "引用的表格数据（11月和12月的股数与均价）均与原文一致，无数字张冠李戴或曲解含义。",
+        "execution_precision": 4,
+        "execution_precision_reason": "公式和计算过程正确，得到的差额数值与标准答案一致，但未严格遵守题目要求的纯数字最终输出格式，存在执行上的小瑕疵。"
+      }
+    },
+    {
+      "sample_id": 1138,
+      "model": "instruct_v6",
+      "gold_answer": "3462694.66",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "步骤清晰：先取数、再算各月支出、再求差额，推理顺序合理无明显跳跃。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "从原文正确提取了11月和12月的买入股数和均价，未捏造或误引其他数字。",
+        "execution_precision": 3,
+        "execution_precision_reason": "思路和公式正确，但数值乘法/差值计算有误，导致最终差额与标准答案不符。根据规则答错最高3分。"
+      }
+    },
+    {
+      "sample_id": 498,
+      "model": "thinking",
+      "gold_answer": "35066.0",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤比较2012与2011两数值，推导最大值，逻辑清晰但有少量重复和赘述，未达到极度严密。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "准确引用表中27885和35066两个数字，并正确理解为以2011较大，无错误或曲解。",
+        "execution_precision": 4,
+        "execution_precision_reason": "识别需要取两年之间的最大值，计算与最终答案35066正确，符合题目对输出格式的要求。"
+      }
+    },
+    {
+      "sample_id": 498,
+      "model": "instruct_v6",
+      "gold_answer": "35066.0",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤识别数据、解释无需额外计算并直接给出数值，过程连贯无明显跳跃，但对“maximum”含义未进一步核实，略有疏漏。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "从原文表格中正确引用了2012和2011年的净衍生品负债数值，没有虚构或错误引用。",
+        "execution_precision": 3,
+        "execution_precision_reason": "正确识别了两个年度的数值，但问题要求的是最大值而非两个年份并列输出，最终答案与标准答案不符，思路基本正确但未完成所需取最大操作。"
+      }
+    },
+    {
+      "sample_id": 633,
+      "model": "thinking",
+      "gold_answer": "0.6",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "步骤清晰，先取数再套用百分比增长公式并计算，中间有少量重复确认导致轻微冗余，故不满分。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "正确引用了2006年15和2007年24的净衍生品收益，没有捏造或误读数据，表述与原文一致。",
+        "execution_precision": 4,
+        "execution_precision_reason": "公式正确，计算9/15=0.6正确，最终答案与标准答案一致，解释与结果匹配，但未涉及更复杂边界情况，给4分。"
+      }
+    },
+    {
+      "sample_id": 633,
+      "model": "instruct_v6",
+      "gold_answer": "0.6",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "步骤清晰，从取数到公式再到换算为小数，推理顺畅无跳跃，仅有少量重复解释。",
+        "factual_fidelity": 5,
+        "factual_fidelity_reason": "准确引用了2006和2007年的净衍生品收益数值（15和24），与原文完全一致，无偏差。",
+        "execution_precision": 4,
+        "execution_precision_reason": "使用正确的百分比增长公式，计算过程和最终结果0.6均正确，符合题目关于小数形式输出的要求。"
+      }
+    },
+    {
+      "sample_id": 250,
+      "model": "thinking",
+      "gold_answer": "6.25",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "推理步骤完整，先识别2005和2006的现金支出，再计算增幅并外推到2007，逻辑顺畅但有一些重复性的自我确认表述，略显冗余，故不给满分。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "引用的数值均来自原文：2005和2006年cash outlays分别为4和5，增幅25%，未捏造额外数字或曲解原文含义，对“cash expense=现金支出”的理解合理，但未特别区分其他相关指标，整体准确。",
+        "execution_precision": 4,
+        "execution_precision_reason": "识别正确数据，计算增幅(25%)并正确应用到2006年数值得到2007年6.25，公式与计算均准确，最终答案也正确，但解释未涉及更复杂边界情况，按标准给4分。"
+      }
+    },
+    {
+      "sample_id": 250,
+      "model": "instruct_v6",
+      "gold_answer": "6.25",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "步骤完整，先找数据、算百分比变动、再外推到下一年，内部推理前后一致且无明显跳跃。",
+        "factual_fidelity": 3,
+        "factual_fidelity_reason": "引用了2005和2006年的保修费用数字是准确的，但错误地用“pretax charges against income”而没有使用题目真正需要的“cash outlays related to product warranties”，遗漏了关键信息，导致理解偏差。",
+        "execution_precision": 2,
+        "execution_precision_reason": "思路上是按前一年到后一年的百分比变化外推下一年，方法本身合理，但选择了错误的基数（费用而非现金支出），关键变量用错，最终答案也与标准答案不符。"
+      }
+    },
+    {
+      "sample_id": 124,
+      "model": "thinking",
+      "gold_answer": "0.01577",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 2,
+        "logical_coherence_reason": "有基本步骤和公式，但中途反复用近似计算、展开多次尝试，推理过程冗长且在幂次计算上出现中断和杂乱，不够清晰紧凑。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "正确使用了起始值100、终值208.14和5年期限，未捏造额外数据，但对ln(2.0814)的近似略粗略，不过未影响整体思路。",
+        "execution_precision": 3,
+        "execution_precision_reason": "公式和思路正确，最终年化收益率定性在约15.8%附近，与标准答案0.01577不一致，数量级错误（百分数与小数混淆），因此答案不精确但推理方向是对的。"
+      }
+    },
+    {
+      "sample_id": 124,
+      "model": "instruct_v6",
+      "gold_answer": "0.01577",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "步骤清晰，按要求列出了数据、公式和计算过程，没有明显跳跃或前后矛盾。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "起始值100和终值208.14均正确引用了题干中的S&P 500数据，没有捏造或曲解信息。",
+        "execution_precision": 3,
+        "execution_precision_reason": "公式使用正确，思路正确，但在计算年化收益率时数值计算有误，导致最终答案偏离正确值。根据规则答错最高3分。"
+      }
+    },
+    {
+      "sample_id": 638,
+      "model": "thinking",
+      "gold_answer": "0.11237",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 3,
+        "logical_coherence_reason": "有清晰步骤：找出2007和2008余额，计算差额，再用差额/原值计算比例。但在小数位取舍上来回犹豫，给出多个可能结果（0.11237、0.1124、0.112），逻辑有重复和摇摆，不够干净利落。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "引用的数字（21376、23778、2402）都与原文表格一致，未捏造额外数据。只是对输出精度的讨论有点混乱，但不影响对原文信息的忠实程度。",
+        "execution_precision": 3,
+        "execution_precision_reason": "采用的公式和计算步骤正确，2402/21376得到0.11237，与标准答案一致。但在最终输出时选择了0.1124而非0.11237，导致与标准答案不完全一致；属于计算正确但结果呈现精度处理错误，按规则答错最高给3分。"
+      }
+    },
+    {
+      "sample_id": 638,
+      "model": "instruct_v6",
+      "gold_answer": "0.11237",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "步骤清晰：找数值、给出公式、计算差额、代入计算并得到百分比，整体推理顺畅无明显跳跃，仅有轻微冗余。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "引用的2007和2008不确定税务立场金额均与原表格数值一致，没有编造或曲解信息。",
+        "execution_precision": 4,
+        "execution_precision_reason": "公式正确，计算思路正确，计算结果与标准答案仅在第五位小数上存在四舍五入差异（0.11236 vs 0.11237），属于轻微精度差异。"
+      }
+    }
+  ],
+  "metadata": {
+    "created": "2025-12-06T16:00:17.875060",
+    "last_updated": "2025-12-06T16:12:57.839059"
+  }
+}

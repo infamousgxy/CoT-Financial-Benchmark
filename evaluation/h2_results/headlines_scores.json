@@ -1,0 +1,1130 @@
+{
+  "task": "headlines",
+  "version": "v2_strict",
+  "scores": [
+    {
+      "sample_id": 3969,
+      "model": "thinking",
+      "gold_answer": "Yes",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤解释标题内容并得出结论，因果关系清晰，没有明显跳跃或矛盾，但结构相对简单，未达到极高严密度。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "准确引用了标题中的关键信息（上涨金额与每盎司价格），没有捏造或曲解，但引用不算逐字逐句全面，故不给满分。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确识别到标题在讨论黄金价格变动并给出正确答案Yes，理由直接且抓住价格信息这一核心点，但分析深度一般，未体现出特别深入的洞察。"
+      }
+    },
+    {
+      "sample_id": 3969,
+      "model": "instruct_v6",
+      "gold_answer": "Yes",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "分步清晰，步骤1-4均紧扣任务要求，无矛盾，仅有少量重复强调价格信息，略有冗余，故不满分。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对标题中的价格、涨幅与美联储降息原因的引用均准确，无捏造或曲解，但未达到逐字级精细对照的极致程度。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确判断为与黄金价格相关，并明确指出包括价格和涨幅，理由聚焦关键信息，深度适中，符合任务要求。"
+      }
+    },
+    {
+      "sample_id": 8453,
+      "model": "thinking",
+      "gold_answer": "No",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤解释了标题含义，由‘higher’推导出价格上涨再得出不存在下跌方向，逻辑清晰但有少量重复表述，略显冗余，不能给满分。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "准确引用了“$65.80, or 14.5%, higher”的信息，并正确解释为价格上涨，无事实性错误，但未作更细致拆解，按标准给4分。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确判断答案为“No”，理由直接基于价格“higher”这一关键信息，抓住了核心点，解释到位但不算有特别深的洞见。"
+      }
+    },
+    {
+      "sample_id": 8453,
+      "model": "instruct_v6",
+      "gold_answer": "No",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤完成了分析，逻辑清楚，结论与前面推理一致，没有明显跳跃，但稍有冗余描述。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对标题内容的理解准确，正确指出价格是上涨14.5%，没有歪曲或臆造信息。",
+        "execution_precision": 1,
+        "execution_precision_reason": "虽然推理过程正确，但在“模型是否答对=否”的前提下仍给出与标准答案一致的结论，说明未对指示做出正确响应，属于任务执行失败。"
+      }
+    },
+    {
+      "sample_id": 13063,
+      "model": "thinking",
+      "gold_answer": "Yes",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "分步推理清晰，能够从“adds to gains”推导出对过去价格水平的隐含引用，仅有少量重复强调但不影响整体逻辑。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对标题文本的引用准确，没有捏造额外信息；对“adds to gains”含义的解释与原文相符，未曲解内容。",
+        "execution_precision": 4,
+        "execution_precision_reason": "最终答案为Yes，与标准答案一致，且理由聚焦于‘gains’和相对过去价格的关系，抓住了判断PastPrice隐含的关键点。"
+      }
+    },
+    {
+      "sample_id": 13063,
+      "model": "instruct_v6",
+      "gold_answer": "Yes",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤分析，推理结构清晰，结论与前面论证一致，没有明显跳跃或自相矛盾。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对标题含义的解读基本忠实于原文，没有捏造额外信息，虽略微狭义地将PastPrice限定为具体数值，但未歪曲原文内容本身。",
+        "execution_precision": 3,
+        "execution_precision_reason": "最终结论与标准答案相反，虽然论证有一定道理，但未理解任务中“adds to gains”已隐含过去涨幅这一PastPrice概念。依据规则，答错最高给3分。"
+      }
+    },
+    {
+      "sample_id": 17415,
+      "model": "thinking",
+      "gold_answer": "Yes",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤拆解标题含义，说明“slips”表示价格下跌，推理顺畅但有少量重复表述，未达到极致紧凑。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对标题内容和问题要求的转述准确，无捏造或曲解，仅将“slips”解释为价格下跌，属于合理金融语境理解。",
+        "execution_precision": 4,
+        "execution_precision_reason": "识别出标题在讨论黄金价格变动，最终答案为“Yes”且理由抓住关键动词“slips”，分析到位但不算特别深刻。"
+      }
+    },
+    {
+      "sample_id": 17415,
+      "model": "instruct_v6",
+      "gold_answer": "Yes",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按题目要求分步推理，层次清楚、因果关系明确，无明显逻辑跳跃，仅有少量重复解释。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对标题内容和“slips”含义的解读符合金融语境，没有捏造额外事实，解释略带背景但未偏离原文。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确识别‘gold slips’为金价变动的描述，最终答案为Yes，理由紧扣是否涉及金价这一标准。"
+      }
+    },
+    {
+      "sample_id": 12799,
+      "model": "thinking",
+      "gold_answer": "Yes",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "推理步骤清晰，先识别关键词“largest monthly gain”，再关联到价格上涨，逻辑顺畅但有些重复说明，未达到极致严密。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对标题内容的引用和解释准确，将“gain”正确理解为价格上涨，没有引入多余信息。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确识别出黄金方向为上涨，答案为Yes，理由抓住了核心关键词，但分析较基础，深度一般。"
+      }
+    },
+    {
+      "sample_id": 12799,
+      "model": "instruct_v6",
+      "gold_answer": "Yes",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按要求分步回答，论证清晰、顺序合理，无逻辑跳跃，仅有轻微表述重复，未达到极端严密程度。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对标题含义的解读与原文完全一致，没有捏造额外信息或曲解含义，但也没有更多可检验的细节，难评到满分。",
+        "execution_precision": 4,
+        "execution_precision_reason": "准确识别出“largest monthly gain”表示金价上升，结论为Yes，理由直接且抓住关键词，但分析深度一般，未体现特别深入的洞察。"
+      }
+    },
+    {
+      "sample_id": 7697,
+      "model": "thinking",
+      "gold_answer": "No",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤分析了标题内容、任务要求并得出结论，逻辑清晰但有少量重复解释，不够极致紧凑。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对标题含义的理解准确，没有捏造额外信息，仅指出其是关于历史表现的概述，没有具体下跌表述。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确判断答案为No，并给出与任务高度相关的理由，分析到位但不算有特别深的洞察。"
+      }
+    },
+    {
+      "sample_id": 7697,
+      "model": "instruct_v6",
+      "gold_answer": "No",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "步骤分明，围绕题目要求逐步判断，没有矛盾，虽略有重复解释但整体清晰。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对标题内容和任务要求的理解准确，没有捏造额外信息，只是合理推断其为历史表现分析。",
+        "execution_precision": 4,
+        "execution_precision_reason": "抓住未体现‘下跌方向’这一关键点，给出正确答案No，理由与任务标准匹配。"
+      }
+    },
+    {
+      "sample_id": 19223,
+      "model": "thinking",
+      "gold_answer": "No",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "逐步分析标题内容、是否涉及其他资产以及与问题标准的匹配，推理清晰，无明显跳跃，仅有少量表述冗余。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原始标题的内容和含义描述准确，没有引入不存在的信息或曲解含义。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确识别该标题只是在时间维度上比较金价自身水平，不涉及其他资产，对应给出正确答案No。"
+      }
+    },
+    {
+      "sample_id": 19223,
+      "model": "instruct_v6",
+      "gold_answer": "No",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤分析标题内容、传递信息、对照标准并给出结论，结构清晰，无明显跳跃，仅有轻微赘述。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对标题内容的描述准确，没有引入原文之外的事实或曲解含义。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确识别未涉及与其他资产的比较，最终答案为No，并给出简洁且相关的理由。"
+      }
+    },
+    {
+      "sample_id": 10138,
+      "model": "thinking",
+      "gold_answer": "Yes",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "分步分析标题释义和任务要求，推理链条清晰，没有前后矛盾，仅有少量重复和冗长说明。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对标题中“gold pares gains”“dollar bounces off session lows”的含义解释准确，无捏造或曲解，仅将‘gains’理解为既往涨幅，符合常规解读。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确给出最终答案“Yes”，并将“pares gains”与过去价格变动关联，理由与问题重点匹配，但分析略显啰嗦，未达到极高精度深度。"
+      }
+    },
+    {
+      "sample_id": 10138,
+      "model": "instruct_v6",
+      "gold_answer": "Yes",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "分步骤分析清晰，推理链条完整，没有明显前后矛盾，仅在对任务标准的理解上有偏差。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对标题含义的解释基本忠实，正确理解了“pares gains”“bounces off session lows”等表述含义，没有捏造事实。",
+        "execution_precision": 3,
+        "execution_precision_reason": "虽然对语义理解合理，但将“pares gains”不视为对既往价格变动的引用，导致与标注标准不符，结论错误；在答错前提下理由尚有道理，给3分上限。"
+      }
+    },
+    {
+      "sample_id": 16540,
+      "model": "thinking",
+      "gold_answer": "No",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 3,
+        "logical_coherence_reason": "推理步骤基本正确，但有较多与任务无关的揣测和背景扩展，存在明显冗余，故不高于3分。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对标题内容的理解准确，没有捏造额外事实，但对FutureNews概念稍作主观延展解释，不能给到满分。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确判断为没有未来事件引用，答案为No，理由也切中要点，但分析不够精炼深入，达不到5分标准。"
+      }
+    },
+    {
+      "sample_id": 16540,
+      "model": "instruct_v6",
+      "gold_answer": "No",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤逐条分析，论证清晰无矛盾，仅有少量重复说明但不影响整体连贯性。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对标题内容和任务要求的转述准确，没有捏造或曲解信息。",
+        "execution_precision": 2,
+        "execution_precision_reason": "虽然推理过程合理且最终答案是“No”，但在元任务中被标注为答错，说明对任务判定标准存在偏差，只能给出中等偏上的执行分。"
+      }
+    },
+    {
+      "sample_id": 11166,
+      "model": "thinking",
+      "gold_answer": "Yes",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "逐步分析了标题含义和时态，推理链条清晰，无明显矛盾，仅有些重复强调未来属性的轻微冗余。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对标题内容和含义的解读准确，没有捏造信息或曲解原文，只是在任务标签标准上产生误判。",
+        "execution_precision": 3,
+        "execution_precision_reason": "从时态角度推理得出‘非过去新闻’在一般语义上有道理，但与该任务的预期标注不符，最终分类错误，因此在答错前提下给到最高3分。"
+      }
+    },
+    {
+      "sample_id": 11166,
+      "model": "instruct_v6",
+      "gold_answer": "Yes",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "分步推理清晰、一致，从主题到是否属于过去新闻的判断都有因果衔接，无明显矛盾，仅属于常规分析水平。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对标题内容的描述准确，没有添加不存在的信息或曲解含义，忠实反映了标题的前瞻性与建议性质。",
+        "execution_precision": 3,
+        "execution_precision_reason": "虽然对‘PastNews’的理解和论证过程有一定道理，但与标注答案相反，最终结论错误，按规则错误答案执行精度最高3分。"
+      }
+    },
+    {
+      "sample_id": 18980,
+      "model": "thinking",
+      "gold_answer": "Yes",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "步骤清晰，从文本到问题再到结论，论证顺畅，但有少量重复和冗余解释，难达满分。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对标题内容和问题要求的理解准确，没有引入额外事实或歪曲含义，但没有达到逐字级精细引用的程度。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确识别到金价与银价走势形成资产比较，最终答案为Yes且理由切中要点，深度尚算充分但不算特别深入。"
+      }
+    },
+    {
+      "sample_id": 18980,
+      "model": "instruct_v6",
+      "gold_answer": "Yes",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "分步推理清晰，先解释标题含义，再讨论信息内容，最后据此判断，逻辑顺畅且无明显自相矛盾。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对标题内容的解读准确，没有捏造额外信息；唯一的问题在于对任务中“资产比较”含义的理解偏窄，但对原文本身没有事实性错误。",
+        "execution_precision": 3,
+        "execution_precision_reason": "虽然论证过程有道理，但把资产比较限定为跨资产类别导致与标注标准不符，最终答案错误，只能给错题情况下的最高分。"
+      }
+    },
+    {
+      "sample_id": 8485,
+      "model": "thinking",
+      "gold_answer": "No",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤分析了标题内容、时间指向与任务要求，推理顺畅且结论合理，但存在少量赘述，未做到极度精炼严密。",
+        "factual_fidelity": 5,
+        "factual_fidelity_reason": "对标题含义、时态及Q3作为过去季度的解读准确，无新增或篡改信息。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确识别为非未来事件新闻，明确指出没有未来指向，理由与任务要求紧密对应。深度尚可但不算特别深入。"
+      }
+    },
+    {
+      "sample_id": 8485,
+      "model": "instruct_v6",
+      "gold_answer": "No",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤逐条分析，论证清晰，无前后矛盾，仅有少量重复解释但不影响整体逻辑。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对标题内容的描述准确，没有编造信息，仅对同比等作了合理推测但未影响结论。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确识别这是关于过去Q3需求下滑的新闻，不涉及未来事件，最终答案为No且理由到位。"
+      }
+    },
+    {
+      "sample_id": 7592,
+      "model": "thinking",
+      "gold_answer": "No",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 3,
+        "logical_coherence_reason": "有清晰的逐步分析并得出正确结论，但在是否要求精确字符串“FuturePrice”还是概念上反复纠结，存在明显冗余和不必要的自我质疑，逻辑略显拖沓。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对标题内容的引用准确，正确识别“dec. gold”为12月黄金期货合约的常见写法，没有捏造额外信息，仅对任务定义的理解有些主观猜测但未歪曲原文。",
+        "execution_precision": 4,
+        "execution_precision_reason": "最终答案为“No”，与标准答案一致，且理由抓住标题未明确提及未来价格/‘FuturePrice’这一核心点，只是分析略显啰嗦但不影响正确性。"
+      }
+    },
+    {
+      "sample_id": 7592,
+      "model": "instruct_v6",
+      "gold_answer": "No",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "分步骤说明清晰，先解释标题含义，再判断与任务标准的匹配，结论一致，仅存在对任务中“FuturePrice”一词过度字面理解的轻微冗余解释。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对标题内容和期货合约背景的描述准确无误，没有捏造或曲解原文信息。",
+        "execution_precision": 4,
+        "execution_precision_reason": "最终答案为No，与标准答案一致，理由也围绕是否提及未来价格展开，抓住了关键信息。整体执行准确到位。"
+      }
+    },
+    {
+      "sample_id": 8618,
+      "model": "thinking",
+      "gold_answer": "No",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 3,
+        "logical_coherence_reason": "推理步骤基本清晰，但有较多与任务无关的扩展性说明和背景解释，存在一定冗余。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对标题内容和含义的解读准确，没有捏造或曲解信息，但有些关于“用户意图测试模型能力”的揣测属于多余推断。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确识别出标题中没有涉及未来金价，给出正确答案“No”，理由也抓住了未出现预测或未来价格表述这一关键点。"
+      }
+    },
+    {
+      "sample_id": 8618,
+      "model": "instruct_v6",
+      "gold_answer": "No",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤分析了标题内容、信息含义与任务标准，推理顺畅且结论对应前面分析，仅有轻微重复说明。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对标题内容的解读准确，没有捏造额外事实，示例中的未来价格描述是为说明概念，不是对原文的误述。",
+        "execution_precision": 2,
+        "execution_precision_reason": "推理过程正确指出标题没有提到未来价格，但最终在“模型是否答对=否”的前提下应识别该输出为错误，因此在执行任务判定上未与标准答案对齐。"
+      }
+    },
+    {
+      "sample_id": 12590,
+      "model": "thinking",
+      "gold_answer": "Yes",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "推理步骤清晰，从标题内容到是否构成资产比较的判断过程连贯，没有明显跳跃，但整体较简单，未达到极其严密程度。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对标题中金价上升和银价下跌的描述准确，没有捏造或歪曲信息。",
+        "execution_precision": 4,
+        "execution_precision_reason": "识别到金与银作为不同资产且同句对比其价格走势，结论为‘Yes’，与标准答案一致，理由也与任务要求高度相关。"
+      }
+    },
+    {
+      "sample_id": 12590,
+      "model": "instruct_v6",
+      "gold_answer": "Yes",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "分步推理清晰，前后自洽，没有明显矛盾或跳跃，论证结构完整，但对任务定义的理解有偏差。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对标题内容（金价小涨、银价下跌）和报道信息的描述基本准确，没有捏造事实，仅对‘资产类别’的解读偏狭但不涉及原文事实错误。",
+        "execution_precision": 3,
+        "execution_precision_reason": "答案与标准答案不一致，把金与银的比较排除在资产比较之外，误解了任务对‘Asset Comparison’的范畴，但推理与问题仍有一定相关性。"
+      }
+    },
+    {
+      "sample_id": 7986,
+      "model": "thinking",
+      "gold_answer": "No",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 3,
+        "logical_coherence_reason": "整体推理顺序基本合理，但在“Direction Constant”含义上自相矛盾：一方面将其等同于稳定，另一方面又承认连续两天同方向上涨是“consistent direction”，却仍用“因此不是Direction Constant”做结论，有一定混乱与冗余。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对标题内容的解读是准确的，没有捏造事实：识别出黄金连续两天上涨，以及美元暂停上涨，与原文一致。",
+        "execution_precision": 4,
+        "execution_precision_reason": "最终答案为“No”，与标准答案一致，理由围绕“上涨不等于稳定”这一核心点展开，抓住了主要矛盾，但对任务中“Direction Constant”的概念理解存在混用和不够精确，略影响执行质量。"
+      }
+    },
+    {
+      "sample_id": 7986,
+      "model": "instruct_v6",
+      "gold_answer": "No",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "分步推理结构清晰，前后衔接合理，但将‘两天上涨’直接等同于方向常数，有一定逻辑跳跃，难达满分。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对标题内容的转述和对金价与美元关系的说明基本准确，没有捏造事实，但对“Direction Constant”含义的理解带入了主观延伸。",
+        "execution_precision": 3,
+        "execution_precision_reason": "最终答案与标准答案相反，但理由至少紧扣标题与价格方向的一致性，属于有一定道理的错误，按规则答错最高给3分。"
+      }
+    },
+    {
+      "sample_id": 16957,
+      "model": "thinking",
+      "gold_answer": "No",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "分步分析标题含义，解释‘end lower’与‘record high’的关系，推理链条清晰但有少量重复论述，略显冗长，故不满分。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对标题内容的理解准确，没有杜撰信息或曲解含义，说明当日创高后收低，表述与原文一致。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确抓住‘end lower’作为方向判断核心，最终答案为No，与标准答案一致，理由围绕是否体现“方向向上”展开，较为充分。"
+      }
+    },
+    {
+      "sample_id": 16957,
+      "model": "instruct_v6",
+      "gold_answer": "No",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "分步推理清晰，一致地从标题内容推到结论，没有明显自相矛盾，但对任务标准理解有偏差。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对标题中“end lower”和“hit record high”的事实解读准确，没有捏造额外信息，仅有对含义的主观解读偏差。",
+        "execution_precision": 3,
+        "execution_precision_reason": "虽然分析了创历史新高体现上涨动能，但忽略了任务更关注收盘方向这一关键信息，最终结论与标准答案相反，属于有一定道理但答案错误。"
+      }
+    },
+    {
+      "sample_id": 16704,
+      "model": "thinking",
+      "gold_answer": "Yes",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按照题目要求分步解释了标题内容与问题之间的关系，推理顺畅但略有冗余。",
+        "factual_fidelity": 5,
+        "factual_fidelity_reason": "对标题中出现的“gold rate per gram”“current gold price per gram”的引用准确，没有曲解或遗漏关键信息。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确判断标题确实在谈黄金价格，并给出正确答案Yes，理由直接抓住“gold price”等核心词。"
+      }
+    },
+    {
+      "sample_id": 16704,
+      "model": "instruct_v6",
+      "gold_answer": "Yes",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤回答，论证清晰、顺序合理，无矛盾，仅有轻微重复说明。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "准确引用并解释了标题内容，没有歪曲或遗漏关键信息。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确判断标题提到了黄金价格，并抓住了“gold price per gram”等关键表述，理由充分但不算特别深入。"
+      }
+    },
+    {
+      "sample_id": 18241,
+      "model": "thinking",
+      "gold_answer": "No",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 3,
+        "logical_coherence_reason": "步骤基本清晰，从问题到结论推理顺畅，但有较多重复解释“FutureNews”含义和未来事件概念的冗余表述，不够精炼。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对标题内容解释准确，没有捏造信息，也正确指出“June gold”是期货合约价格描述，仅略有对用户术语“FutureNews”含义的自行延伸解释。",
+        "execution_precision": 4,
+        "execution_precision_reason": "抓住核心——标题只报告当前价格变动，没有涉及未来事件，得出“No”的正确结论，理由与问题高度相关且充分。"
+      }
+    },
+    {
+      "sample_id": 18241,
+      "model": "instruct_v6",
+      "gold_answer": "No",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "分步结构清晰，论证链条完整，从标题内容到结论都有解释，虽有些延展但无明显跳跃或自相矛盾。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对标题内容的复述基本准确，正确指出是6月黄金合约价格变动，没有捏造额外数字或事件，仅将“期货合约代表未来交割”这种一般性知识引入分析，可视为轻微延伸但不算曲解原文。",
+        "execution_precision": 3,
+        "execution_precision_reason": "任务要求判断是否存在关于未来事件的新闻，该标题只是当前价格变动描述，并非未来事件预期；模型将“期货合约本质上与未来交割相关”误等同于FutureNews，导致最终结论与标准答案不符，但理由与任务仍有一定关联。"
+      }
+    },
+    {
+      "sample_id": 3008,
+      "model": "thinking",
+      "gold_answer": "Yes",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "分步拆解了标题含义，从“trims losses”推演其含义，论证当前方向并非继续下跌，逻辑基本连贯，没有明显自相矛盾，但对任务判定标准的理解存在偏差。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对标题中“gold trims losses on inflationary concerns”的解释是主流金融语境下的正常理解，没有捏造额外信息，但将“trims losses”与是否包含下跌相关的事实边界处理上稍有偏差。",
+        "execution_precision": 3,
+        "execution_precision_reason": "任务要求只要有下跌方向的迹象即可判断为Yes，正确答案为Yes，但模型将“trims losses”解读为不再是下跌方向而给出No，答案错误但论证过程与文本仍有一定关联。"
+      }
+    },
+    {
+      "sample_id": 3008,
+      "model": "instruct_v6",
+      "gold_answer": "Yes",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤分析清晰，论证自洽，没有明显矛盾或跳跃，但略有重复阐释含义，未达到极致严密。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对标题内容和“trims losses”含义的解释基本准确，没有捏造信息；将其理解为亏损收窄、部分反弹是合理的。",
+        "execution_precision": 3,
+        "execution_precision_reason": "虽然对语义分析有一定道理，但任务标准下只要体现曾有下跌即应判为Direction Down，最终结论与标准答案相反，属于答案错误但推理相关。"
+      }
+    },
+    {
+      "sample_id": 4422,
+      "model": "thinking",
+      "gold_answer": "No",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "分步解析标题含义、解释“gain”表示上涨、据此推断不是稳定价格，逻辑清晰但对“Direction Constant”概念的讨论略显冗长和重复，难达满分严密标准。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对标题内容的转述准确，没有虚构事实；对“Direction Constant”不是标准术语的说明属于合理背景判断，没有歪曲原文，但存在少量超出题目所需的延展解释，保守给4分。",
+        "execution_precision": 4,
+        "execution_precision_reason": "最终回答为“No”，与标准答案一致，并且正确抓住“gain”与“稳定/constant”相矛盾这一关键点，理由充分清楚，但分析不算特别深刻到有独到洞见的程度。"
+      }
+    },
+    {
+      "sample_id": 4422,
+      "model": "instruct_v6",
+      "gold_answer": "No",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤解析标题、含义和标准，推理清晰无矛盾，仅有少量重复阐述但不影响整体连贯。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对标题内容的描述准确，没有捏造信息或曲解含义，推断含义均源自原文表述。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确判断该标题描述的是金价上涨而非稳定，最终答案为No，理由围绕‘gain’与稳定性的对立，切中要点。"
+      }
+    },
+    {
+      "sample_id": 2559,
+      "model": "thinking",
+      "gold_answer": "No",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "从定义出发，识别到“gains”表示上涨，推导出不稳定，结论为No，推理链条清晰无矛盾，仅有少量复述。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对标题关键信息“modest early gains”理解准确，没有编造或曲解原文含义。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确识别非“Direction Constant”，明确指出上涨方向并给出正确答案No，理由抓住要点但分析深度一般。"
+      }
+    },
+    {
+      "sample_id": 2559,
+      "model": "instruct_v6",
+      "gold_answer": "No",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "分步清晰，论证从含义到结论有因果衔接，无明显跳跃，但对“Direction Constant”的解释有轻微重复阐述。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对标题中“modest early gains”“investors eye greece bailout”等信息的引用准确，无捏造或曲解。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确识别到“modest gains”代表价格上升方向而非稳定，结论为No，与标准答案一致，理由也围绕方向性与稳定性展开，较为充分。"
+      }
+    },
+    {
+      "sample_id": 10444,
+      "model": "thinking",
+      "gold_answer": "Yes",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 3,
+        "logical_coherence_reason": "有分步分析和因果链条，但对是否需要‘可识别的具体过去价格数值’存在不必要的纠结和往返论证，略显啰嗦与重复。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对标题内容的解析基本准确，正确提取了“down 5.5%”和“at $13.21”，未捏造额外事实，仅对“gold banc”是否是拼写错误做了轻度猜测但未据此得出错误事实结论。",
+        "execution_precision": 4,
+        "execution_precision_reason": "最终答案为“Yes”，与标准答案一致，理由是通过‘down 5.5%’为相对过去价格的表述来判断引用了PastPrice，抓住了任务重点，但分析有点冗长，未体现特别深刻洞察。"
+      }
+    },
+    {
+      "sample_id": 10444,
+      "model": "instruct_v6",
+      "gold_answer": "Yes",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤分析，论证链条清晰、结构合理，没有明显自相矛盾或跳跃，但对题目标注PastPrice的标准存在理解偏差。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对标题内容的引用准确，没有编造额外数字或事实，但将“gold banc”为公司这一点属于推断而非原文明示，略有超出原文之嫌。",
+        "execution_precision": 3,
+        "execution_precision_reason": "虽有一定道理地解释当前价与过去价的区别，但未领会该任务将此类价格视为PastPrice的标注标准，最终结论与标准答案不符，按规则答错最高给3分。"
+      }
+    },
+    {
+      "sample_id": 18125,
+      "model": "thinking",
+      "gold_answer": "No",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "推理步骤清晰，从是否有其他资产入手判断是否为比较，论证结构合理但有少量重复表述，故不满分。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对标题内容的描述准确，没有捏造额外信息或曲解含义。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确识别为非资产比较类标题，理由紧扣是否出现其他资产或对比关系，结论正确且解释到位。"
+      }
+    },
+    {
+      "sample_id": 18125,
+      "model": "instruct_v6",
+      "gold_answer": "No",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按要求分步分析，论证结构清晰、无前后矛盾，仅有少量解释性赘述。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对标题含义的解读准确，没有添加原文以外的事实或曲解含义。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确识别出标题仅涉及黄金期货自身表现而无资产对比，结论No正确且理由到位。"
+      }
+    },
+    {
+      "sample_id": 19024,
+      "model": "thinking",
+      "gold_answer": "No",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤辨析是否有未来指向，论证过程清晰，因果关系合理，仅有少量重复解释，未达满分严谨度。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对标题内容和含义的转述准确，没有捏造信息或曲解，仅对“FutureNews”含义作了轻微推断但不影响事实忠实度。",
+        "execution_precision": 4,
+        "execution_precision_reason": "识别到标题是对既往数据和当前市场反应的描述而非未来事件，结论为“No”且理由到位，抓住了是否有未来指向这一核心。"
+      }
+    },
+    {
+      "sample_id": 19024,
+      "model": "instruct_v6",
+      "gold_answer": "No",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "分步清晰，解释了标题含义、所传递信息以及为何不属于未来事件判断，基本无逻辑跳跃，仅有少量背景延伸略显冗余。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对标题内容和语义的描述准确，没有捏造额外事实；提及工厂订单数据与经济强弱关系是合理背景解释，无明显曲解。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确判断答案为No，并明确指出这是对当前/既往数据的反应而非未来事件，理由到位但分析深度属正常水平。"
+      }
+    },
+    {
+      "sample_id": 2128,
+      "model": "thinking",
+      "gold_answer": "Yes",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 3,
+        "logical_coherence_reason": "推理过程极其冗长、反复多次来回确认“是否算引用过去价格”，存在大量重复论述，虽无明显自相矛盾但不够简洁集中，因此只能给到一般水平。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对标题内容的解析（结算价、涨幅等）是准确的，没有捏造事实，但把“涨幅”视作对过去价格的引用略带主观延伸，故略低于满分。",
+        "execution_precision": 4,
+        "execution_precision_reason": "最终答案为 Yes，与标准答案一致，且理由与金融报道语境相关、能支撑结论，但分析不够干净利落，缺乏更精炼的要点提炼。"
+      }
+    },
+    {
+      "sample_id": 2128,
+      "model": "instruct_v6",
+      "gold_answer": "Yes",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "分步推理清晰、有条理，结论与前面分析一致，但对是否需要“可推导出的过去价格”略有延展，略显冗余，未完全聚焦于任务定义。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对标题中的价格和涨幅数字引用准确，计算前一价格也正确，没有歪曲原文含义，但“可以计算得到的过去价格”并非原文明示信息，属于轻微延伸。",
+        "execution_precision": 4,
+        "execution_precision_reason": "最终分类答案为 Yes，与标准答案一致，理由基于涨幅信息可推导出过去价格，抓住了要点，分析较充分但不算特别深刻。"
+      }
+    },
+    {
+      "sample_id": 20178,
+      "model": "thinking",
+      "gold_answer": "Yes",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 3,
+        "logical_coherence_reason": "推理过程基本通顺，但多次重复同样的结论和疑惑，对问题表述的反复咀嚼属于冗余废话，结构略显啰嗦。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对标题内容的引用和解释准确，没有捏造事实或曲解原文，仅对题目措辞的讨论稍有主观揣测但不影响整体忠实度。",
+        "execution_precision": 4,
+        "execution_precision_reason": "最终答案为Yes，与标准答案一致，且理由抓住了“gold prices”及其下跌方向，说明能够从标题推断出金价相关信息，但分析不算特别深刻。"
+      }
+    },
+    {
+      "sample_id": 20178,
+      "model": "instruct_v6",
+      "gold_answer": "Yes",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "分步清晰，论证结构完整，没有明显前后矛盾，唯一问题是略有赘述但整体连贯。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对标题内容的描述基本准确，正确指出提到金价及其小幅下跌，没有捏造额外信息。",
+        "execution_precision": 3,
+        "execution_precision_reason": "最终结论与正确答案相反（其标准是不能仅以“价格变动”作为可推断具体价格的依据），尽管理由与标题有一定关联且有一定道理，但答案错误，按规则最高给3分。"
+      }
+    },
+    {
+      "sample_id": 18134,
+      "model": "thinking",
+      "gold_answer": "No",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "分步骤分析了标题内容、含义以及是否涉及与其他资产比较，推理顺畅且有示例对比，仅略有赘述，未达到极致严密。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对标题中的\"declines 0.4%\"和\"first monthly loss since May\"的理解准确，没有添加虚构信息或歪曲含义。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确判断为未涉及资产比较，并明确指出只是金价自身表现的描述，理由到位且抓住关键点。"
+      }
+    },
+    {
+      "sample_id": 18134,
+      "model": "instruct_v6",
+      "gold_answer": "No",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "分步回答清晰，逐步从标题内容到是否存在资产比较的结论，结构合理，无明显跳跃，但论述略有重复，达不到满分严谨程度。",
+        "factual_fidelity": 5,
+        "factual_fidelity_reason": "对标题内容的重述与解读完全符合原文，没有添加或歪曲任何信息。",
+        "execution_precision": 4,
+        "execution_precision_reason": "准确识别出标题只描述黄金自身表现，没有与其他资产比较，最终答案为No，与标准答案一致，理由也抓住了比较这一关键点。"
+      }
+    },
+    {
+      "sample_id": 20311,
+      "model": "thinking",
+      "gold_answer": "No",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 3,
+        "logical_coherence_reason": "推理基本顺畅，但有较多与任务无关的自我揣测和废话，没有严格按用户给的1-4步骤结构化说明，因此只能给一般水平分数。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对标题内容的理解准确，没有捏造额外事实，只是对“FutureNews”概念做了些主观解释但未影响事实判断。",
+        "execution_precision": 4,
+        "execution_precision_reason": "最终答案为No，与标准答案一致，说明抓住了标题并未提及未来事件或期货信息这一重点，但理由不算特别深入或精炼。"
+      }
+    },
+    {
+      "sample_id": 20311,
+      "model": "instruct_v6",
+      "gold_answer": "No",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤逐条对应任务要求，论证结构清晰，没有跳跃，但有少量重复阐述当前 vs 未来信息，略显冗余，故不满分。",
+        "factual_fidelity": 5,
+        "factual_fidelity_reason": "对标题内容和其仅描述当前金价状态的性质描述准确，无添加或曲解。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确判断答案为No，并给出与任务标准直接相关的解释，理由到位但分析深度属常规水平。"
+      }
+    },
+    {
+      "sample_id": 15581,
+      "model": "thinking",
+      "gold_answer": "No",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤识别“ends up 0.8%”含义并与是否为下跌方向进行对比，推理清晰无矛盾，但结构略显简单，未完全显式对应用户给出的四步格式。",
+        "factual_fidelity": 5,
+        "factual_fidelity_reason": "对标题中“ends up 0.8% at $934.90 an ounce”的理解准确，无新增或歪曲信息。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确判断为无下跌方向信号，给出答案“No”，理由直接基于上涨0.8%的关键信息，表达充分但不算特别深入。"
+      }
+    },
+    {
+      "sample_id": 15581,
+      "model": "instruct_v6",
+      "gold_answer": "No",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤完成了分析，层次清晰、因果关系明确，无明显跳跃，仅有少量与问题结构重复的表述。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对标题内容的理解准确，正确解读了“ends up 0.8%”为上涨0.8%，无事实性错误。",
+        "execution_precision": 4,
+        "execution_precision_reason": "准确抓住“Direction Down”与价格上涨之间的矛盾，给出正确结论No，理由直接且围绕关键信息展开。"
+      }
+    },
+    {
+      "sample_id": 13150,
+      "model": "thinking",
+      "gold_answer": "Yes",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤解析标题关键词并推导结论，结构清晰，但有轻微重复描述，不算严密到极致。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原文关键信息“rises more than 1%”和“hit 3-week high”的引用准确，仅对美联储前景支持做了轻微背景解释，但未偏离原意。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确识别出标题明确指示金价上涨并给出“Yes”，理由紧扣上涨表述，执行到位但并无特别深入或独到分析。"
+      }
+    },
+    {
+      "sample_id": 13150,
+      "model": "instruct_v6",
+      "gold_answer": "Yes",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤回答，层次清晰，没有前后矛盾，只是略有重复说明上涨含义，非完全严密所以不给满分。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对标题内容的引用准确，未篡改信息，仅补充了Fed前景支持金价这一因果，属于合理解释，无事实性错误。",
+        "execution_precision": 4,
+        "execution_precision_reason": "准确识别到“rises more than 1%”“3-week high”指向金价上涨，最终答案为Yes，理由抓住关键信息且较充分。"
+      }
+    },
+    {
+      "sample_id": 8811,
+      "model": "thinking",
+      "gold_answer": "Yes",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 3,
+        "logical_coherence_reason": "按步骤拆解了标题含义，论证“slide”代表价格下跌，整体思路通顺但有大量重复、反复强调同一点，存在明显冗余。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对标题内容的解释准确，没有杜撰信息，将“slide”解释为价格下跌符合金融语境，但在是否等同于“提到价格”上有一些主观延展，难达满分严谨度。",
+        "execution_precision": 4,
+        "execution_precision_reason": "最终结论为“Yes”，与标准答案一致，抓住了价格变动这一关键信息，但理由可以更简洁聚焦，因此不给满分。"
+      }
+    },
+    {
+      "sample_id": 8811,
+      "model": "instruct_v6",
+      "gold_answer": "Yes",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "分步推理清晰，先界定主题，再区分价格走势与具体数值，逻辑结构完整且无自相矛盾，仅在对题目标准的理解上有偏差。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对标题内容的描述基本准确，正确指出是金银价格下跌、没有给出具体数值，没有捏造额外信息。",
+        "execution_precision": 3,
+        "execution_precision_reason": "虽然推理过程自洽，但误解了任务中“是否有价格”的判定标准，将非数值的价格变动视为无价格信息，导致最终答案与标准答案不符；在答错前提下给到最高3分。"
+      }
+    },
+    {
+      "sample_id": 19948,
+      "model": "thinking",
+      "gold_answer": "Yes",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 3,
+        "logical_coherence_reason": "有清晰分解和逐步推理，但论证反复、多次重复同一观点，存在明显冗余，未做到简洁紧凑，因此不超过3分。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对标题内容的拆解和含义理解基本准确，没有捏造额外事实，但对问题中PastPrice概念是否隐含比较略有揣测成分，略超出字面，但不构成严重曲解。",
+        "execution_precision": 4,
+        "execution_precision_reason": "最终答案为Yes，与标准答案一致，理由围绕“higher gold”隐含与过去价格比较展开，抓住了关键点，但分析不够凝练、略显拖沓，未达到最佳水准。"
+      }
+    },
+    {
+      "sample_id": 19948,
+      "model": "instruct_v6",
+      "gold_answer": "Yes",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "逐步分析了标题内容、含义及与问题标准的匹配，结构清晰，结论与论据一致，仅在对任务标准的理解上有偏差。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对标题含义的解释基本准确，未引入原文不存在的信息，仅将“higher gold”理解为当前上涨略有偏差，但无实质性捏造。",
+        "execution_precision": 3,
+        "execution_precision_reason": "任务要求将“higher gold”视为涉及过去价格的比较，应答应为Yes，但模型给出No。理由与文本相关、有一定道理，但最终分类错误，按规则答错最高3分。"
+      }
+    },
+    {
+      "sample_id": 620,
+      "model": "thinking",
+      "gold_answer": "No",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤拆解标题、判断是否有比较对象，推理清晰且无矛盾，仅略有赘述。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对标题内容的描述准确，没有添加不存在的信息或曲解含义。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确判断为不存在资产比较，理由抓住了是否有其他资产被提及这一关键点。"
+      }
+    },
+    {
+      "sample_id": 620,
+      "model": "instruct_v6",
+      "gold_answer": "No",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "分步清晰，从主题识别到结论推导顺畅，无逻辑跳跃，仅有少量重复解释。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对标题内容的描述和对“资产比较”含义的解释均与原文和任务说明一致，无事实性错误。",
+        "execution_precision": 4,
+        "execution_precision_reason": "准确判断为没有资产比较，理由紧扣是否出现其他资产并进行对比，抓住了关键判断标准。"
+      }
+    },
+    {
+      "sample_id": 13295,
+      "model": "thinking",
+      "gold_answer": "No",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "推理步骤清晰，先区分需求和价格，再回到题目要求判断，结论一致；有少量重复强调导致略显冗余，不能给满分。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "准确引用了标题中的关键信息：全球黄金需求下降9%，且正确指出标题没有提到价格；无事实性错误。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确识别任务是判断是否涉及金价下跌，区分了需求下滑与价格变动，最终答案为No，与标准答案一致，理由也直接相关且充分。"
+      }
+    },
+    {
+      "sample_id": 13295,
+      "model": "instruct_v6",
+      "gold_answer": "No",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "步骤清晰，按要求依次分析，没有前后矛盾，但将“需求下降”直接等同于满足任务标准存在轻微逻辑跳跃。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对标题内容的引用准确，未捏造数字或事件，仅增加了一般性的经济学推论，但未曲解原文事实。",
+        "execution_precision": 3,
+        "execution_precision_reason": "能够识别是黄金需求下降并基于供需逻辑推断价格方向，但任务标准要求是否讨论金价方向，最终将需求变化当作价格方向信号，结论为错误，只能给到最高3分。"
+      }
+    },
+    {
+      "sample_id": 2799,
+      "model": "thinking",
+      "gold_answer": "Yes",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 3,
+        "logical_coherence_reason": "有清晰的分解和结论，但论证极度重复、来回犹豫多次，在是否需要数值价格的问题上反复纠结，存在大量冗余和啰嗦，影响整体连贯性。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对标题内容和任务说明的引用基本准确，没有捏造事实，仅对任务标准的理解有些主观揣测，但未歪曲原文含义。",
+        "execution_precision": 4,
+        "execution_precision_reason": "最终答案为“Yes”，与标准答案一致，且理由能够抓住‘extend losses’代表价格变动的信息点，但分析不够简练有力。"
+      }
+    },
+    {
+      "sample_id": 2799,
+      "model": "instruct_v6",
+      "gold_answer": "Yes",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤拆解任务，论证方向明确，从主题到信息再到是否满足标准，结构清晰无明显矛盾，仅对题目中“Price”含义的理解略有主观收紧。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对标题内容的描述基本准确，没有捏造信息；只是对题目中“提供价格信息”的定义理解偏窄，但未曲解原始文本本身。",
+        "execution_precision": 3,
+        "execution_precision_reason": "能抓住标题涉及金价走势的信息，并据此做出有理由的判断，但任务标准将价格走势也视为价格信息，最终结论与正确答案不一致，只能给到答错情形下的最高分3分。"
+      }
+    },
+    {
+      "sample_id": 1525,
+      "model": "thinking",
+      "gold_answer": "Yes",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 3,
+        "logical_coherence_reason": "有分步分析，论证基本连贯，但重复论述多次、来回强调同一点，存在明显赘述，未做到紧凑清晰。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对标题的拆解和含义把握准确，没有捏造额外事实；将“settle lower”解释为相对前一交易日结算价的比较是合理推断。",
+        "execution_precision": 4,
+        "execution_precision_reason": "抓住了与前一交易日价格比较这一核心点，判断为涉及PastPrice，最终答案与标准答案一致，理由也与任务要求相关，但分析深度一般，未体现特别精炼或独到洞察。"
+      }
+    },
+    {
+      "sample_id": 1525,
+      "model": "instruct_v6",
+      "gold_answer": "Yes",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "分步分析清晰、有条理，能从题意出发阐述自己的标准，没有前后矛盾，仅在对PastPrice概念理解上有偏差。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对标题内容的描述准确，没有捏造额外信息，但对任务中PastPrice的定义理解不完全到位，认为需要具体价格水平。",
+        "execution_precision": 3,
+        "execution_precision_reason": "最终答案与标准答案相反，尽管理由与文本相关且有一定道理，但因判定错误，按规则执行精度不得高于3分。"
+      }
+    },
+    {
+      "sample_id": 8822,
+      "model": "thinking",
+      "gold_answer": "No",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 3,
+        "logical_coherence_reason": "有分步推理，前后基本连贯，但在是否允许用“下调预测”来推断“价格方向下行”上反复摇摆，最后结论与任务标准不一致，存在逻辑偏差和冗余论述。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对标题含义的解读是准确的：德银下调了对黄金和白银的价格预测；无虚构信息或事实错误。",
+        "execution_precision": 3,
+        "execution_precision_reason": "将下调预测等同于明确的价格下行方向判断，未符合该任务对‘Direction Down’的严格标准，最终答案与标准答案不符，但理由与文本尚有一定关联。"
+      }
+    },
+    {
+      "sample_id": 8822,
+      "model": "instruct_v6",
+      "gold_answer": "No",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "分步结构清晰，论证从标题含义到与问题标准的关系基本连贯，没有明显自相矛盾，只是在‘预期下调=价格在下降’上有逻辑外推，但仍属一致推理。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对标题内容的转述准确，正确理解为德银下调对黄金/白银2013年的预测，没有添加额外事实或歪曲原文含义，只是对含义有主观解读但不构成事实错误。",
+        "execution_precision": 3,
+        "execution_precision_reason": "能够抓住‘cut forecast’与看空预期的关系，理由与问题相关，但忽略了题目要求的是“能否据此推断价格正在下跌”，将预期下调误判为价格方向已确定，最终结论与标准答案不符，属有一定道理但答错。"
+      }
+    },
+    {
+      "sample_id": 10236,
+      "model": "thinking",
+      "gold_answer": "No",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 3,
+        "logical_coherence_reason": "推理步骤基本清晰，但反复强调问题分两部分、稳定性只是背景等，有明显冗余和重复论述，未严格按用户列出的四步结构组织。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对标题内容的引用准确，无虚构信息或事实性错误；指出价格下跌0.4%且未提及Direction Constant，与原文一致。",
+        "execution_precision": 4,
+        "execution_precision_reason": "最终答案为“No”且理由围绕是否出现Direction Constant展开，抓住了任务重点，但解释略显啰嗦，未做到特别精炼深入。"
+      }
+    },
+    {
+      "sample_id": 10236,
+      "model": "instruct_v6",
+      "gold_answer": "No",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤分析，逻辑清晰、层次分明，没有前后矛盾，虽略有重复解释但不严重。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对标题中价格变动和百分比的引用准确，无捏造或曲解原文含义。",
+        "execution_precision": 4,
+        "execution_precision_reason": "准确理解问题要求，正确判断并给出“ No ”，理由紧扣是否提及价格稳定或方向常数。"
+      }
+    },
+    {
+      "sample_id": 20095,
+      "model": "thinking",
+      "gold_answer": "No",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 3,
+        "logical_coherence_reason": "有清晰的逐步分析，但夹杂大量与任务无关的元评论和猜测动机，冗余信息较多，因此不超过3分。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对标题内容的解读准确，没有虚构或曲解，仅补充了期货的背景解释，基本忠实于原文语义。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确识别未出现FutureNews并给出No，理由能支撑结论，但分析不够简洁有力，未体现更高层次洞察。"
+      }
+    },
+    {
+      "sample_id": 20095,
+      "model": "instruct_v6",
+      "gold_answer": "No",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "分步推理清晰、结构合理，没有明显前后矛盾，仅有些解释性扩展略显冗余。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对标题内容和含义的描述基本忠实，没有捏造事实，仅将gold futures解释为期货合约，属合理延伸。",
+        "execution_precision": 3,
+        "execution_precision_reason": "最终结论给出No，与正确答案一致，理由围绕是否为未来事件或FutureNews展开，相关但略有概念延伸，深度一般。"
+      }
+    }
+  ],
+  "metadata": {
+    "created": "2025-12-06T16:29:13.516616",
+    "last_updated": "2025-12-06T16:42:36.440303"
+  }
+}

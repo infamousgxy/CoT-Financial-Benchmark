@@ -1,0 +1,1131 @@
+{
+  "task": "fpb",
+  "version": "v2_strict",
+  "scores": [
+    {
+      "sample_id": 0,
+      "model": "thinking",
+      "gold_answer": "positive",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 3,
+        "logical_coherence_reason": "推理过程基本连贯，按步骤分析关键词、情感和结论，但有明显重复与冗余论述，且多次来回讨论正负中立可能性，结构略显拖沓，达不到高分要求。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原句中“expands”“long-established cooperation”等关键词的引用准确，没有捏造额外事实，但关于“在财经新闻中通常被视为正面”等属于一般性推断，非严格基于原文，略超出文本本身。",
+        "execution_precision": 4,
+        "execution_precision_reason": "最终情感判断为positive，与标准答案一致，能抓住“expands a long-established cooperation”为正面核心依据，论证较充分，但分析不够精炼和深刻，未达到‘独到洞察’水平。"
+      }
+    },
+    {
+      "sample_id": 0,
+      "model": "instruct_v6",
+      "gold_answer": "positive",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤提取关键词、逐条分析情感并汇总到整体判断，结构清晰无明显跳跃，推理链条连贯。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原句的引用和拆解准确，没有虚构内容或曲解，仅在语气判断上有轻微主观性但未偏离文本事实。",
+        "execution_precision": 3,
+        "execution_precision_reason": "识别到“expands a long-established cooperation”带有正面含义，但最终仍将整体情感判为中性，与标准答案不符，属于有一定道理但结论错误的情况。"
+      }
+    },
+    {
+      "sample_id": 388,
+      "model": "thinking",
+      "gold_answer": "negative",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 3,
+        "logical_coherence_reason": "有明确分步分析，结论一致，但存在明显重复和冗余论述，多次重复“delayed”为负面这一点，影响紧凑性。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原句关键词“delayed”“estimated to be completed in spring 2010”的引用和含义解释准确，无捏造或曲解。",
+        "execution_precision": 4,
+        "execution_precision_reason": "情感类别判断为negative，与标准答案一致，理由紧扣“delayed”这一负面事件，但分析不算深入，仅停留在表层含义。"
+      }
+    },
+    {
+      "sample_id": 388,
+      "model": "instruct_v6",
+      "gold_answer": "negative",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "分步清晰、有条理，论证“delay”负面、“completion time”中性，逻辑连贯但对情感判定标准的理解略有偏差，未算逻辑错误。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原句的拆解和引用准确，无捏造或事实错误，解释与文本内容一致。",
+        "execution_precision": 3,
+        "execution_precision_reason": "识别了“delayed”为负面因素，但将整体情感误判为中性，理由与金融语境有一定相关性但未抓住核心情绪倾向。"
+      }
+    },
+    {
+      "sample_id": 522,
+      "model": "thinking",
+      "gold_answer": "neutral",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 3,
+        "logical_coherence_reason": "推理步骤基本连贯，但有些重复和冗余描述（多次强调新闻稿中性、确认行为等），不够精炼，符合一般水平。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原文内容和语气的引用与解释准确，没有虚构事实，仅对乱码字符做了合理猜测，不影响核心信息。",
+        "execution_precision": 4,
+        "execution_precision_reason": "情感分类结果为neutral，与标准答案一致，理由能抓住没有情感色彩、只是交易确认这一关键点，但分析不算特别深入。"
+      }
+    },
+    {
+      "sample_id": 522,
+      "model": "instruct_v6",
+      "gold_answer": "neutral",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤识别关键词、分析情绪、再给结论，结构清晰，无明显前后矛盾，但有将“确认购买”直接等同积极情绪的轻微跳跃。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原文事件和措辞的引用基本准确，没有捏造事实，只是对“purchase confirmed”偏向性解读，属于轻微解释性偏差。",
+        "execution_precision": 3,
+        "execution_precision_reason": "文本整体语气客观中性，模型却判断为正面情绪，最终分类错误，但分析过程与文本相关且有一定道理。"
+      }
+    },
+    {
+      "sample_id": 396,
+      "model": "thinking",
+      "gold_answer": "neutral",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤识别情感词、判断为客观陈述并得出中性结论，结构清晰但存在少量重复说明，略显冗余，故不满分。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "准确复述了原句含义，没有引入不存在的信息或曲解语义，但未逐字对齐到每个细节，按标准给4分。",
+        "execution_precision": 4,
+        "execution_precision_reason": "情感分类为neutral，与标准答案一致，理由紧扣缺乏情感性词汇这一关键点，分析到位但不算特别深入。"
+      }
+    },
+    {
+      "sample_id": 396,
+      "model": "instruct_v6",
+      "gold_answer": "neutral",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤识别关键词、分析情感、给出结论，结构清晰无矛盾，仅有少量重复说明。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原句内容的引用和理解准确，没有添加不存在的事实或曲解含义。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确判断为中性情感，理由贴合文本，覆盖了岗位头衔和公司名称的中性特征。"
+      }
+    },
+    {
+      "sample_id": 529,
+      "model": "thinking",
+      "gold_answer": "neutral",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤识别关键词、分析情绪、结合财新闻境并得出结论，结构清晰，无明显跳跃，仅有少量背景性说明。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原句内容的转述准确，没有杜撰或曲解，仅补充了一点行业背景，不影响原文含义。",
+        "execution_precision": 4,
+        "execution_precision_reason": "识别到文本为客观陈述、无情绪词汇，且在财新闻境下判断为中性，结论正确且理由到位。"
+      }
+    },
+    {
+      "sample_id": 529,
+      "model": "instruct_v6",
+      "gold_answer": "neutral",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "步骤清晰，按要求分点分析，推理过程前后连贯，虽有将‘合同通常正面’直接推到情感分类的轻微跳跃，但整体无明显矛盾。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原句的关键词和含义引用准确，没有捏造额外事件或数字，但将中性陈述解读为‘积极发展’带有主观延伸，与原文客观语气略有出入。",
+        "execution_precision": 3,
+        "execution_precision_reason": "识别了句子为客观报事实质，但在金融情感分类任务中错误地选为positive而非neutral，理由与文本有一定关联但未遵循标准标签含义。"
+      }
+    },
+    {
+      "sample_id": 277,
+      "model": "thinking",
+      "gold_answer": "negative",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤识别关键词、分析情感、结合财务语境并得出结论，结构清晰但有少量重复和赘述，未达到严密无冗余的程度。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原句中“temporarily shut down”“extend the maintenance period”等措辞的引用准确，未添加虚构事实，仅轻微延伸到财务影响但未曲解原文。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确识别为负面情绪，理由围绕停产和延长维护对运营和财务的短期负面影响，抓住关键词，分析较充分但不算特别深入。"
+      }
+    },
+    {
+      "sample_id": 277,
+      "model": "instruct_v6",
+      "gold_answer": "negative",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤识别关键词、分析情绪、综合得出结论，结构清晰，没有明显前后矛盾，但对负面含义的权重判断略显牵强。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原文事件和措辞的引用基本准确，没有虚构信息，只对动机作了些推测性解释但未偏离文本事实。",
+        "execution_precision": 3,
+        "execution_precision_reason": "抓住了“temporarily shut down”“extend the maintenance period”等关键词，并给出与之相关的情绪分析，但最终情感归类为中性而非正确的负面，只能给到答错上限3分。"
+      }
+    },
+    {
+      "sample_id": 21,
+      "model": "thinking",
+      "gold_answer": "positive",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤识别关键词、分析情感并得出结论，结构清晰；虽有些重复解释，但无明显跳跃或矛盾。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原句的关键词和含义引用准确，没有虚构或曲解，仅做了合理情感解读。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确判断为positive，并抓住“annual improvement”“operating profit”等关键点，理由充分但分析深度属于常规水平。"
+      }
+    },
+    {
+      "sample_id": 21,
+      "model": "instruct_v6",
+      "gold_answer": "positive",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按要求分步骤识别关键词、分析情绪、再给出结论，结构清晰，无明显逻辑跳跃，仅略有重复性表述。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原句中的关键词、金额和含义引用准确，没有捏造或曲解，仅对“重要性”和“积极”性质做了合理扩展。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确判断情感为正向，并给出与财务背景相关的合理解释，抓住了‘annual improvement’和‘operating profit’等关键点。"
+      }
+    },
+    {
+      "sample_id": 22,
+      "model": "thinking",
+      "gold_answer": "positive",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤识别关键信息、分析情绪词、检查负面词并得出结论，结构清晰但有些冗余解释，未达到极致严密。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原文公司名称、持股比例变化等信息引用正确，只是将该行为普遍视为利好属于合理推断，没有歪曲原文事实。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确判断为正向情绪，并给出与财务语境相关的解释，抓住了增加持股比例这一积极信号，但分析深度一般，未达到特别有洞察力的程度。"
+      }
+    },
+    {
+      "sample_id": 22,
+      "model": "instruct_v6",
+      "gold_answer": "positive",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤列出关键词、情感分析、整体语气再得出结论，结构清晰无明显跳跃，仅有少量重复说明。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原文数值和事件描述准确，没有歪曲；将“提高持股”解读为积极信号属合理金融常识延伸。",
+        "execution_precision": 4,
+        "execution_precision_reason": "最终情感分类为positive，与标准答案一致，理由围绕增持和信心信号展开，较为到位。"
+      }
+    },
+    {
+      "sample_id": 667,
+      "model": "thinking",
+      "gold_answer": "neutral",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 3,
+        "logical_coherence_reason": "推理步骤有条理，能从关键词到整体语气再到结论。但反复拉扯“应判为正面还是中性”的讨论，论证过长且多次重复，存在明显冗余，因此不超过3分。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原句的复述准确，没有捏造或错误引用数字，也未曲解含义。只是加入了一些关于金融情感分析的一般性背景，不影响对原文的忠实度。",
+        "execution_precision": 4,
+        "execution_precision_reason": "最终结论为neutral，与标准答案一致，分析过程能够抓住这是客观财务数据、缺乏情感评价用语这一核心点，理由基本充分但不算特别精炼深入。"
+      }
+    },
+    {
+      "sample_id": 667,
+      "model": "instruct_v6",
+      "gold_answer": "neutral",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤识别关键词、分析情绪、综合判断，结构清晰，推理链条连贯，没有明显自相矛盾，只是在由事实数据推导积极情绪上有偏差但非逻辑混乱。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原文中的数字和术语引用准确，没有捏造额外事实或改动数据，仅对“高额/强劲”等含义有些主观解读，但不构成事实性错误。",
+        "execution_precision": 3,
+        "execution_precision_reason": "抓住了营业额和营业利润等关键信息，分析与任务相关，但将客观财务数据解读为正面情绪，未遵循该类句子应标注为中性的标准，最终情感分类错误。"
+      }
+    },
+    {
+      "sample_id": 155,
+      "model": "thinking",
+      "gold_answer": "positive",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤解释了从亏损到盈利的转变为何为正面，推理连贯，但有少量重复表述，略显冗余。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对EPS从-0.01到+0.03的描述和含义均与原文一致，无事实性错误或曲解。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确判断情感为positive，理由抓住了由亏转盈这一关键信号，分析充分但不算特别深刻。"
+      }
+    },
+    {
+      "sample_id": 155,
+      "model": "instruct_v6",
+      "gold_answer": "positive",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤识别关键词、判断含义、再综合得出结论，推理链条清晰无矛盾，仅略有重复解释但不影响整体。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原句中EPS由亏转盈的描述准确无误，没有捏造或歪曲信息。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确识别由亏损转为盈利为正面情绪，理由围绕盈利改善这一关键点，解释到位。"
+      }
+    },
+    {
+      "sample_id": 798,
+      "model": "thinking",
+      "gold_answer": "neutral",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 3,
+        "logical_coherence_reason": "推理过程简单但有些重复与赘述，比如先给一段步骤框架再重复说明，没有严格按用户要求的逐步列点说明关键词等。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原句内容的引用和解释准确，没有添加不存在的信息或曲解含义。",
+        "execution_precision": 4,
+        "execution_precision_reason": "最终情感分类为neutral，答案正确，理由也围绕缺乏情绪性词汇进行说明，抓住了重点但分析不算深入。"
+      }
+    },
+    {
+      "sample_id": 798,
+      "model": "instruct_v6",
+      "gold_answer": "neutral",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "步骤清晰、有条理，从关键词到情绪再到结论，整体逻辑连贯，仅在将“便利性”直接等同于正向情感上有轻微推断过度。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原句内容的复述和引用基本准确，没有捏造事实，只是对“便利性”等含义有主观延展，但未扭曲原文客观内容。",
+        "execution_precision": 3,
+        "execution_precision_reason": "识别出文本为客观航班信息，但将潜在的便利性解读为正向情感，与标准答案中将其归类为中性不符；理由相关但结论分类错误。"
+      }
+    },
+    {
+      "sample_id": 935,
+      "model": "thinking",
+      "gold_answer": "neutral",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 3,
+        "logical_coherence_reason": "推理过程大体顺畅，但多次重复强调相同观点（如“陈述是事实性、中性报道”），存在明显冗余和反复思考，未做到简洁有力，因此不超过3分。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原句事件（收购50%股份、成为唯一所有者）引用准确，没有捏造或歪曲事实，少量关于财报例子的扩展是类比而非对原文内容的引用，可认为整体忠实。",
+        "execution_precision": 4,
+        "execution_precision_reason": "最终情感分类为neutral，与标准答案一致，且理由围绕是否存在情绪化措辞展开，抓住了“纯事实性公告通常为中性”的要点，但分析不够凝练、没有更深层次洞察，故给4分。"
+      }
+    },
+    {
+      "sample_id": 935,
+      "model": "instruct_v6",
+      "gold_answer": "neutral",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤提取关键词、逐步分析情绪并得出结论，结构清晰无明显矛盾，虽对隐含情绪的判断有偏差但推理链条本身连贯。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原文事实的引用准确，没有捏造信息，只是对‘取得控股权通常偏正面’的解读属于主观延伸但不算事实错误。",
+        "execution_precision": 3,
+        "execution_precision_reason": "能够识别语句整体语气中性但过度解读为积极情绪，最终情感分类错误；理由与文本尚有一定相关性，符合答错情况下的最高分。"
+      }
+    },
+    {
+      "sample_id": 684,
+      "model": "thinking",
+      "gold_answer": "neutral",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤说明了找情感词、检查语气、得出结论，结构清晰，但有一定重复表述，略显冗余，故不满分。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原句内容的复述和理解准确，没有捏造或误读，但没有逐一精确引用所有细节，按标准给4分。",
+        "execution_precision": 4,
+        "execution_precision_reason": "情感分类为neutral，与标准答案一致，理由抓住了缺乏情绪性/评价性词汇这一关键点，分析到位但不算特别深入。"
+      }
+    },
+    {
+      "sample_id": 684,
+      "model": "instruct_v6",
+      "gold_answer": "neutral",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤识别关键词、分析情绪、综合判断，结构清晰，推理顺畅，无明显自相矛盾，仅在从“事实性陈述”跳到“正面情绪”上有轻微过度延伸。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原文内容的引用和转述基本准确，没有虚构事实或数字，仅将大额投资解读为“通常是乐观信号”带有轻微主观延伸。",
+        "execution_precision": 3,
+        "execution_precision_reason": "识别了文本是客观报道，但将其整体判为正面而非中性，最终情感分类错误；理由与文本相关且有一定道理，但未抓住该任务偏向中性的标注标准。"
+      }
+    },
+    {
+      "sample_id": 818,
+      "model": "thinking",
+      "gold_answer": "neutral",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤列出要素、判断语气为事实陈述并据此得出中性结论，结构清晰但推理较简单，无特别严密的多步因果。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "准确提取了申请人、发明人、申请号、日期等信息，没有曲解或新增内容。",
+        "execution_precision": 4,
+        "execution_precision_reason": "情感分类为neutral，与标准答案一致，理由直接围绕缺乏情感性用语展开，抓住了重点。"
+      }
+    },
+    {
+      "sample_id": 818,
+      "model": "instruct_v6",
+      "gold_answer": "neutral",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤清晰完成了关键词识别、情绪判断、整体语气分析到结论，结构合理无明显跳跃，仅属常规分析难称严密无懈可击。",
+        "factual_fidelity": 5,
+        "factual_fidelity_reason": "对原文信息的引用和概括完全准确，没有添加不存在的内容或歪曲含义。",
+        "execution_precision": 4,
+        "execution_precision_reason": "情感分类为neutral，与标准答案一致，理由抓住了文本为客观行政信息、无情绪色彩这一核心要点。分析充分但不算有特别深刻洞察。"
+      }
+    },
+    {
+      "sample_id": 563,
+      "model": "thinking",
+      "gold_answer": "neutral",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤拆解关键词并推导情感，结构清晰，没有明显跳跃，但有些重复论述，未达满分严密程度。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原句中“best-known, most visited, most shopped”等措辞的引用和解释准确，没有捏造或歪曲，但对整体语境是否应视为中性未进一步讨论。",
+        "execution_precision": 3,
+        "execution_precision_reason": "将带有正面表述的市场地位句子直接判为positive，有一定道理但不符合该任务标准答案neutral，属于答案错误但推理与文本有相关性，按规则答错最高3分。"
+      }
+    },
+    {
+      "sample_id": 563,
+      "model": "instruct_v6",
+      "gold_answer": "neutral",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤识别关键词、分析情感、综合语气再得出结论，结构清楚无明显跳跃，虽然对“语气明显正面”的判断与标注不符，但内部逻辑连贯。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原文关键词提取准确，没有捏造或改动事实，只是将客观描述解读为带有明显褒义，但未歪曲具体内容本身。",
+        "execution_precision": 3,
+        "execution_precision_reason": "分析过程与文本相关且有一定道理，但未符合该任务对情感标签的标准，将应判为中性的客观陈述判为正面，属于答案错误情形下的最高档次。"
+      }
+    },
+    {
+      "sample_id": 697,
+      "model": "thinking",
+      "gold_answer": "neutral",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤解释了为何数字和缺乏比较/修饰语导致情感中性，结构清晰但略有重复阐述。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原句的数字和含义引用准确，无捏造或曲解，不过属于常规精确度。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确识别为中性情感，理由与金融文本情感判断的关键点（仅陈述数据、无评价性语气）紧密相关且较为充分。"
+      }
+    },
+    {
+      "sample_id": 697,
+      "model": "instruct_v6",
+      "gold_answer": "neutral",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤识别关键词、分析含义、综合语气并得出结论，结构清晰且前后连贯，无明显逻辑矛盾。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原文数字和内容的引用准确，只是在情感解读上认为13.5%的利润率偏正面，但没有捏造信息。",
+        "execution_precision": 3,
+        "execution_precision_reason": "将应判为中性的客观财务陈述解读为正面情绪，答案错误但给出的理由与金融语境相关。"
+      }
+    },
+    {
+      "sample_id": 448,
+      "model": "thinking",
+      "gold_answer": "neutral",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤识别关键信息、判断是否包含情绪性词汇、结合财经语境再给出结论，结构清晰无明显跳跃，但整体推理相对简单，未到极其严密的程度。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原句内容的复述准确，没有添加不存在的数字或事件，也未曲解含义，但没有逐点精细对应到每个细节，故不给满分。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确判断为neutral，理由紧扣“事实陈述、无评价性用语”这一核心点，解释到位但分析深度一般，未达到极高洞察力水平。"
+      }
+    },
+    {
+      "sample_id": 448,
+      "model": "instruct_v6",
+      "gold_answer": "neutral",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤提取关键词、分析语气、再给结论，结构清晰，无明显前后矛盾，但在从“事实性描述”推到“积极情绪”的过程中有轻微逻辑跳跃。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原句关键信息（40%销售、地区、公司身份等）引用准确，无捏造内容；但将这一事实解读为“正面发展”和“成功”带有一定主观延伸。",
+        "execution_precision": 3,
+        "execution_precision_reason": "能抓住文本是事实陈述、无负面措辞，推理过程相关，但将中性业务比例解读为正面情绪，最终情感分类错误，按规则答错最高3分。"
+      }
+    },
+    {
+      "sample_id": 326,
+      "model": "thinking",
+      "gold_answer": "negative",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤识别了关键词“job cuts”，分析其负面含义，并将其与公司处于困境和裁员联系，推理清晰但略有重复，不算特别严密。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原句的复述和理解准确，仅轻微推断“可能财务困境”，但符合上下文常识，没有事实性错误或数字偏差。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确识别情感为negative，抓住了裁员这一核心负面因素，理由到位但分析不算特别深入。"
+      }
+    },
+    {
+      "sample_id": 326,
+      "model": "instruct_v6",
+      "gold_answer": "negative",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤识别关键词、逐项分析情绪、综合整体语气并得出结论，结构清晰无明显跳跃，仅有少量重复解释。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原文要素的引用准确，没有引入不存在的信息，仅将裁员与财务困境联系作为常规背景推断，未歪曲原句含义。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确判断情绪为负面，抓住‘900 job cuts’作为主要情绪来源，解释到位但深度属常规水平。"
+      }
+    },
+    {
+      "sample_id": 329,
+      "model": "thinking",
+      "gold_answer": "negative",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤识别关键词、分析语义并得出结论，结构清晰无明显矛盾，仅有轻微重复说明，不到严密程度。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原句中的元素（泄漏、矿山背景）引用准确，无捏造事实，仅对可能带来环境和财务影响的推断属合理延伸。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确识别情感为negative，并清楚指出“leakage”为负面关键点，理由与金融语境下的负面影响相符，但分析深度一般，未到特别深入。"
+      }
+    },
+    {
+      "sample_id": 329,
+      "model": "instruct_v6",
+      "gold_answer": "negative",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤识别关键词、分析情绪、再给出结论，结构清晰，无明显跳跃，仅有少量背景性扩展。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原句关键信息（泄漏、地点、时间）引用准确，虽补充了环境和财务后果的背景推断，但未歪曲原文含义。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确识别情感为负面，抓住“leakage”等负面词并结合金融语境进行解释，理由到位但不算特别深入。",
+        "": ""
+      }
+    },
+    {
+      "sample_id": 202,
+      "model": "thinking",
+      "gold_answer": "positive",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 3,
+        "logical_coherence_reason": "推理过程基本通顺，先找关键词，再结合财经语境判断，但有明显重复与冗余说明，且对“并购通常是积极的”反复强调，逻辑不够精炼。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原句的关键信息（签署协议、收购业务资产、地点等）的理解准确，没有捏造事实，只是略作一般性延展说明并购含义。",
+        "execution_precision": 4,
+        "execution_precision_reason": "最终情感分类为positive，与标准答案一致，理由明确指出收购在财经新闻中通常代表扩张和积极发展，但分析深度一般，未达到特别有洞见的程度。"
+      }
+    },
+    {
+      "sample_id": 202,
+      "model": "instruct_v6",
+      "gold_answer": "positive",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤提取关键词、分析情绪、总结整体语气，结构清晰，没有明显前后矛盾，但在由“扩张行为”推至“纯描述应判中性”的结论上略有武断。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原文事件的描述准确，没有捏造信息或事实性错误，情绪词判断也基本基于原文内容。",
+        "execution_precision": 3,
+        "execution_precision_reason": "将带有扩张和收购含义的新闻判为中性而非正面，偏离金融情感标注标准；理由相关但没有充分体现行业惯例，最终分类错误且深度一般。"
+      }
+    },
+    {
+      "sample_id": 331,
+      "model": "thinking",
+      "gold_answer": "negative",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤拆解句子、分析关键词及含义，并基于利润下降得出负面情感，结构清晰无明显跳跃，仅有少量重复论述。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原文数值、主体和因果关系的引用准确，没有捏造或误读，仅对投资未来可能正面影响的说明是合理延伸。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确识别到“down”表示利润下降，抓住句子核心是利润下滑，因此情感分类为negative，与标准答案一致，理由到位但不算特别深入。"
+      }
+    },
+    {
+      "sample_id": 331,
+      "model": "instruct_v6",
+      "gold_answer": "negative",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "分步结构清晰，有从关键词到情感再到整体判断的推理链条，基本无前后矛盾，仅对“中性”的结论有一定主观权衡但逻辑尚算自洽。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原文数字和内容引用准确，未捏造信息；认为投资是“正面、长期利好”的解释略带延伸但不构成严重曲解。",
+        "execution_precision": 3,
+        "execution_precision_reason": "抓住了利润下降这一关键信号，也意识到有投资背景，但最终情感分类选为中性而非负面，与标准答案不符，只能给答错情形下的最高分。"
+      }
+    },
+    {
+      "sample_id": 75,
+      "model": "thinking",
+      "gold_answer": "positive",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 3,
+        "logical_coherence_reason": "有基本的分步推理，但存在明显冗余和重复论述，同一结论多次展开，未完全按用户的四步结构组织。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对文本中“1.5 MEUR annual improvement”等关键信息引用准确，无事实性错误，也未引入原文之外的内容。",
+        "execution_precision": 4,
+        "execution_precision_reason": "识别到“annual improvement”等为正向表述，结论为positive且理由围绕核心财经含义展开，但分析不算特别深入细致。"
+      }
+    },
+    {
+      "sample_id": 75,
+      "model": "instruct_v6",
+      "gold_answer": "positive",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按给定四步逐条完成，识别关键词、分析情绪、综合判断到结论，结构清晰无明显跳跃，仅有轻微重复说明。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对句子中的金额、时间和含义引用准确，无虚构或曲解，仅在语气上做了轻微概括性描述，仍属忠实。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确识别出‘annual improvement’带来的积极情绪，结论为positive，与标准答案一致，理由也紧扣关键信息。"
+      }
+    },
+    {
+      "sample_id": 592,
+      "model": "thinking",
+      "gold_answer": "neutral",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤识别关键词、判断情绪、结合语境并得出结论，推理顺畅但略有重复解释，未达到极致紧凑。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "准确复述了交易主体、行为和金额，无捏造或曲解，仅对“completed its exit”略作中性偏正的评论但未影响事实。",
+        "execution_precision": 4,
+        "execution_precision_reason": "识别出该句为例行交易报道、无正负情绪词，最终情感分类为neutral，与标准答案一致且理由到位。"
+      }
+    },
+    {
+      "sample_id": 592,
+      "model": "instruct_v6",
+      "gold_answer": "neutral",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "步骤清晰、结构严谨，从关键词到情感到整体语气，推理顺畅，仅有少量重复强调但不影响逻辑。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原文关键信息的引用准确，无捏造和曲解，也未遗漏重要要素。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确判断为中性情感，理由紧扣商业交易的中性描述，分析到位但不算特别深刻。"
+      }
+    },
+    {
+      "sample_id": 338,
+      "model": "thinking",
+      "gold_answer": "negative",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "从利润下降推导出负面情绪，论证步骤清晰，但有少量重复表述，未达极致紧凑。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "准确引用了2005和2006年的利润数据并正确比较，无事实性错误。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确识别利润下降在金融语境下为负面情绪，理由抓住了核心点且较为充分。"
+      }
+    },
+    {
+      "sample_id": 338,
+      "model": "instruct_v6",
+      "gold_answer": "negative",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "分步推理清晰、有条理，从关键词到情绪再到整体判断，前后没有矛盾，虽然结论有误但逻辑链条是连贯的。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原文数字和事实的引用准确，正确指出净利润从8.4降到7.99，没有捏造或篡改信息。",
+        "execution_precision": 3,
+        "execution_precision_reason": "正确识别了利润下降这一关键信号，但将这种变化解读为中性而非负面，与任务标注不符；推理有一定道理但最终分类错误，按规则最高给3分。"
+      }
+    },
+    {
+      "sample_id": 467,
+      "model": "thinking",
+      "gold_answer": "neutral",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤拆解了关键词、语境和情感含义，论证一致且顺畅，但存在一定重复阐述，略显冗余，达不到满分严谨度。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原句含义的解释准确，没有添加不存在的细节，“no changes”被正确解读为事实性陈述，没有事实性错误，但分析不算精细到逐字逐句对应。",
+        "execution_precision": 4,
+        "execution_precision_reason": "最终情感分类为neutral，与标准答案一致，理由与文本内容紧密相关且能说明为何为中性，但分析深度一般，未达到特别有洞察力的程度。"
+      }
+    },
+    {
+      "sample_id": 467,
+      "model": "instruct_v6",
+      "gold_answer": "neutral",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤完成关键词识别、情感分析和整体判断，结构清晰，无前后矛盾，仅有少量表述重复。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原句的引用和解释准确，没有添加不存在的信息或歪曲含义。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确识别为中性情绪，理由紧扣‘无变化’和客观描述的特征，分析到位但不算特别深入。"
+      }
+    },
+    {
+      "sample_id": 210,
+      "model": "thinking",
+      "gold_answer": "positive",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤识别关键词、分析语义、考虑上下文并得出结论，结构清晰，无明显跳跃，仅略有重复说明。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原句的关键词提取和含义把握准确，无虚构或曲解，仅对“先进、高效”等做了轻微延展但不影响事实忠实度。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确判断为正向情感，并基于“launching new”“quick tests”“ensure the safety of food”等核心词给出有针对性的理由。分析到位但不算特别深入。"
+      }
+    },
+    {
+      "sample_id": 210,
+      "model": "instruct_v6",
+      "gold_answer": "positive",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤提取关键词、分析情感、综合语气并得出结论，结构清晰，无明显跳跃，仅略有解释性冗余。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原句中公司、动作和目的的引用准确，没有增加不存在的事实，仅将语气解读为偏乐观属合理解释。",
+        "execution_precision": 4,
+        "execution_precision_reason": "识别出“launching”“new DNA-based quick tests”“ensure the safety of food”等积极信号，结论为positive，与标准答案一致，理由到位。"
+      }
+    },
+    {
+      "sample_id": 597,
+      "model": "thinking",
+      "gold_answer": "neutral",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤分析了文本内容、情感词缺失和客观描述，推理链条清晰，但前后有少量重复解释，略显冗余，因此不满分。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原句中的产品特征和颜色等信息引用准确，没有新增或歪曲事实，但分析未逐字对应到每个细节，给4分更合适。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确判断情感为中性，理由紧扣描述性、无评价性用语这个关键点，分析充分但并不算有特别深度洞察。"
+      }
+    },
+    {
+      "sample_id": 597,
+      "model": "instruct_v6",
+      "gold_answer": "neutral",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤提取关键词、分析情感、看整体语气再给结论，结构清晰，无明显跳跃，仅有少量重复性表述。",
+        "factual_fidelity": 5,
+        "factual_fidelity_reason": "对原句的内容、属性和语气的描述完全准确，没有添加或遗漏事实。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确识别为中性情感，并给出与文本相符的理由，分析到位但不算特别深入或有独到见解。"
+      }
+    },
+    {
+      "sample_id": 349,
+      "model": "thinking",
+      "gold_answer": "negative",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤提取关键信息、联系财务语境得出结论，逻辑清晰，无矛盾，仅有少量重复说明。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "数字和事实引用准确，没有歪曲原文含义，只是将时间点理解为对比前期但不影响原意。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确识别“down 2 percent”在财务语境中的负面含义，结论为negative且理由到位。"
+      }
+    },
+    {
+      "sample_id": 349,
+      "model": "instruct_v6",
+      "gold_answer": "negative",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "步骤清晰，按要求分步分析，论证从关键词到情感判断顺畅，仅有少量重复解释。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原句的数字、比较关系和含义引用准确，没有捏造或曲解。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确识别财务收入下降为负面信号，最终情感分类为negative且理由抓住‘down 2 percent’这一核心点。"
+      }
+    },
+    {
+      "sample_id": 104,
+      "model": "thinking",
+      "gold_answer": "positive",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 3,
+        "logical_coherence_reason": "推理过程基本顺畅，但有明显重复与赘述（多次重复合同通常是积极事件、反复确认结论），不够精炼，按标准有冗余只能给到3分。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原句的关键信息引用准确，没有虚构或曲解，仅加入常识性解释“签约通常是利好”，不存在事实性错误。",
+        "execution_precision": 4,
+        "execution_precision_reason": "最终情感判断为positive，与标准答案一致，理由也与金融语境契合，但分析深度一般、略显啰嗦，未达到“深度洞察”要求。"
+      }
+    },
+    {
+      "sample_id": 104,
+      "model": "instruct_v6",
+      "gold_answer": "positive",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "分步分析清晰、有因有果，结论与前面分析在内部是自洽的，没有明显跳跃，但略有重复说明，未达到极致严密。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原文关键信息的引用准确，没有引入不存在的细节和事实错误，只是对情绪强弱的判断偏向属解读层面。",
+        "execution_precision": 3,
+        "execution_precision_reason": "能抓住“签署合同”在财经语境下通常偏正面，但最终情感分类给成中性，与标准答案不符，只能给到答错情形下的最高分。"
+      }
+    },
+    {
+      "sample_id": 872,
+      "model": "thinking",
+      "gold_answer": "neutral",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤分析词语含义、语气和示例，推理清晰无明显跳跃，但有少量重复解释。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原句内容的引用准确，没有捏造事实，仅将其描述为客观表述，属忠实转述。",
+        "execution_precision": 4,
+        "execution_precision_reason": "成功判断情感为中性，并给出与语境相符的理由，抓住了其客观、无情绪色彩的特点。"
+      }
+    },
+    {
+      "sample_id": 872,
+      "model": "instruct_v6",
+      "gold_answer": "neutral",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤识别关键词、分析情绪、综合语气再给结论，结构清晰无矛盾，仅有少量重复解释。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对句子内容和语气的描述准确，没有编造或曲解含义。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确识别情感为中性，理由抓住了缺乏正负评价性用语这一关键点，论证较充分。"
+      }
+    },
+    {
+      "sample_id": 108,
+      "model": "thinking",
+      "gold_answer": "positive",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤识别关键词、解释情绪含义并得出结论，结构清晰但有少量重复说明，略显冗余。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原句的引用与解读准确，仅补充了“可能此前为负增长”等合理推断，没有捏造具体事实或数字。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确识别情感为positive，并基于“return to positive growth”等核心短语做出合理解释，抓住了主要情绪点。"
+      }
+    },
+    {
+      "sample_id": 108,
+      "model": "instruct_v6",
+      "gold_answer": "positive",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤识别关键词、分析情感、再给出结论，结构清晰，因果衔接合理，无明显跳跃，仅有少量略显重复的阐述。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原句的引用和解释准确，没有捏造信息或歪曲含义，对“return to positive growth”的解读与原文一致。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确判断情感为积极，理由贴合金融语境，抓住“return to positive growth”等关键信号，分析较为充分。"
+      }
+    },
+    {
+      "sample_id": 367,
+      "model": "thinking",
+      "gold_answer": "negative",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 3,
+        "logical_coherence_reason": "有清晰的提取关键信息和情感判断，但存在明显重复与赘述，整体略显拖沓，未严格按用户列出的分步格式组织。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原文的公司、事件（裁员15人）等信息引用准确，无事实性错误，延伸的关于裁员一般为负面情绪的描述也合理，但没有做到逐点精确对应原文内容的逐项引用。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确识别出裁员为负面事件，最终情感分类为negative，理由抓住了核心信息，但分析深度一般，未做到特别精炼或有洞见。"
+      }
+    },
+    {
+      "sample_id": 367,
+      "model": "instruct_v6",
+      "gold_answer": "negative",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤提取关键词、分析情绪、再给结论，结构清晰，仅有少量重复解释但无逻辑跳跃。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原文关键信息如裁员、公司名称和行为描述准确，无捏造或曲解，仅对裁员含义做合理延伸。",
+        "execution_precision": 4,
+        "execution_precision_reason": "识别到裁员这一负面事件，给出负面情绪判断，理由与文本高度相关且抓住重点。"
+      }
+    },
+    {
+      "sample_id": 239,
+      "model": "thinking",
+      "gold_answer": "positive",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 3,
+        "logical_coherence_reason": "推理流程有步骤、有结论，但存在一定冗余和重复说明，未严格按用户给出的1-4步格式组织，因此只能算基本通顺。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对市场份额和销量增长的数据及措辞（raised, jumped）引用准确，没有歪曲原文含义。",
+        "execution_precision": 4,
+        "execution_precision_reason": "识别到市场份额和销量均上升，明确判断为positive，与标准答案一致，理由也紧扣关键信息，但分析深度一般，未达到特别深入的程度。"
+      }
+    },
+    {
+      "sample_id": 239,
+      "model": "instruct_v6",
+      "gold_answer": "positive",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤列出关键词、情感分析、整体语气再给结论，结构清晰，无明显跳跃，只有少量重复解释。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对市场份额、销售增长及用词的引用准确，没有编造信息或曲解原文。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确判断为正向情绪，理由聚焦于市场份额和销售额增长，分析到位但不算特别深入。"
+      }
+    },
+    {
+      "sample_id": 751,
+      "model": "thinking",
+      "gold_answer": "neutral",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按要求分步骤识别关键词、分析情绪、考虑上下文并得出结论，结构清晰无明显跳跃，仅略有赘述。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原句的内容和语气描述准确，没有添加或曲解信息。",
+        "execution_precision": 4,
+        "execution_precision_reason": "情感分类为neutral，符合标准答案，理由围绕缺乏情绪性词汇和仅为客观陈述展开，较为充分。"
+      }
+    },
+    {
+      "sample_id": 751,
+      "model": "instruct_v6",
+      "gold_answer": "neutral",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤识别关键词、分析情绪词、再综合判断，结构清晰且无跳跃，仅有少量重复解释。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原句内容的引用准确，没有捏造信息或曲解含义，扩展的背景描述也与金融新闻的语境相符。",
+        "execution_precision": 4,
+        "execution_precision_reason": "情感分类为中性，结论正确，且理由紧扣是否存在评价性词汇，分析到位。"
+      }
+    },
+    {
+      "sample_id": 497,
+      "model": "thinking",
+      "gold_answer": "neutral",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 3,
+        "logical_coherence_reason": "有分步分析，前后基本连贯，但在中途承认可能是中性后又回到正面判断，存在轻微自相矛盾和啰嗦重复。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原句的关键词和含义提取基本准确，没有捏造事实或数字，只是对情绪倾向的解读偏向正面，但未歪曲文本内容本身。",
+        "execution_precision": 3,
+        "execution_precision_reason": "识别了预期和额外交易等要素，推理与文本相关，但将本应偏中性的客观表述解读为正面情绪，最终分类错误，在答错前提下可给的最高合理分。"
+      }
+    },
+    {
+      "sample_id": 497,
+      "model": "instruct_v6",
+      "gold_answer": "neutral",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤识别关键词、分析情绪、综合判断并得出结论，结构清晰，无明显跳跃，仅有少量重复解释。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原句关键词和含义的引用准确，没有捏造信息或曲解，仅稍作一般性评价“交易通常利好”但未影响对原文的忠实理解。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确识别为中性情绪，并说明缺乏情感或评价性用语，理由与结论一致且抓住要点。"
+      }
+    },
+    {
+      "sample_id": 883,
+      "model": "thinking",
+      "gold_answer": "neutral",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤分析关键词、情感倾向、上下文和整体语气，结构清晰，无明显跳跃，但有些重复说明，未达到极致紧凑。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原句内容和上下文的描述准确，没有虚构或错误理解，判断其为中性指令与原文一致。",
+        "execution_precision": 4,
+        "execution_precision_reason": "情感分类为neutral，与标准答案一致，理由抓住了缺乏情感性词汇这一要点，分析到位但不算特别深入。"
+      }
+    },
+    {
+      "sample_id": 883,
+      "model": "instruct_v6",
+      "gold_answer": "neutral",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤识别关键词、分析情感、再给结论，结构清晰，推理链条连贯，无明显自相矛盾，但对“新产品发布=积极”略有主观延伸。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原文内容的引用准确，没有捏造事实，只是将“新产品发布”解读为偏积极信号，属于轻微过度解读而非事实性错误。",
+        "execution_precision": 3,
+        "execution_precision_reason": "任务需要判定为中性，模型因将一般性商业表述当作积极情绪而给出正面结论，答案错误但推理过程与文本仍有一定关联。"
+      }
+    },
+    {
+      "sample_id": 116,
+      "model": "thinking",
+      "gold_answer": "positive",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤识别关键词、分析情绪并得出结论，逻辑清晰但有一些重复论述，略显冗余，因此不满分。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原句内容的引用和解释基本准确，仅补充了“在金融新闻中通常被视为正面”等一般性背景，没有捏造具体事实。",
+        "execution_precision": 4,
+        "execution_precision_reason": "最终情感分类为positive，与标准答案一致，理由围绕“awarded contracts”为正面信号展开，相关且充分，但分析不算特别深入精炼。"
+      }
+    },
+    {
+      "sample_id": 116,
+      "model": "instruct_v6",
+      "gold_answer": "positive",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤识别关键词、逐项分析并得出结论，结构清晰，无明显跳跃，论证过程前后一致。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原句中的实体和措辞解读准确，没有额外捏造信息或歪曲内容。",
+        "execution_precision": 3,
+        "execution_precision_reason": "虽然推理有一定道理，但情感归类与标准答案不符，只能按答错情形给到最高3分。"
+      }
+    },
+    {
+      "sample_id": 884,
+      "model": "thinking",
+      "gold_answer": "neutral",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤识别情绪线索、判断为客观陈述并得出结论，结构清晰无明显跳跃，仅有少量轻微赘述。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "准确复述了资产规模和表述特点，对可能的dwt笔误仅作推测且明确说明不据此更改判断，没有歪曲原文含义。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确判断为中性情绪，抓住了缺乏情感性形容词、为客观资产描述这一关键点，理由充分。"
+      }
+    },
+    {
+      "sample_id": 884,
+      "model": "instruct_v6",
+      "gold_answer": "neutral",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤识别关键词、分析情绪、再给结论，结构清晰，推理连贯，仅有少量重复说明但不影响逻辑。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原文数字和表述引用准确，没有捏造信息，仅加入一般性商业解读，未歪曲原文内容。",
+        "execution_precision": 4,
+        "execution_precision_reason": "最终情感分类为neutral，与标准答案一致，理由也围绕描述为事实性、无显性情绪展开，相关且较充分。"
+      }
+    },
+    {
+      "sample_id": 888,
+      "model": "thinking",
+      "gold_answer": "neutral",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 3,
+        "logical_coherence_reason": "推理步骤基本完整，但存在明显冗余和重复论述，多次反复强调相同结论，属于一般水平。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原文内容的引用和解释准确，没有捏造或歪曲事实，仅有轻微延伸解释“通常中性或略正面”但未改变原意。",
+        "execution_precision": 4,
+        "execution_precision_reason": "最终情感判断为neutral，与标准答案一致，理由能抓住主要是客观陈述、无情绪词汇，分析到位但不算深刻。"
+      }
+    },
+    {
+      "sample_id": 888,
+      "model": "instruct_v6",
+      "gold_answer": "neutral",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤拆解文本、分析情绪、再给结论，结构清楚，但有些关于“积极含义”的展开略显冗余。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对成立时间、业务范围、员工数量和办公地点的引用准确，没有捏造或歪曲信息。",
+        "execution_precision": 4,
+        "execution_precision_reason": "成功识别整体语气为事实性描述并给出中性结论，理由与文本吻合，但分析深度为常规水平。"
+      }
+    },
+    {
+      "sample_id": 761,
+      "model": "thinking",
+      "gold_answer": "neutral",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 3,
+        "logical_coherence_reason": "有分步分析和结论，推理基本连贯，但存在“股权融资通常是正面”这样的概括性跳跃，没有充分论证为何不为中性，并有一定重复阐述。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原句的关键信息（30 million shares、aimed to raise >500 million、预期完成日期）引用基本准确，只是对“通常是正面”这类属于外推判断，不是对原文事实的歪曲，因此整体仍较忠实。",
+        "execution_precision": 3,
+        "execution_precision_reason": "情感应为中性，却被判断为正面；理由与文本有一定相关性，偏重对融资行为的主观解读，属于有一定道理但最终分类错误的情况，按规则答错上限为3分。"
+      }
+    },
+    {
+      "sample_id": 761,
+      "model": "instruct_v6",
+      "gold_answer": "neutral",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按照步骤识别关键词、分析情绪、综合判断，结构清晰，推理链完整，无明显前后矛盾，但对“筹资即偏正面”的推断略带主观延伸。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原文关键信息的提取准确，没有捏造或误引内容，但将筹资行为泛化为通常正面，有轻微解读上的偏向。",
+        "execution_precision": 3,
+        "execution_precision_reason": "抓住了文本为客观陈述、无情绪用语的特征，但过度强调筹资的正面含义，最终情感分类从应为中性的判断偏向了正面。答案错误但理由有一定道理。"
+      }
+    }
+  ],
+  "metadata": {
+    "created": "2025-12-06T15:31:23.592304",
+    "last_updated": "2025-12-06T15:47:39.907307"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "model": "/share/huggingface/models--Qwen--Qwen3-30B-A3B-Thinking-2507/snapshots/144afc2f379b542fdd4e85a1fcd5e1f79112d95d/",
+  "version": "v5",
+  "timestamp": "2025-11-29T18:41:04.276325",
+  "tasks": [
+    "fpb",
+    "fiqasa",
+    "finqa",
+    "convfinqa",
+    "headlines"
+  ],
+  "limit_per_task": 999999,
+  "summary": {
+    "fpb": {
+      "correct": 705,
+      "total": 970,
+      "accuracy": 72.68041237113401
+    },
+    "fiqasa": {
+      "correct": 194,
+      "total": 235,
+      "accuracy": 82.5531914893617
+    },
+    "finqa": {
+      "correct": 554,
+      "total": 1147,
+      "accuracy": 48.29991281604185
+    },
+    "convfinqa": {
+      "correct": 946,
+      "total": 1490,
+      "accuracy": 63.48993288590604
+    },
+    "headlines": {
+      "correct": 15567,
+      "total": 20547,
+      "accuracy": 75.76288509271426
+    },
+    "overall": {
+      "correct": 17966,
+      "total": 24389,
+      "accuracy": 73.66435688220099
+    }
+  }
+}

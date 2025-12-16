@@ -1,0 +1,46 @@
+{
+  "model": "Qwen3-30B-A3B-Instruct-2507",
+  "version": "v6_cot",
+  "description": "Chain-of-Thought版本，要求Instruct模型输出推理过程（用于H2评估）",
+  "timestamp": "2025-12-06T10:38:25.610354",
+  "tasks": [
+    "fpb",
+    "fiqasa",
+    "finqa",
+    "convfinqa",
+    "headlines"
+  ],
+  "total_samples": 24389,
+  "summary": {
+    "fpb": {
+      "correct": 701,
+      "total": 970,
+      "accuracy": 72.2680412371134
+    },
+    "fiqasa": {
+      "correct": 187,
+      "total": 235,
+      "accuracy": 79.57446808510639
+    },
+    "finqa": {
+      "correct": 821,
+      "total": 1147,
+      "accuracy": 71.57802964254577
+    },
+    "convfinqa": {
+      "correct": 1127,
+      "total": 1490,
+      "accuracy": 75.63758389261746
+    },
+    "headlines": {
+      "correct": 14581,
+      "total": 20547,
+      "accuracy": 70.96413101669343
+    },
+    "overall": {
+      "correct": 17417,
+      "total": 24389,
+      "accuracy": 71.41
+    }
+  }
+}

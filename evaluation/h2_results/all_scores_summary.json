@@ -1,0 +1,112 @@
+{
+  "generated_at": "2025-12-06T23:29:31.715351",
+  "version": "v2_strict",
+  "tasks": {
+    "fpb_thinking": {
+      "task": "fpb",
+      "model": "thinking",
+      "count": 40,
+      "avg_logical_coherence": 3.65,
+      "avg_factual_fidelity": 4.0,
+      "avg_execution_precision": 3.92,
+      "avg_total": 3.86
+    },
+    "fpb_instruct_v6": {
+      "task": "fpb",
+      "model": "instruct_v6",
+      "count": 40,
+      "avg_logical_coherence": 4.0,
+      "avg_factual_fidelity": 4.05,
+      "avg_execution_precision": 3.52,
+      "avg_total": 3.86
+    },
+    "fiqasa_thinking": {
+      "task": "fiqasa",
+      "model": "thinking",
+      "count": 40,
+      "avg_logical_coherence": 3.6,
+      "avg_factual_fidelity": 4.0,
+      "avg_execution_precision": 3.98,
+      "avg_total": 3.86
+    },
+    "fiqasa_instruct_v6": {
+      "task": "fiqasa",
+      "model": "instruct_v6",
+      "count": 40,
+      "avg_logical_coherence": 3.98,
+      "avg_factual_fidelity": 3.98,
+      "avg_execution_precision": 3.6,
+      "avg_total": 3.85
+    },
+    "finqa_thinking": {
+      "task": "finqa",
+      "model": "thinking",
+      "count": 40,
+      "avg_logical_coherence": 3.02,
+      "avg_factual_fidelity": 3.9,
+      "avg_execution_precision": 3.48,
+      "avg_total": 3.47
+    },
+    "finqa_instruct_v6": {
+      "task": "finqa",
+      "model": "instruct_v6",
+      "count": 40,
+      "avg_logical_coherence": 3.9,
+      "avg_factual_fidelity": 3.92,
+      "avg_execution_precision": 3.58,
+      "avg_total": 3.8
+    },
+    "convfinqa_thinking": {
+      "task": "convfinqa",
+      "model": "thinking",
+      "count": 40,
+      "avg_logical_coherence": 3.15,
+      "avg_factual_fidelity": 3.92,
+      "avg_execution_precision": 3.67,
+      "avg_total": 3.58
+    },
+    "convfinqa_instruct_v6": {
+      "task": "convfinqa",
+      "model": "instruct_v6",
+      "count": 40,
+      "avg_logical_coherence": 3.9,
+      "avg_factual_fidelity": 3.95,
+      "avg_execution_precision": 3.52,
+      "avg_total": 3.79
+    },
+    "headlines_thinking": {
+      "task": "headlines",
+      "model": "thinking",
+      "count": 40,
+      "avg_logical_coherence": 3.6,
+      "avg_factual_fidelity": 4.08,
+      "avg_execution_precision": 3.92,
+      "avg_total": 3.87
+    },
+    "headlines_instruct_v6": {
+      "task": "headlines",
+      "model": "instruct_v6",
+      "count": 40,
+      "avg_logical_coherence": 4.0,
+      "avg_factual_fidelity": 4.05,
+      "avg_execution_precision": 3.38,
+      "avg_total": 3.81
+    }
+  },
+  "models": {
+    "thinking": {
+      "total_samples": 200,
+      "avg_logical_coherence": 3.4,
+      "avg_factual_fidelity": 3.98,
+      "avg_execution_precision": 3.79,
+      "avg_total": 3.73
+    },
+    "instruct_v6": {
+      "total_samples": 200,
+      "avg_logical_coherence": 3.96,
+      "avg_factual_fidelity": 3.99,
+      "avg_execution_precision": 3.52,
+      "avg_total": 3.82
+    }
+  }
+}

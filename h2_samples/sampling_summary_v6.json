@@ -1,0 +1,81 @@
+{
+  "timestamp": "2025-12-06T10:59:45.683014",
+  "total_samples": 200,
+  "tasks": {
+    "finqa": {
+      "pool_size": {
+        "instruct_wins": 297,
+        "thinking_wins": 30,
+        "both_correct": 524,
+        "both_wrong": 296
+      },
+      "config": {
+        "instruct_wins": 16,
+        "thinking_wins": 12,
+        "both_correct": 12,
+        "total": 40
+      },
+      "sampled_count": 40
+    },
+    "convfinqa": {
+      "pool_size": {
+        "instruct_wins": 247,
+        "thinking_wins": 66,
+        "both_correct": 880,
+        "both_wrong": 297
+      },
+      "config": {
+        "instruct_wins": 12,
+        "thinking_wins": 16,
+        "both_correct": 12,
+        "total": 40
+      },
+      "sampled_count": 40
+    },
+    "fpb": {
+      "pool_size": {
+        "instruct_wins": 49,
+        "thinking_wins": 59,
+        "both_correct": 652,
+        "both_wrong": 210
+      },
+      "config": {
+        "thinking_wins": 16,
+        "both_correct": 12,
+        "random": 12,
+        "total": 40
+      },
+      "sampled_count": 40
+    },
+    "fiqasa": {
+      "pool_size": {
+        "instruct_wins": 8,
+        "thinking_wins": 15,
+        "both_correct": 179,
+        "both_wrong": 33
+      },
+      "config": {
+        "thinking_wins": 15,
+        "both_correct": 13,
+        "random": 12,
+        "total": 40
+      },
+      "sampled_count": 40
+    },
+    "headlines": {
+      "pool_size": {
+        "instruct_wins": 1135,
+        "thinking_wins": 2122,
+        "both_correct": 13446,
+        "both_wrong": 3844
+      },
+      "config": {
+        "thinking_wins": 16,
+        "both_correct": 12,
+        "random": 12,
+        "total": 40
+      },
+      "sampled_count": 40
+    }
+  }
+}

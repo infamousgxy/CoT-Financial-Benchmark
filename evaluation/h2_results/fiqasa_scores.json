@@ -1,0 +1,1130 @@
+{
+  "task": "fiqasa",
+  "version": "v2_strict",
+  "scores": [
+    {
+      "sample_id": 0,
+      "model": "thinking",
+      "gold_answer": "negative",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 3,
+        "logical_coherence_reason": "推理过程大体连贯，但有不少冗余和自言自语式的揣测（如多次重复解释loss为负、揣测用户水平等），不够简洁集中，存在明显废话，按标准最高给3分。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原文核心信息“lost .03c per share”与整体含义的把握是准确的，未捏造关键数字或结论。但对“VZ”为Verizon以及3.1为“3.1 billion in cash”等有一定推断成分，虽合理但略超出字面，因此不给满分。",
+        "execution_precision": 4,
+        "execution_precision_reason": "最终情感分类为negative，与标准答案一致，且理由抓住了“lost”这一核心负面词，说明充分。不过分析略显拖沓、未做到特别深刻独到，因此为4分。"
+      }
+    },
+    {
+      "sample_id": 0,
+      "model": "instruct_v6",
+      "gold_answer": "negative",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "分步推理较清晰，先提取关键词，再分析情绪，再给结论，逻辑衔接顺畅，没有明显自相矛盾，但对信息权重的判断略有偏差，未到极致严密。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原文的关键信息（每股亏损、无债务和现金情况）引用准确，没有捏造额外事实，但将‘无债务和现金’解读为较强的正面因素略有主观化，存在轻微解读偏差。",
+        "execution_precision": 3,
+        "execution_precision_reason": "识别到‘lost .03c per share’这一负面关键信息，但在整体情绪判断上过度强调平衡和中性，忽略了亏损在情感分类中的主导作用，最终情感分类为中性而非负面，答案错误但推理与任务相关。"
+      }
+    },
+    {
+      "sample_id": 1,
+      "model": "thinking",
+      "gold_answer": "negative",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤分析关键词、市场反应和缺乏正面背景，论证清晰，但有少量重复解释，略显冗余，未达满分严密程度。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对标题内容的引用准确，未捏造额外事实，关于高管离任一般市场解读属常识性推断，无事实性错误，但非逐句精准映射到原文，按标准给4分。",
+        "execution_precision": 4,
+        "execution_precision_reason": "识别到CFO下台通常被视为负面信号，结合市场惯例给出负面情绪判断，理由聚焦且充分，最终答案正确。"
+      }
+    },
+    {
+      "sample_id": 1,
+      "model": "instruct_v6",
+      "gold_answer": "negative",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤拆解关键词、情绪分析和总体判断，结构清晰，无明显前后矛盾，但对‘高管离任通常偏负面’的市场常识考虑不足。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对标题内容的引用准确，没有捏造额外事实，只是对情绪解读上偏向中性但未曲解原文客观信息。",
+        "execution_precision": 3,
+        "execution_precision_reason": "将“finance chief to step down”解读为中性，忽略其在金融语境中通常带有负面含义，最终情感分类错误，但理由与文本尚有一定关联。"
+      }
+    },
+    {
+      "sample_id": 134,
+      "model": "thinking",
+      "gold_answer": "positive",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 3,
+        "logical_coherence_reason": "推理总体连贯，但有明显的啰嗦和多次重复同一点（如反复强调回购是正面信号），还夹杂了对用户意图的无关揣测，属于有冗余废话的情况。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原文关键信息的引用准确，也没有捏造额外事实，关于‘扩大量回购一般被视为正面信号’的背景说明是合理的常识性补充，没有事实性错误。",
+        "execution_precision": 4,
+        "execution_precision_reason": "最终情感分类为Positive，与标准答案一致，理由抓住了“Expands”“share repurchase program”等核心点，但分析略显泛泛，并掺入了一些与任务无关的猜测，尚未达到非常精炼深入的程度。"
+      }
+    },
+    {
+      "sample_id": 134,
+      "model": "instruct_v6",
+      "gold_answer": "positive",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤完成了关键词提取、情感分析和综合判断，结构清晰，没有明显跳跃，但有少量观点重复。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原句中的实体、动作和金额提取准确，没有捏造信息，补充的是常识性解读，未与原文矛盾。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确判断为正面情绪，并说明了回购及“扩张”等词语的积极含义，理由围绕金融语境，较为充分但不算特别深入。"
+      }
+    },
+    {
+      "sample_id": 135,
+      "model": "thinking",
+      "gold_answer": "positive",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 3,
+        "logical_coherence_reason": "推理基本连贯，按关键词→语境→结论的顺序展开，但夹杂对“用户可能是初学者”等与任务无关的揣测，存在一定冗余废话，故不超过3分。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原文内容的引用准确，无捏造事实，仅对“crazy”在交易语境中的含义做了合理扩展解释，没有曲解原文关键信息。",
+        "execution_precision": 4,
+        "execution_precision_reason": "最终情感分类为positive，与标准答案一致，理由围绕“nearing breakout resistance line”这一技术分析中偏利好信号展开，抓住了主要信息，但分析不算特别深入或有独到洞见。"
+      }
+    },
+    {
+      "sample_id": 135,
+      "model": "instruct_v6",
+      "gold_answer": "positive",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "分步清晰，从关键词到情感再到整体判断，因果关系合理，仅有少量重复解释“crazy looking”语气偏中性，略显冗余，故不满分。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原文关键词的引用和解读基本准确，技术分析中的“nearing breakout resistance line”被正确理解为偏利好信号，没有捏造额外信息。",
+        "execution_precision": 4,
+        "execution_precision_reason": "最终情感分类为Positive，与标准答案一致，理由围绕突破阻力线的利好含义展开，抓住了情绪核心，但分析深度和洞见性尚属常规水平。"
+      }
+    },
+    {
+      "sample_id": 8,
+      "model": "thinking",
+      "gold_answer": "negative",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "推理步骤清晰，从召回事件到负面情绪的因果关系明确，但有少量重复和扩展解释，略显冗余，不能算极致严密。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原文内容的引用准确，没有捏造或曲解，仅稍作合理推断（如安全问题），整体忠实。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确识别出召回事件对公司是负面信息，结论为负面情绪，理由抓住了召回和产品问题的核心，分析到位。"
+      }
+    },
+    {
+      "sample_id": 8,
+      "model": "instruct_v6",
+      "gold_answer": "negative",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤识别关键词、分析情绪、考虑语境并得出结论，结构清晰，无明显跳跃，仅有少量重复解释。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原文的关键信息（召回、数量、车型、问题类型、金融语境）引用准确，没有捏造或歪曲。",
+        "execution_precision": 4,
+        "execution_precision_reason": "准确判断为负面情绪，并结合汽车召回在金融语境中的含义做出合理解释，抓住了主要矛盾。"
+      }
+    },
+    {
+      "sample_id": 9,
+      "model": "thinking",
+      "gold_answer": "negative",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 3,
+        "logical_coherence_reason": "推理步骤基本连贯，能从关键词到结论，但有明显冗余和反复权衡“负面 vs 中性”的啰嗦讨论，超过任务所需，按标准有废话上限给3分。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原文关键元素（GLD、阻力位、200日线、下行趋势线）解读准确，无虚构信息或事实性错误，但未达到逐点精确对齐的极致程度。",
+        "execution_precision": 4,
+        "execution_precision_reason": "最终情感判断为negative，与标准答案一致，且理由围绕阻力与下行趋势的偏空含义，抓住了主要矛盾，但分析深度虽够用不算特别有洞见，给4分。"
+      }
+    },
+    {
+      "sample_id": 9,
+      "model": "instruct_v6",
+      "gold_answer": "negative",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤完成分解，识别关键词并逐步推导情绪，论证结构清晰，仅在针对技术性负面信号与情绪表达之间的权衡上略显主观。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原文内容、技术术语和语气的描述基本准确，没有捏造信息或明显曲解，只是对是否体现情绪的理解略偏向中性判断。",
+        "execution_precision": 3,
+        "execution_precision_reason": "抓住了“resistance”“downward trendline”等偏空信号，但过度强调语言的中性表述而忽视其隐含的负面市场含义，最终情感分类错误，但理由与文本仍有一定关联。"
+      }
+    },
+    {
+      "sample_id": 12,
+      "model": "thinking",
+      "gold_answer": "negative",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "分步分析负面词、转折词“but”、技术面用语，对正负信息权重有对比，结论与过程一致，但有一些重复阐述，略显冗长，难达满分严谨度。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原句中“less than stellar day”“held the 50 day moving average”的引用和含义解释准确，没有新增事实，仅加入合理的金融语境说明，整体忠实。",
+        "execution_precision": 4,
+        "execution_precision_reason": "最终情感判断为负面，与标准答案一致，理由也聚焦于“less than stellar”为主、技术支撑为次的情感权重，抓住了重点，但分析深度属常规水平，未达极高洞见程度。"
+      }
+    },
+    {
+      "sample_id": 12,
+      "model": "instruct_v6",
+      "gold_answer": "negative",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤解析关键词、情绪及整体语气，结构清晰，无明显跳跃，推理链条完整。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原句中两部分含义的解读基本忠实：‘less than stellar day’为负向，‘held the 50 day moving average’为偏正向，没有捏造信息。",
+        "execution_precision": 3,
+        "execution_precision_reason": "虽然对情绪成分的分析有一定道理，但整体情绪判断为中性与标准答案负向不符，只能给到答错上限分。"
+      }
+    },
+    {
+      "sample_id": 17,
+      "model": "thinking",
+      "gold_answer": "negative",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 3,
+        "logical_coherence_reason": "推理过程基本连贯，但有明显冗余和重复强调“sad”和“sold off”等情绪点，夹杂对用户意图的猜测，属于一般水平。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原句关键词如“sad”“takeover rumor”“sold off next day”的引用和理解准确，没有虚构信息，仅多了一些背景性猜测（如用户用途），但未影响对文本本身的忠实度。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确识别情感为negative，抓住了关键情绪词和语气，理由与结论一致且有针对性，但深度和精炼程度一般，未达到特别深入或独到分析的程度。"
+      }
+    },
+    {
+      "sample_id": 17,
+      "model": "instruct_v6",
+      "gold_answer": "negative",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按要求分步骤提取关键词、分析情绪、再给结论，结构清晰无明显跳跃，但有少量轻微重复说明，未达到极致严密。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原句中“sad”“takeover rumor”“sold off next day”等内容的引用准确，未捏造信息，仅对情绪和含义做了合理延伸。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确识别为负面情绪，抓住了“sad”和“sold off”等核心表达，理由与结论一致充分，但分析深度仍属常规水平。"
+      }
+    },
+    {
+      "sample_id": 18,
+      "model": "thinking",
+      "gold_answer": "negative",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 3,
+        "logical_coherence_reason": "有清晰的步骤和结论，但在正负可能性之间来回犹豫、重复论述，存在明显冗余，推理不够干净利落。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原文关键信息的引用准确，结合常见财经语境解释“Timberrrr”与股价下跌的关联，没有捏造原文不存在的内容，只是加入了一些背景性猜测。",
+        "execution_precision": 4,
+        "execution_precision_reason": "最终判断为负向，与标准答案一致，理由也抓住了“Timberrrr”在股市语境中暗示下跌这一核心点，但分析略显啰嗦，缺乏更简洁有力的聚焦，未达到5分深度。"
+      }
+    },
+    {
+      "sample_id": 18,
+      "model": "instruct_v6",
+      "gold_answer": "negative",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 3,
+        "logical_coherence_reason": "步骤完整有条理，但对“Timberrrr”的含义推断带有主观臆测，逻辑中存在明显跳跃与不充分之处。",
+        "factual_fidelity": 3,
+        "factual_fidelity_reason": "对原文关键信息提取尚可，但将“Timberrrr”解释为常用于股价上涨的看涨语境是对原文语义及常见用法的曲解。",
+        "execution_precision": 3,
+        "execution_precision_reason": "最终情感分类与正确答案相反，但分析过程与金融情绪判断有一定相关性，属于有一定道理但结论错误的情况。"
+      }
+    },
+    {
+      "sample_id": 147,
+      "model": "thinking",
+      "gold_answer": "positive",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 3,
+        "logical_coherence_reason": "整体推理链条通顺，但存在明显的反复犹豫和自我修正（在正面/中性之间来回摇摆），阐述较为啰嗦，有一定重复和冗余，达不到高度精炼的要求。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原句中“broken its downtrend”和“200DMA proving to be stiff resistance short term”的含义解读准确，没有捏造额外事实或歪曲原文，仅加入一般性的技术分析背景说明。",
+        "execution_precision": 4,
+        "execution_precision_reason": "最终情感分类为Positive，与标准答案一致，且抓住了‘打破下跌趋势’是主导情绪、‘200日均线阻力’为短期谨慎因素这一关键矛盾，理由基本充分，但分析略显拖沓，深度和精炼度未达到满分标准。"
+      }
+    },
+    {
+      "sample_id": 147,
+      "model": "instruct_v6",
+      "gold_answer": "positive",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤提取关键词、分析情绪、综合判断，结构清晰、前后自洽，没有明显逻辑跳跃，但在对整体情绪权重的把握上略显机械。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原文关键信息的引用和解释基本准确，正确识别了“破掉下降趋势”为利好、“200DMA阻力”为短期压力，没有虚构信息或明显曲解。",
+        "execution_precision": 3,
+        "execution_precision_reason": "虽然分析过程合理，但对整体情绪取向判断有偏差，把总体偏多的表述错判为中性；原因相关但未抓住‘破掉下跌趋势’这一主导情绪，因此答案错误且最高只能给3分。"
+      }
+    },
+    {
+      "sample_id": 24,
+      "model": "thinking",
+      "gold_answer": "negative",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "推理步骤清晰，从“recall”含义到财务影响，结构合理但有少量重复论述，未达到极度严密。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原文信息的引用准确，没有捏造额外事实，仅补充了一般性背景说明。",
+        "execution_precision": 4,
+        "execution_precision_reason": "情感分类为Negative且理由抓住了召回对公司及股价的负面影响，分析到位但不算特别深入。"
+      }
+    },
+    {
+      "sample_id": 24,
+      "model": "instruct_v6",
+      "gold_answer": "negative",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "分步骤识别关键词、分析情感、再综合判断，结构清晰，无明显逻辑矛盾，但在由‘事件负面’推导到‘整体中性’时有一定主观跳跃。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原文关键信息（Tesla、recalls、2,700 Model X SUVs、$TSLA）引用准确，无捏造或歪曲。",
+        "execution_precision": 3,
+        "execution_precision_reason": "正确识别了“recalls”为负面事件，但最终将情感判为Neutral，与标准答案不符，尽管理由与金融语境相关且有一定道理。"
+      }
+    },
+    {
+      "sample_id": 25,
+      "model": "thinking",
+      "gold_answer": "negative",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤展开分析，高空头比例含义、LOL语气及整体语境，推理顺畅无矛盾，仅略有重复说明，未达极致精简严密。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原文关键信息（42.71% 浮动空头、LOL 表达）引用准确，将高空头视作看空信号属于常识推断，无捏造内容。",
+        "execution_precision": 4,
+        "execution_precision_reason": "最终情感判断为负面，与标准答案一致，理由围绕高空头比例的看空含义和LOL的讽刺语气，抓住了主要矛盾。"
+      }
+    },
+    {
+      "sample_id": 25,
+      "model": "instruct_v6",
+      "gold_answer": "negative",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤识别关键词、分析情绪、再下结论，结构清晰，推理链条顺畅，无明显前后矛盾，仅在情感判断上有偏差。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原文元素（股票代码、高空头比例、LoL、链接）的引用准确，没有虚构或数字错误，只是在语气解读上略有主观性但不算事实性错误。",
+        "execution_precision": 3,
+        "execution_precision_reason": "能够抓住高空头比例通常是负面信号这一要点，但过度强调‘LoL’的轻松语气，将整体情绪判为中性，最终情感分类错误，按规则答错最高给3分。"
+      }
+    },
+    {
+      "sample_id": 154,
+      "model": "thinking",
+      "gold_answer": "positive",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "步骤清晰，从关键词识别到整体语气分析再到结论，推理链条合理，但有一定重复解释，略显冗余，难以给满分。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原句中“downgrade is bias”和“This stock is a buy”的解读准确，没有添加不存在的内容或歪曲含义。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确判断为正向情绪，抓住了反驳下调评级和明确买入建议两个关键点，理由紧扣任务要求，但分析深度属正常水平，不到极致细腻。"
+      }
+    },
+    {
+      "sample_id": 154,
+      "model": "instruct_v6",
+      "gold_answer": "positive",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤梳理关键词、情绪含义、整体语气并得出结论，结构清晰无明显跳跃，仅有少量措辞上的重复说明，未达极致严密。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原文内容的引用和解释准确，未添加虚构信息，情绪判断与文本一致，但未做到逐字级精细对齐，故不给满分。",
+        "execution_precision": 4,
+        "execution_precision_reason": "准确判断为正向情绪，并清楚指出“buy”为核心积极信号，理由与结论高度一致且抓住重点，但分析深度属常规水平。"
+      }
+    },
+    {
+      "sample_id": 31,
+      "model": "thinking",
+      "gold_answer": "negative",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 3,
+        "logical_coherence_reason": "推理链条基本顺畅，能从价格下跌和措辞推导出负面情绪，但有较多重复解释和啰嗦说明，逻辑上没有进一步精炼和结构化，因此停留在一般水平。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原句中关键信息（FMCN股价回落至17下方、对空头的抱怨、讽刺语气）引用准确，没有虚构内容，但对“LOL”是否讽刺带有少量主观判断，略超出文本表面含义，故不给满分。",
+        "execution_precision": 4,
+        "execution_precision_reason": "最终情感分类为negative，与标准答案一致，并抓住了“back under $17”“darn those shorts”“No chit Sherlock”等关键词的负面含义，理由到位但分析深度和精炼度尚未达到非常出色的程度。"
+      }
+    },
+    {
+      "sample_id": 31,
+      "model": "instruct_v6",
+      "gold_answer": "negative",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "分步识别关键词、分析情绪、综合得出结论，结构清晰、前后连贯，无明显自相矛盾，虽然对整体情绪的解读有偏差，但逻辑过程本身是连贯的。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原文内容的引用基本准确，对各短语情绪的描述与文本相符，没有捏造信息，仅在对讽刺语气和整体情感的理解上有一定曲解但不属事实性错误。",
+        "execution_precision": 3,
+        "execution_precision_reason": "最终情感分类与标准答案不符，但分析了关键短语（LOL、back under $17、darn those shorts、No chit Sherlock）并尝试基于语气和上下文推断情绪，理由与任务相关，有一定道理。按规则答错最高给3分。"
+      }
+    },
+    {
+      "sample_id": 33,
+      "model": "thinking",
+      "gold_answer": "negative",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "推理过程清晰，先解释召回的含义及其在金融语境中的影响，再得出负面情绪结论，结构合理但有一定重复论述，故不满分。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原文信息的引用准确，没有捏造事实或歪曲含义，对“自愿召回”、“座椅问题”等描述均与原文一致。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确判断情感为负面，理由抓住召回和安全问题在金融语境中的负面影响，分析到位但不算非常深入。"
+      }
+    },
+    {
+      "sample_id": 33,
+      "model": "instruct_v6",
+      "gold_answer": "negative",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤完成任务，关键词提取、情感分析、整体判断到最终结论的链条清晰，论证有条理，仅有少量重复解释“voluntary recall”的含义。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原文关键信息（Tesla、自愿召回、2700辆、后座问题、财务语境）引用准确，无编造与事实性错误。",
+        "execution_precision": 4,
+        "execution_precision_reason": "识别到召回及缺陷在金融语境中通常为负面事件，最终给出Negative，与标准答案一致，理由也紧扣财务情感分析需求。"
+      }
+    },
+    {
+      "sample_id": 35,
+      "model": "thinking",
+      "gold_answer": "negative",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 3,
+        "logical_coherence_reason": "推理步骤基本连贯，但加入了关于“用户可能是新手投资者”的揣测和多次重复解释，看起来有些啰嗦和与任务无关，按标准有无关废话只能给到3分。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对文本内容的引用与解读基本准确，抓住了“signaling some bad moves for the market”这一核心负面短语；对TLT、RSI、MACD等背景解释也大体正确，没有明显事实性错误。不过这些背景并非都源自原文，稍有延展，故不给满分。",
+        "execution_precision": 4,
+        "execution_precision_reason": "最终情感分类为Negative，与标准答案一致，且理由抓住了关键负面表述和整体偏空语气，分析到位但并无特别深刻或独到的洞见，故评4分。"
+      }
+    },
+    {
+      "sample_id": 35,
+      "model": "instruct_v6",
+      "gold_answer": "negative",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤识别关键词、分析情绪、再给结论，结构清晰，因果关系合理，仅有少量解释性冗余。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原文关键信息如“rising RSI & MACD”“signaling some bad moves for the market”等引用准确，无明显曲解，仅对TLT技术信号的解读略作延伸但不违背原意。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确识别整体情绪为负面，并抓住“bad moves for the market”作为核心依据，理由与结论一致且聚焦关键点。"
+      }
+    },
+    {
+      "sample_id": 174,
+      "model": "thinking",
+      "gold_answer": "positive",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "分步拆解文本、解释各短语含义并推导情感，结构清晰但有一定重复阐述，略显冗长。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原文关键词“bounce”“slid”“vol”的解释基本准确，但将“no vol”直接解读为正面信号略带主观，轻微超出字面信息。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确识别整体情绪为positive，并给出与股价反弹相关的合理金融语境解释，理由围绕文本关键点展开，虽不算很深入但已较充分。"
+      }
+    },
+    {
+      "sample_id": 174,
+      "model": "instruct_v6",
+      "gold_answer": "positive",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤拆解关键词、情绪含义和整体语气，推理顺畅无明显矛盾，只是对‘bounce’偏正向含义的权重判断略显保守。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原句中关于AAPL反弹、当前无波动、下跌时波动较大等信息的复述准确，没有捏造额外事实，仅在情绪解读上作了中性化判断。",
+        "execution_precision": 3,
+        "execution_precision_reason": "将整体情绪判为中性而非正面，未把‘bounce’这一典型利好词汇视为主导情绪，最终分类错误，但理由与文本相关、具有一定道理。"
+      }
+    },
+    {
+      "sample_id": 179,
+      "model": "thinking",
+      "gold_answer": "positive",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤拆解文本、解释术语、推导情绪，结构清晰无矛盾，但有一定篇幅的重复与扩展说明，略显冗长，难以给满分。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原文术语如BTO、call、目标价等解释准确，没有捏造数值或事件；将“bounce off”视为积极技术信号是合理解读，不过对“Added. Cost now at 1.54”含有轻微主观推断其表现良好，因此不给满分。",
+        "execution_precision": 4,
+        "execution_precision_reason": "最终情感分类为positive，与标准答案一致，并能抓住买入看涨期权和“ride to 609 ish”等关键点，理由充分，但分析深度正常偏上，尚未达到特别精炼又有独到洞察的程度。"
+      }
+    },
+    {
+      "sample_id": 179,
+      "model": "instruct_v6",
+      "gold_answer": "positive",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤识别关键词、分析情感、再给结论，结构清晰、无明显跳跃，仅有少量重复阐述。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原文关键信息的引用和解释基本准确，没有捏造内容，仅将技术信号解释为看多，属于合理扩展。",
+        "execution_precision": 4,
+        "execution_precision_reason": "识别到“for ride to 609 ish”等关键看多措辞，正确判断为正向情绪，理由与结论一致且抓住重点。"
+      }
+    },
+    {
+      "sample_id": 183,
+      "model": "thinking",
+      "gold_answer": "positive",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 3,
+        "logical_coherence_reason": "有分步骤分析术语含义并推导情绪，整体思路清晰，但存在明显冗余和跑题（揣测用户深层需求、解释过长），不够精炼紧凑。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对“SPY”“bear trap”等金融概念解释基本准确，没有捏造事实或明显曲解原文，仅对语气情绪有轻微主观延伸。",
+        "execution_precision": 4,
+        "execution_precision_reason": "情感分类为正面，与标准答案一致，对bear trap代表对空头不利、对多头有利的解释到位，但分析略显啰嗦，深度尚未达到非常细致入微的程度。"
+      }
+    },
+    {
+      "sample_id": 183,
+      "model": "instruct_v6",
+      "gold_answer": "positive",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤拆解关键词、情绪和整体语气，推理结构清晰，无明显自相矛盾，但在从含义到情绪判断的映射上有偏差。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对文本内容和“bear trap”含义的解释基本准确，没有捏造信息，仅在情绪解读上有偏差并略低估其对多头的正面含义。",
+        "execution_precision": 3,
+        "execution_precision_reason": "将‘bear traps’整体理解为负面市场现象，忽略了其对看多者是利好的含义，导致情感分类从应为正面误判为负面，但推理与文本仍有一定相关性。"
+      }
+    },
+    {
+      "sample_id": 188,
+      "model": "thinking",
+      "gold_answer": "positive",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 3,
+        "logical_coherence_reason": "步骤分解清楚，但存在明显重复和啰嗦，多次反复强调同一观点且有不必要的扩展说明，符合“有冗余废话”的标准。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原句的关键词和含义解释基本准确，未曲解语义；对“biggies”“loading up”“lows”的解读与原文一致。关于LINE公司背景的补充属于轻微延展，并未影响对文本本身的忠实度。",
+        "execution_precision": 4,
+        "execution_precision_reason": "情感分类为Positive，与标准答案一致，能抓住“loading up at lows”这一看涨信号并作出合理解释，但分析深度属常规水平，没有特别深入或独到之处。"
+      }
+    },
+    {
+      "sample_id": 188,
+      "model": "instruct_v6",
+      "gold_answer": "positive",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按给定四步逐条完成，逻辑顺畅、无矛盾，虽有少量重复强调但不算严重冗余。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原文关键词“biggies”“loading up”“at lows”的解释准确，没有捏造额外内容，只是稍作背景补充。",
+        "execution_precision": 4,
+        "execution_precision_reason": "情感分类为Positive，与标准答案一致，且能抓住“loading up”“lows”等作为看多信号，理由充分但不算特别深入。"
+      }
+    },
+    {
+      "sample_id": 192,
+      "model": "thinking",
+      "gold_answer": "positive",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 3,
+        "logical_coherence_reason": "推理基本顺畅，但存在明显重复和冗余解释，多次重复“收购/投资通常为正面”这一点，未完全按用户给出的4步格式简洁对应。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对标题内容的解读准确，没有捏造额外事实，只是补充了公司背景等常识性信息。",
+        "execution_precision": 4,
+        "execution_precision_reason": "最终情感分类为正面，与标准答案一致，理由相关且抓住了“购买50%股权”作为利好信号，但分析略显啰嗦、深度一般，未到极高水准。"
+      }
+    },
+    {
+      "sample_id": 192,
+      "model": "instruct_v6",
+      "gold_answer": "positive",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按要求分步骤识别关键词、分析情感、综合得出结论，结构清晰，无明显跳跃，仅有少量扩展性描述。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对标题中的主体、行为和比例等信息引用准确，仅补充了MediaCityUK性质的背景说明，属轻度合理扩展，无事实性错误。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确判断为正面情感，并从‘buys’和‘50 pct stake’等金融语境中的积极含义进行解释，理由与结论一致且抓住重点。"
+      }
+    },
+    {
+      "sample_id": 193,
+      "model": "thinking",
+      "gold_answer": "positive",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤识别关键词、分析情绪并得出结论，结构清晰但有少量重复阐述，略显冗余，难达满分严谨度。",
+        "factual_fidelity": 5,
+        "factual_fidelity_reason": "对标题中的关键信息如“win”“£100m”“contract extension”的引用与含义解读均与原文一致，无歪曲或遗漏关键信息。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确判断为积极情绪，理由紧扣“赢得合同”和金额较大等关键点，分析到位但不算特别深入。"
+      }
+    },
+    {
+      "sample_id": 193,
+      "model": "instruct_v6",
+      "gold_answer": "positive",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "严格按步骤拆解关键词、情绪和整体语境，推理顺畅无矛盾，略有重复但不影响整体清晰度。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对标题中的主体、金额、合同性质等信息引用准确，无虚构或曲解，仅对积极含义做了合理延伸。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确判断为正面情绪，抓住了“win”“£100m”“contract extension”等关键点，理由充分但分析深度属常规水平。"
+      }
+    },
+    {
+      "sample_id": 195,
+      "model": "thinking",
+      "gold_answer": "positive",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "推理步骤清晰，从BUY评级推导出正向情感，结构合理但有少量重复与冗余说明，不能算极致紧凑。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原文关键信息（BUY推荐、价位目标、主体）引用准确，无捏造内容，仅对价位目标通常高于现价做了一句常识性补充推断，属合理扩展。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确识别情感为Positive，理由紧扣BUY推荐和目标价，分析到位但并不算特别深入或有独到见解。"
+      }
+    },
+    {
+      "sample_id": 195,
+      "model": "instruct_v6",
+      "gold_answer": "positive",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤识别关键词、分析情感、再下结论，结构清晰无明显跳跃，仅有少量解释性重复。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原文关键信息（BUY、价目标、推荐来源等）引用准确，无捏造或曲解，仅对“新推荐暗含积极分析”为轻度推断但不影响整体忠实度。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确判断为正向情感，突出BUY评级和目标价的积极意义，理由与金融语境吻合但分析深度一般。"
+      }
+    },
+    {
+      "sample_id": 70,
+      "model": "thinking",
+      "gold_answer": "negative",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 3,
+        "logical_coherence_reason": "有清晰步骤拆解关键词、逐段分析并得出结论，但存在明显重复论述和冗余解释，多次反复强调同一点，影响整体紧凑度。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原句的解析基本忠实，没有捏造额外信息，对“bull move ended”“waiting for next setup”的解释符合文本含义和常见金融语境。",
+        "execution_precision": 4,
+        "execution_precision_reason": "最终情感分类为negative，与标准答案一致，理由抓住了“bull move ended”这一核心负面信号，但分析略显拖沓、缺乏更精炼有力的概括，因此不满分。"
+      }
+    },
+    {
+      "sample_id": 70,
+      "model": "instruct_v6",
+      "gold_answer": "negative",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤识别关键词、分析情绪、综合判断，结构清晰，无明显跳跃，但对情绪强弱判断略显主观。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "准确引用并解释了原文中的关键词，没有捏造额外信息，对语句含义的解读基本忠实。",
+        "execution_precision": 3,
+        "execution_precision_reason": "抓住了“bull move ended”带来的负向含义，但对整体语气偏中性解读，最终情感分类为Neutral而正确应为Negative，属有依据但结论错误。"
+      }
+    },
+    {
+      "sample_id": 200,
+      "model": "thinking",
+      "gold_answer": "positive",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 3,
+        "logical_coherence_reason": "有分步分析和结论，但对“picked some up”的含义理解有偏差，且论述略显啰嗦重复，存在轻微逻辑跳跃。",
+        "factual_fidelity": 3,
+        "factual_fidelity_reason": "整体围绕原句展开，但将“picked some up”误解为股价上涨而非买入行为，属于轻微曲解语义。",
+        "execution_precision": 4,
+        "execution_precision_reason": "最终情感分类为Positive，与标准答案一致，理由基本聚焦在对股票前景的乐观态度上，但对关键短语的解释不够精准，深度略显不足。"
+      }
+    },
+    {
+      "sample_id": 200,
+      "model": "instruct_v6",
+      "gold_answer": "positive",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤完成了关键词提取、情感分析和结论，结构清晰，但对“picked some up”含义的解释略显武断，存在轻微过度推断。",
+        "factual_fidelity": 3,
+        "factual_fidelity_reason": "对原句的含义有细微曲解：‘picked some up’在语境中更可能是说话者买入股票，而不是股价上涨；其余内容基本忠实。",
+        "execution_precision": 4,
+        "execution_precision_reason": "情感分类结果为正面，与标准答案一致，理由也紧扣关键词和语气，但个别细节解释不够精确，未达到非常深入的分析程度。"
+      }
+    },
+    {
+      "sample_id": 74,
+      "model": "thinking",
+      "gold_answer": "negative",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "分步分析清晰，能识别关键词并联系金融语境判断情绪，论证顺畅但有些重复解释“downgrade”含义，稍显冗余，故不满分。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原文的关键信息（Deutsche Bank、downgrades、Starbucks、新忠诚度计划、$SBUX）引用准确，无捏造或歪曲，仅对中性表述做出了合理解释。",
+        "execution_precision": 4,
+        "execution_precision_reason": "最终情感分类为Negative，与标准答案一致，并准确抓住“downgrades”作为负面信号，解释到位但整体分析深度和精炼度尚有提升空间。"
+      }
+    },
+    {
+      "sample_id": 74,
+      "model": "instruct_v6",
+      "gold_answer": "negative",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤完成识别关键词、分析情绪、考虑语境并得出结论，结构清晰，无明显跳跃，仅有少量重复解释。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原文内容的复述和引用准确，没有虚构信息或曲解，仅对“新忠诚度计划”导致负面看法作了合理推断。",
+        "execution_precision": 4,
+        "execution_precision_reason": "准确识别“downgrades”为负面信号，结合金融语境得出负面情绪判断，与标准答案一致，分析抓住了关键点。"
+      }
+    },
+    {
+      "sample_id": 203,
+      "model": "thinking",
+      "gold_answer": "positive",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "推理步骤清晰，从RSI含义到4周期RSI特性，再到Connors策略与买入信号关联，逻辑链完整，但存在一定重复阐述，略显冗长，无法给到满分。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原文内容的引用准确；对RSI<30为超卖、Connors策略常在低RSI买入等背景说明与常识一致，没有捏造原文信息，但这些属于外部知识而非可逐条在原文中追溯，故不给5分。",
+        "execution_precision": 4,
+        "execution_precision_reason": "最终情感分类为positive，与标准答案一致；理由紧扣低RSI被视为买入机会及参考Connors交易策略来判断为偏多情绪，抓住主要矛盾并解释到位，但分析深度尚未达到特别高的洞察水平。"
+      }
+    },
+    {
+      "sample_id": 203,
+      "model": "instruct_v6",
+      "gold_answer": "positive",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤识别关键词、分析含义、综合语气后给出结论，结构清晰，无明显自相矛盾，但对技术信号含义的解释略有重复。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原文内容的引用和拆解基本准确，未捏造额外事件，仅对RSI为买入机会的解读属常识性延伸，无明显曲解。",
+        "execution_precision": 3,
+        "execution_precision_reason": "将语气判断为中性而忽略在交易语境下超卖+提及策略书通常隐含看多意图，导致情感分类与标准答案不符，但推理与金融背景相关且有一定道理。"
+      }
+    },
+    {
+      "sample_id": 75,
+      "model": "thinking",
+      "gold_answer": "negative",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "分步骤识别正负信息并判断哪一部分主导情绪，逻辑清晰但有少量重复和扩展性赘述，略影响紧凑性。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原文关键信息“Beat the estimates”和“Will still go down on lack of new products”的引用准确，没有捏造信息，仅补充了一些一般性金融语境解释。",
+        "execution_precision": 4,
+        "execution_precision_reason": "最终判断为负面情绪，与标准答案一致，理由围绕前瞻性负面预测占主导展开，能抓住重点，但分析深度属正常水平而非特别深入。"
+      }
+    },
+    {
+      "sample_id": 75,
+      "model": "instruct_v6",
+      "gold_answer": "negative",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤拆解关键词、情绪和整体语气，推理顺畅无明显矛盾，仅有少量重复阐述正负情绪对比。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原文的关键信息（盈利超预期、股价仍会下跌、缺乏新产品）引用准确，无虚构或歪曲。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确识别整体情绪偏负面，理由抓住‘will still go down’和‘lack of new products’为主导情绪因素，分析到位。"
+      }
+    },
+    {
+      "sample_id": 208,
+      "model": "thinking",
+      "gold_answer": "positive",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "推理步骤清晰，从术语含义到情感结论，因果关系合理，但有少量重复说明，略显冗余，达不到满分严密程度。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对文本的解释准确，‘$FB’为股票、‘popping up’为快速上涨、‘HOD’为当日高点均属常识性正确解读，无歪曲原文，但有少量扩展背景（如Meta）并非原文所述，故不评为5分。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确识别为正向情绪，并抓住关键表达‘popping up to HOD’进行分析，理由聚焦价格上涨带来利好情绪，较为充分但不算特别深入或有独到洞见。"
+      }
+    },
+    {
+      "sample_id": 208,
+      "model": "instruct_v6",
+      "gold_answer": "positive",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤识别关键词、分析情绪、再综合给出结论，结构清晰无明显跳跃，仅有少量重复强调。",
+        "factual_fidelity": 5,
+        "factual_fidelity_reason": "对原文内容的解释准确，将“popping up”和“HOD”解释为股价上升和当日高点均与文本及金融语境完全一致，无杜撰信息。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确判断为正向情绪，并说明上涨和创当日高点是积极信号，理由贴合要点，分析较充分但不算特别深刻。"
+      }
+    },
+    {
+      "sample_id": 213,
+      "model": "thinking",
+      "gold_answer": "positive",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "分步骤识别关键词、解释含义、排除无关的“REFILE”、得出情感结论，逻辑清晰但有少量重复描述，不算严密到无懈可击。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对标题中各元素的含义解释准确，没有捏造额外事实；将FTSE上涨视为积极事件符合常识。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确判断为正向情绪，并抓住“climb higher”等关键表达，理由充分但分析深度属常规水准。"
+      }
+    },
+    {
+      "sample_id": 213,
+      "model": "instruct_v6",
+      "gold_answer": "positive",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤识别关键词、分析情感、结合语境并得出结论，结构清晰；略有重复解释但无明显跳跃。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对标题中各词语含义和整体语气的解读准确，没有捏造额外信息，仅对REFILE作合理说明。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确判断为正向情绪，理由紧扣“help”和“climb higher”等关键词，能结合金融市场语境说明上涨为利好。"
+      }
+    },
+    {
+      "sample_id": 222,
+      "model": "thinking",
+      "gold_answer": "neutral",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤梳理关键词、逐条分析情感，再综合得出结论，结构清晰无明显跳跃，但有少量重复论述，难达满分。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对标题中“turnaround”“proving expensive”“tough UK market”的含义解读基本忠实且合理，没有虚构信息或事实性错误。",
+        "execution_precision": 3,
+        "execution_precision_reason": "将情绪判定为Negative而非标准答案Neutral，但分析与文本相关且有一定道理，属于有依据但结论偏差的情况。"
+      }
+    },
+    {
+      "sample_id": 222,
+      "model": "instruct_v6",
+      "gold_answer": "neutral",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤识别关键词、分析情绪、综合后给出结论，推理顺畅无明显矛盾，仅在权重判断上有偏差。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原文中‘turnaround’、‘proving expensive’、‘tough UK market’的引用和释义基本准确，没有编造信息或明显曲解。",
+        "execution_precision": 3,
+        "execution_precision_reason": "抓住了成本高和市场艰难等负面点，但对整体语气的解读偏向负面，与标准答案中性不符，属于有一定道理但最终分类错误。"
+      }
+    },
+    {
+      "sample_id": 223,
+      "model": "thinking",
+      "gold_answer": "neutral",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 3,
+        "logical_coherence_reason": "推理过程基本通顺，但有明显重复和赘述，多次反复说明“neutral”一词及示例，超过完成任务所需的逻辑展开，存在冗余。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对标题中关键信息的解读（Diageo、stays neutral、boardroom turmoil）均与原文一致，没有事实性错误或捏造内容。",
+        "execution_precision": 4,
+        "execution_precision_reason": "最终情感分类为Neutral，与标准答案一致，并抓住了“stays neutral”为主导情绪的核心，但分析深度一般，未体现特别深入或独到的洞察。"
+      }
+    },
+    {
+      "sample_id": 223,
+      "model": "instruct_v6",
+      "gold_answer": "neutral",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤识别关键词、分析情绪、综合判断，结构清晰，因果合理，无明显跳跃或矛盾，仅有少量重复阐述。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对标题中各词语含义的解释基本贴合原文，没有捏造额外事实，虽对Diageo背景略作描述但不影响对原文的忠实度。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确识别整体情绪为中性，理由围绕‘stays neutral’和信息性报道语气展开，抓住了主要判断依据，分析到位。"
+      }
+    },
+    {
+      "sample_id": 228,
+      "model": "thinking",
+      "gold_answer": "neutral",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤拆解关键词、情感含义、新闻语境再得出结论，结构清晰但有一定重复论述，略显啰嗦，达不到满分严密程度。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对标题内容和常见财经新闻写法的描述基本准确，无捏造或明显曲解，仅对“poaches”语气的讨论略带主观色彩但不影响事实忠实度。",
+        "execution_precision": 4,
+        "execution_precision_reason": "最终情感分类为neutral，和标准答案一致，且理由能抓住核心：这是中性报道性标题，有一定深度但不算特别有洞见。"
+      }
+    },
+    {
+      "sample_id": 228,
+      "model": "instruct_v6",
+      "gold_answer": "neutral",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤识别关键词、分析情绪、再下结论，结构清晰、无明显跳跃，虽有少量重复但整体连贯。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对标题中的机构、人物及用词含义的解释基本忠实原文，没有捏造额外事实，仅对“poaches”等词语做一般性语气解读。",
+        "execution_precision": 3,
+        "execution_precision_reason": "将整体情绪从应为中性的新闻表述解读为正向，最终分类错误，但理由与文本相关且有一定道理，符合答错时的最高档。"
+      }
+    },
+    {
+      "sample_id": 104,
+      "model": "thinking",
+      "gold_answer": "positive",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 3,
+        "logical_coherence_reason": "推理整体连贯，但多次重复阐述相同观点（如资产出售一般被视为积极的战略调整），存在明显冗余，未严格按用户要求的分步结构呈现。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对标题内容的理解基本准确，没有捏造具体事实，仅对交易背景和典型市场解读做一般性推断，虽有推演但未与原文事实相矛盾。",
+        "execution_precision": 4,
+        "execution_precision_reason": "最终情感判断为Positive，与标准答案一致，理由与金融语境相关且有一定展开，但分析略显泛化，对关键词本身及其语气的直接分析不够精炼深入，未达到特别有洞察力的程度。"
+      }
+    },
+    {
+      "sample_id": 104,
+      "model": "instruct_v6",
+      "gold_answer": "positive",
+      "is_correct": false,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤拆解关键词、情绪分析和整体判断，结构清晰无明显跳跃，但对中性结论的论证略显重复。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对标题中的关键信息提取准确，没有捏造事实或明显曲解，仅对“可能是战略性出售”等为合理推测。",
+        "execution_precision": 3,
+        "execution_precision_reason": "推理过程与情感判定任务相关且有一定道理，但最终情感分类与标准答案不符，只能给答错情况下的最高分。"
+      }
+    },
+    {
+      "sample_id": 106,
+      "model": "thinking",
+      "gold_answer": "positive",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤识别关键词、解释含义并得出结论，结构清晰但有轻微重复和冗余说明，未达到极致紧凑严密。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原句中“resume gains, rally to record, climb”等词的引用和解释准确，无杜撰或曲解，但未逐字对应到每一处，略逊于满分标准。",
+        "execution_precision": 4,
+        "execution_precision_reason": "提取了正确的情感线索，分析到位，最终情感分类为正面，与标准答案一致，理由也紧扣财务语境。"
+      }
+    },
+    {
+      "sample_id": 106,
+      "model": "instruct_v6",
+      "gold_answer": "positive",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤提取关键词、分析情绪、综合判断，结构清晰，无明显跳跃，仅有少量重复解释。",
+        "factual_fidelity": 5,
+        "factual_fidelity_reason": "对原句中“resume gains”“rally to record”“climb”等关键词的引用和含义解释准确，无偏离或捏造信息。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确判断为正向情绪，并给出围绕股价上涨、创纪录表现等的充分理由，抓住了核心信息。"
+      }
+    },
+    {
+      "sample_id": 234,
+      "model": "thinking",
+      "gold_answer": "neutral",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "分析从内容理解到情感判断，结构清晰、有层次，没有明显跳跃，但存在一定程度的重复论述，略显冗长，难以评为满分。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原始标题的内容理解准确，没有杜撰或曲解，仅加入了一些一般性的背景说明（如领导更迭通常中性），与原文不冲突。",
+        "execution_precision": 4,
+        "execution_precision_reason": "最终情感分类为中性，与标准答案一致，理由针对新闻事实、措辞和语气分析，抓住了无明显正负词这一关键点，解释较充分但不算特别深刻。"
+      }
+    },
+    {
+      "sample_id": 234,
+      "model": "instruct_v6",
+      "gold_answer": "neutral",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤识别关键词、分析情感、评估整体语气并得出结论，结构清晰无明显跳跃，推理简洁但不够到严密无懈可击的程度。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对标题内容的引用准确，仅说明是人事变动、无情感色彩，未引入额外事实或曲解含义。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确判断为中性，并说明缺乏正负向评价词或业绩信息，理由充分且紧扣要点，但分析深度为常规水平。"
+      }
+    },
+    {
+      "sample_id": 108,
+      "model": "thinking",
+      "gold_answer": "positive",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "分步分析清晰，从拆解关键词到综合判断，因果链合理但存在少量重复表述，略显冗余，故不满分。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对标题中“sales lifted”“soft economy”等要素的理解准确，没有虚构信息或歪曲含义，但没有更细致拆分结构，维持高分不满分。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确识别整体情绪为积极，并抓住“销售上升在疲软经济中的表现”这一核心逻辑，理由充分但分析深度属常规水准。"
+      }
+    },
+    {
+      "sample_id": 108,
+      "model": "instruct_v6",
+      "gold_answer": "positive",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤完成识别关键词、分析情感、综合判断到结论，结构清晰，无明显跳跃，仅有少量重复阐述。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对标题中“sales lifted”“soft economy”等元素的理解准确，没有捏造信息或歪曲含义。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确判断总体情绪为积极，理由围绕销售上升及逆势表现展开，抓住了核心要点。"
+      }
+    },
+    {
+      "sample_id": 109,
+      "model": "thinking",
+      "gold_answer": "positive",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤识别关键词、分析情绪、综合语境再给结论，结构清晰但有少量重复说明，略显冗余，未达严密无冗余的程度。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原文内容和术语含义的解读准确，未捏造额外事实，仅基于通用交易语境解释“explosive setup”“break 20EMA and 105 level”，没有事实性错误。",
+        "execution_precision": 4,
+        "execution_precision_reason": "最终情感分类为Positive，与标准答案一致，且抓住了“explosive setup”和突破关键技术位的乐观含义，理由充分但不具特别深度洞察。"
+      }
+    },
+    {
+      "sample_id": 109,
+      "model": "instruct_v6",
+      "gold_answer": "positive",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按要求分步进行，识别关键词、分析情绪、再给结论，逻辑清晰无明显跳跃，仅有少量重复表述。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原文短句的引用与解释基本准确，没有捏造信息或曲解含义，仅对“explosive”偏向积极的常见交易语境作了合理扩展。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确识别情感为正向，抓住了“explosive setup”“break”等关键交易语汇，理由与结论一致且围绕金融语境分析，但分析深度尚属常规水平。"
+      }
+    },
+    {
+      "sample_id": 124,
+      "model": "thinking",
+      "gold_answer": "positive",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤拆解文本、解释术语、再给出结论，结构清晰，但有部分重复解释与背景说明，略显冗余，难以评为满分。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原文关键词、含义和技术含义的解读基本准确，但开头对$pcln所代表公司有不必要的猜测性说明，虽不影响结论但略超出原文且可能不精确，故不给满分。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确识别出技术形态“back over up trendline”为偏多头信号，将整体情绪归类为Positive，理由与答案一致且抓住了关键点，但分析深度属正常水平。"
+      }
+    },
+    {
+      "sample_id": 124,
+      "model": "instruct_v6",
+      "gold_answer": "positive",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤拆解关键词、情绪含义和整体语气，推理顺畅清晰，没有明显跳跃，但略有些冗长重复，未达到近乎完美的严密程度。",
+        "factual_fidelity": 3,
+        "factual_fidelity_reason": "整体对原文含义的把握是正确的，但错误地将“$pcln”解释为Planet Fitness的股票代码，属于事实性偏差，因此不能给高于3分。",
+        "execution_precision": 4,
+        "execution_precision_reason": "最终情感判断为Positive，与标准答案一致，理由紧扣技术面‘back over up trendline’这一利好信号，分析较为充分，但存在个股识别错误，难称特别深入精细。"
+      }
+    },
+    {
+      "sample_id": 125,
+      "model": "thinking",
+      "gold_answer": "positive",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤识别关键词、分析语境、排除负面和中性，推理顺畅但有一定重复说明，未达到极致严密。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原文内容和“good entry”在交易语境中的含义理解准确，无捏造或曲解。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确判断情感为Positive，理由围绕“good entry”这一核心信号展开，抓住要点且解释充分。"
+      }
+    },
+    {
+      "sample_id": 125,
+      "model": "instruct_v6",
+      "gold_answer": "positive",
+      "is_correct": true,
+      "scores": {
+        "logical_coherence": 4,
+        "logical_coherence_reason": "按步骤识别关键词、分析情绪、再综合得出结论，结构清晰无明显跳跃，略有轻微重复但不影响整体逻辑。",
+        "factual_fidelity": 4,
+        "factual_fidelity_reason": "对原文内容的引用准确，没有添加原文不存在的事实或曲解含义。",
+        "execution_precision": 4,
+        "execution_precision_reason": "正确识别出“good entry”为看多信号，给出Positive结论，理由围绕金融语境中用语含义，较为充分。"
+      }
+    }
+  ],
+  "metadata": {
+    "created": "2025-12-06T15:47:40.417108",
+    "last_updated": "2025-12-06T16:00:17.363050"
+  }
+}

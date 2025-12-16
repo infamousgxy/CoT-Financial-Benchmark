@@ -1,0 +1,638 @@
+{
+  "timestamp": "2025-12-04T18:11:44.224386",
+  "version": "v2_improved_extractor",
+  "model_summaries": {
+    "Qwen3-30B-A3B-Instruct-2507": {
+      "runs": {
+        "Qwen3-30B-A3B-Instruct-2507/5tasks_5842samples": {
+          "finqa": {
+            "total": 1147,
+            "correct_original": 649,
+            "correct_v2": 649,
+            "accuracy_original": 56.582388840453355,
+            "accuracy_v2": 56.582388840453355,
+            "improvement": 0,
+            "improvement_pct": 0.0
+          },
+          "convfinqa": {
+            "total": 1490,
+            "correct_original": 990,
+            "correct_v2": 989,
+            "accuracy_original": 66.44295302013423,
+            "accuracy_v2": 66.3758389261745,
+            "improvement": -1,
+            "improvement_pct": -0.06711409395973154
+          },
+          "fpb": {
+            "total": 970,
+            "correct_original": 770,
+            "correct_v2": 770,
+            "accuracy_original": 79.38144329896907,
+            "accuracy_v2": 79.38144329896907,
+            "improvement": 0,
+            "improvement_pct": 0.0
+          },
+          "fiqasa": {
+            "total": 235,
+            "correct_original": 177,
+            "correct_v2": 177,
+            "accuracy_original": 75.31914893617021,
+            "accuracy_v2": 75.31914893617021,
+            "improvement": 0,
+            "improvement_pct": 0.0
+          },
+          "headlines": {
+            "total": 2000,
+            "correct_original": 1471,
+            "correct_v2": 1471,
+            "accuracy_original": 73.55000000000001,
+            "accuracy_v2": 73.55000000000001,
+            "improvement": 0,
+            "improvement_pct": 0.0
+          }
+        },
+        "Qwen3-30B-A3B-Instruct-2507/headlines_full_20547samples": {
+          "headlines": {
+            "total": 20547,
+            "correct_original": 14953,
+            "correct_v2": 14953,
+            "accuracy_original": 72.77461429892442,
+            "accuracy_v2": 72.77461429892442,
+            "improvement": 0,
+            "improvement_pct": 0.0
+          }
+        },
+        "Qwen3-30B-A3B-Instruct-2507/5tasks_full_round2_30295": {
+          "finqa": {
+            "total": 1147,
+            "correct_original": 629,
+            "correct_v2": 629,
+            "accuracy_original": 54.83870967741935,
+            "accuracy_v2": 54.83870967741935,
+            "improvement": 0,
+            "improvement_pct": 0.0
+          },
+          "convfinqa": {
+            "total": 1490,
+            "correct_original": 990,
+            "correct_v2": 990,
+            "accuracy_original": 66.44295302013423,
+            "accuracy_v2": 66.44295302013423,
+            "improvement": 0,
+            "improvement_pct": 0.0
+          },
+          "fpb": {
+            "total": 970,
+            "correct_original": 769,
+            "correct_v2": 769,
+            "accuracy_original": 79.27835051546391,
+            "accuracy_v2": 79.27835051546391,
+            "improvement": 0,
+            "improvement_pct": 0.0
+          },
+          "fiqasa": {
+            "total": 235,
+            "correct_original": 174,
+            "correct_v2": 174,
+            "accuracy_original": 74.04255319148936,
+            "accuracy_v2": 74.04255319148936,
+            "improvement": 0,
+            "improvement_pct": 0.0
+          },
+          "headlines": {
+            "total": 20547,
+            "correct_original": 14950,
+            "correct_v2": 14950,
+            "accuracy_original": 72.76001362729352,
+            "accuracy_v2": 72.76001362729352,
+            "improvement": 0,
+            "improvement_pct": 0.0
+          }
+        },
+        "Qwen3-30B-A3B-Instruct-2507/5tasks_full_round2_31176": {
+          "finqa": {
+            "total": 1147,
+            "correct_original": 649,
+            "correct_v2": 649,
+            "accuracy_original": 56.582388840453355,
+            "accuracy_v2": 56.582388840453355,
+            "improvement": 0,
+            "improvement_pct": 0.0
+          },
+          "convfinqa": {
+            "total": 1490,
+            "correct_original": 990,
+            "correct_v2": 989,
+            "accuracy_original": 66.44295302013423,
+            "accuracy_v2": 66.3758389261745,
+            "improvement": -1,
+            "improvement_pct": -0.06711409395973154
+          },
+          "fpb": {
+            "total": 970,
+            "correct_original": 770,
+            "correct_v2": 770,
+            "accuracy_original": 79.38144329896907,
+            "accuracy_v2": 79.38144329896907,
+            "improvement": 0,
+            "improvement_pct": 0.0
+          },
+          "fiqasa": {
+            "total": 235,
+            "correct_original": 177,
+            "correct_v2": 177,
+            "accuracy_original": 75.31914893617021,
+            "accuracy_v2": 75.31914893617021,
+            "improvement": 0,
+            "improvement_pct": 0.0
+          },
+          "headlines": {
+            "total": 20547,
+            "correct_original": 14949,
+            "correct_v2": 14949,
+            "accuracy_original": 72.7551467367499,
+            "accuracy_v2": 72.7551467367499,
+            "improvement": 0,
+            "improvement_pct": 0.0
+          }
+        }
+      },
+      "total_original": 54057,
+      "total_v2": 54055,
+      "total_samples": 75167,
+      "accuracy_original": 71.91586733539984,
+      "accuracy_v2": 71.91320659331888,
+      "improvement": -2,
+      "improvement_pct": -0.0026607420809663814
+    },
+    "Qwen3-30B-A3B-Thinking-2507": {
+      "runs": {
+        "Qwen3-30B-A3B-Thinking-2507/5tasks_5842samples": {
+          "finqa": {
+            "total": 1147,
+            "correct_original": 554,
+            "correct_v2": 618,
+            "accuracy_original": 48.29991281604185,
+            "accuracy_v2": 53.879686137750646,
+            "improvement": 64,
+            "improvement_pct": 5.579773321708806
+          },
+          "convfinqa": {
+            "total": 1490,
+            "correct_original": 946,
+            "correct_v2": 997,
+            "accuracy_original": 63.48993288590604,
+            "accuracy_v2": 66.91275167785234,
+            "improvement": 51,
+            "improvement_pct": 3.422818791946309
+          },
+          "fpb": {
+            "total": 970,
+            "correct_original": 711,
+            "correct_v2": 711,
+            "accuracy_original": 73.29896907216494,
+            "accuracy_v2": 73.29896907216494,
+            "improvement": 0,
+            "improvement_pct": 0.0
+          },
+          "fiqasa": {
+            "total": 235,
+            "correct_original": 194,
+            "correct_v2": 194,
+            "accuracy_original": 82.5531914893617,
+            "accuracy_v2": 82.5531914893617,
+            "improvement": 0,
+            "improvement_pct": 0.0
+          },
+          "headlines": {
+            "total": 2000,
+            "correct_original": 1534,
+            "correct_v2": 1536,
+            "accuracy_original": 76.7,
+            "accuracy_v2": 76.8,
+            "improvement": 2,
+            "improvement_pct": 0.1
+          }
+        },
+        "Qwen3-30B-A3B-Thinking-2507/headlines_full_20547samples": {
+          "headlines": {
+            "total": 20547,
+            "correct_original": 15568,
+            "correct_v2": 15622,
+            "accuracy_original": 75.7677519832579,
+            "accuracy_v2": 76.030564072614,
+            "improvement": 54,
+            "improvement_pct": 0.2628120893561104
+          }
+        },
+        "Qwen3-30B-A3B-Thinking-2507/5tasks_full_round2_31856": {
+          "finqa": {
+            "total": 1147,
+            "correct_original": 547,
+            "correct_v2": 619,
+            "accuracy_original": 47.689625108979946,
+            "accuracy_v2": 53.96687009590235,
+            "improvement": 72,
+            "improvement_pct": 6.2772449869224065
+          },
+          "convfinqa": {
+            "total": 1490,
+            "correct_original": 928,
+            "correct_v2": 991,
+            "accuracy_original": 62.281879194630875,
+            "accuracy_v2": 66.51006711409396,
+            "improvement": 63,
+            "improvement_pct": 4.228187919463087
+          },
+          "fpb": {
+            "total": 970,
+            "correct_original": 705,
+            "correct_v2": 705,
+            "accuracy_original": 72.68041237113401,
+            "accuracy_v2": 72.68041237113401,
+            "improvement": 0,
+            "improvement_pct": 0.0
+          },
+          "fiqasa": {
+            "total": 235,
+            "correct_original": 193,
+            "correct_v2": 193,
+            "accuracy_original": 82.12765957446808,
+            "accuracy_v2": 82.12765957446808,
+            "improvement": 0,
+            "improvement_pct": 0.0
+          },
+          "headlines": {
+            "total": 20547,
+            "correct_original": 15576,
+            "correct_v2": 15633,
+            "accuracy_original": 75.80668710760695,
+            "accuracy_v2": 76.08409986859395,
+            "improvement": 57,
+            "improvement_pct": 0.2774127609870054
+          }
+        },
+        "Qwen3-30B-A3B-Thinking-2507/5tasks_full_round2_32617": {
+          "finqa": {
+            "total": 1147,
+            "correct_original": 554,
+            "correct_v2": 618,
+            "accuracy_original": 48.29991281604185,
+            "accuracy_v2": 53.879686137750646,
+            "improvement": 64,
+            "improvement_pct": 5.579773321708806
+          },
+          "convfinqa": {
+            "total": 1490,
+            "correct_original": 946,
+            "correct_v2": 997,
+            "accuracy_original": 63.48993288590604,
+            "accuracy_v2": 66.91275167785234,
+            "improvement": 51,
+            "improvement_pct": 3.422818791946309
+          },
+          "fpb": {
+            "total": 970,
+            "correct_original": 705,
+            "correct_v2": 705,
+            "accuracy_original": 72.68041237113401,
+            "accuracy_v2": 72.68041237113401,
+            "improvement": 0,
+            "improvement_pct": 0.0
+          },
+          "fiqasa": {
+            "total": 235,
+            "correct_original": 194,
+            "correct_v2": 194,
+            "accuracy_original": 82.5531914893617,
+            "accuracy_v2": 82.5531914893617,
+            "improvement": 0,
+            "improvement_pct": 0.0
+          },
+          "headlines": {
+            "total": 20547,
+            "correct_original": 15567,
+            "correct_v2": 15621,
+            "accuracy_original": 75.76288509271426,
+            "accuracy_v2": 76.02569718207037,
+            "improvement": 54,
+            "improvement_pct": 0.2628120893561104
+          }
+        }
+      },
+      "total_original": 55422,
+      "total_v2": 55954,
+      "total_samples": 75167,
+      "accuracy_original": 73.7318238056594,
+      "accuracy_v2": 74.43958119919645,
+      "improvement": 532,
+      "improvement_pct": 0.7077573935370575
+    }
+  },
+  "detailed_results": {
+    "Qwen3-30B-A3B-Instruct-2507/5tasks_5842samples": {
+      "finqa": {
+        "total": 1147,
+        "correct_original": 649,
+        "correct_v2": 649,
+        "accuracy_original": 56.582388840453355,
+        "accuracy_v2": 56.582388840453355,
+        "improvement": 0,
+        "improvement_pct": 0.0
+      },
+      "convfinqa": {
+        "total": 1490,
+        "correct_original": 990,
+        "correct_v2": 989,
+        "accuracy_original": 66.44295302013423,
+        "accuracy_v2": 66.3758389261745,
+        "improvement": -1,
+        "improvement_pct": -0.06711409395973154
+      },
+      "fpb": {
+        "total": 970,
+        "correct_original": 770,
+        "correct_v2": 770,
+        "accuracy_original": 79.38144329896907,
+        "accuracy_v2": 79.38144329896907,
+        "improvement": 0,
+        "improvement_pct": 0.0
+      },
+      "fiqasa": {
+        "total": 235,
+        "correct_original": 177,
+        "correct_v2": 177,
+        "accuracy_original": 75.31914893617021,
+        "accuracy_v2": 75.31914893617021,
+        "improvement": 0,
+        "improvement_pct": 0.0
+      },
+      "headlines": {
+        "total": 2000,
+        "correct_original": 1471,
+        "correct_v2": 1471,
+        "accuracy_original": 73.55000000000001,
+        "accuracy_v2": 73.55000000000001,
+        "improvement": 0,
+        "improvement_pct": 0.0
+      }
+    },
+    "Qwen3-30B-A3B-Instruct-2507/headlines_full_20547samples": {
+      "headlines": {
+        "total": 20547,
+        "correct_original": 14953,
+        "correct_v2": 14953,
+        "accuracy_original": 72.77461429892442,
+        "accuracy_v2": 72.77461429892442,
+        "improvement": 0,
+        "improvement_pct": 0.0
+      }
+    },
+    "Qwen3-30B-A3B-Instruct-2507/5tasks_full_round2_30295": {
+      "finqa": {
+        "total": 1147,
+        "correct_original": 629,
+        "correct_v2": 629,
+        "accuracy_original": 54.83870967741935,
+        "accuracy_v2": 54.83870967741935,
+        "improvement": 0,
+        "improvement_pct": 0.0
+      },
+      "convfinqa": {
+        "total": 1490,
+        "correct_original": 990,
+        "correct_v2": 990,
+        "accuracy_original": 66.44295302013423,
+        "accuracy_v2": 66.44295302013423,
+        "improvement": 0,
+        "improvement_pct": 0.0
+      },
+      "fpb": {
+        "total": 970,
+        "correct_original": 769,
+        "correct_v2": 769,
+        "accuracy_original": 79.27835051546391,
+        "accuracy_v2": 79.27835051546391,
+        "improvement": 0,
+        "improvement_pct": 0.0
+      },
+      "fiqasa": {
+        "total": 235,
+        "correct_original": 174,
+        "correct_v2": 174,
+        "accuracy_original": 74.04255319148936,
+        "accuracy_v2": 74.04255319148936,
+        "improvement": 0,
+        "improvement_pct": 0.0
+      },
+      "headlines": {
+        "total": 20547,
+        "correct_original": 14950,
+        "correct_v2": 14950,
+        "accuracy_original": 72.76001362729352,
+        "accuracy_v2": 72.76001362729352,
+        "improvement": 0,
+        "improvement_pct": 0.0
+      }
+    },
+    "Qwen3-30B-A3B-Instruct-2507/5tasks_full_round2_31176": {
+      "finqa": {
+        "total": 1147,
+        "correct_original": 649,
+        "correct_v2": 649,
+        "accuracy_original": 56.582388840453355,
+        "accuracy_v2": 56.582388840453355,
+        "improvement": 0,
+        "improvement_pct": 0.0
+      },
+      "convfinqa": {
+        "total": 1490,
+        "correct_original": 990,
+        "correct_v2": 989,
+        "accuracy_original": 66.44295302013423,
+        "accuracy_v2": 66.3758389261745,
+        "improvement": -1,
+        "improvement_pct": -0.06711409395973154
+      },
+      "fpb": {
+        "total": 970,
+        "correct_original": 770,
+        "correct_v2": 770,
+        "accuracy_original": 79.38144329896907,
+        "accuracy_v2": 79.38144329896907,
+        "improvement": 0,
+        "improvement_pct": 0.0
+      },
+      "fiqasa": {
+        "total": 235,
+        "correct_original": 177,
+        "correct_v2": 177,
+        "accuracy_original": 75.31914893617021,
+        "accuracy_v2": 75.31914893617021,
+        "improvement": 0,
+        "improvement_pct": 0.0
+      },
+      "headlines": {
+        "total": 20547,
+        "correct_original": 14949,
+        "correct_v2": 14949,
+        "accuracy_original": 72.7551467367499,
+        "accuracy_v2": 72.7551467367499,
+        "improvement": 0,
+        "improvement_pct": 0.0
+      }
+    },
+    "Qwen3-30B-A3B-Thinking-2507/5tasks_5842samples": {
+      "finqa": {
+        "total": 1147,
+        "correct_original": 554,
+        "correct_v2": 618,
+        "accuracy_original": 48.29991281604185,
+        "accuracy_v2": 53.879686137750646,
+        "improvement": 64,
+        "improvement_pct": 5.579773321708806
+      },
+      "convfinqa": {
+        "total": 1490,
+        "correct_original": 946,
+        "correct_v2": 997,
+        "accuracy_original": 63.48993288590604,
+        "accuracy_v2": 66.91275167785234,
+        "improvement": 51,
+        "improvement_pct": 3.422818791946309
+      },
+      "fpb": {
+        "total": 970,
+        "correct_original": 711,
+        "correct_v2": 711,
+        "accuracy_original": 73.29896907216494,
+        "accuracy_v2": 73.29896907216494,
+        "improvement": 0,
+        "improvement_pct": 0.0
+      },
+      "fiqasa": {
+        "total": 235,
+        "correct_original": 194,
+        "correct_v2": 194,
+        "accuracy_original": 82.5531914893617,
+        "accuracy_v2": 82.5531914893617,
+        "improvement": 0,
+        "improvement_pct": 0.0
+      },
+      "headlines": {
+        "total": 2000,
+        "correct_original": 1534,
+        "correct_v2": 1536,
+        "accuracy_original": 76.7,
+        "accuracy_v2": 76.8,
+        "improvement": 2,
+        "improvement_pct": 0.1
+      }
+    },
+    "Qwen3-30B-A3B-Thinking-2507/headlines_full_20547samples": {
+      "headlines": {
+        "total": 20547,
+        "correct_original": 15568,
+        "correct_v2": 15622,
+        "accuracy_original": 75.7677519832579,
+        "accuracy_v2": 76.030564072614,
+        "improvement": 54,
+        "improvement_pct": 0.2628120893561104
+      }
+    },
+    "Qwen3-30B-A3B-Thinking-2507/5tasks_full_round2_31856": {
+      "finqa": {
+        "total": 1147,
+        "correct_original": 547,
+        "correct_v2": 619,
+        "accuracy_original": 47.689625108979946,
+        "accuracy_v2": 53.96687009590235,
+        "improvement": 72,
+        "improvement_pct": 6.2772449869224065
+      },
+      "convfinqa": {
+        "total": 1490,
+        "correct_original": 928,
+        "correct_v2": 991,
+        "accuracy_original": 62.281879194630875,
+        "accuracy_v2": 66.51006711409396,
+        "improvement": 63,
+        "improvement_pct": 4.228187919463087
+      },
+      "fpb": {
+        "total": 970,
+        "correct_original": 705,
+        "correct_v2": 705,
+        "accuracy_original": 72.68041237113401,
+        "accuracy_v2": 72.68041237113401,
+        "improvement": 0,
+        "improvement_pct": 0.0
+      },
+      "fiqasa": {
+        "total": 235,
+        "correct_original": 193,
+        "correct_v2": 193,
+        "accuracy_original": 82.12765957446808,
+        "accuracy_v2": 82.12765957446808,
+        "improvement": 0,
+        "improvement_pct": 0.0
+      },
+      "headlines": {
+        "total": 20547,
+        "correct_original": 15576,
+        "correct_v2": 15633,
+        "accuracy_original": 75.80668710760695,
+        "accuracy_v2": 76.08409986859395,
+        "improvement": 57,
+        "improvement_pct": 0.2774127609870054
+      }
+    },
+    "Qwen3-30B-A3B-Thinking-2507/5tasks_full_round2_32617": {
+      "finqa": {
+        "total": 1147,
+        "correct_original": 554,
+        "correct_v2": 618,
+        "accuracy_original": 48.29991281604185,
+        "accuracy_v2": 53.879686137750646,
+        "improvement": 64,
+        "improvement_pct": 5.579773321708806
+      },
+      "convfinqa": {
+        "total": 1490,
+        "correct_original": 946,
+        "correct_v2": 997,
+        "accuracy_original": 63.48993288590604,
+        "accuracy_v2": 66.91275167785234,
+        "improvement": 51,
+        "improvement_pct": 3.422818791946309
+      },
+      "fpb": {
+        "total": 970,
+        "correct_original": 705,
+        "correct_v2": 705,
+        "accuracy_original": 72.68041237113401,
+        "accuracy_v2": 72.68041237113401,
+        "improvement": 0,
+        "improvement_pct": 0.0
+      },
+      "fiqasa": {
+        "total": 235,
+        "correct_original": 194,
+        "correct_v2": 194,
+        "accuracy_original": 82.5531914893617,
+        "accuracy_v2": 82.5531914893617,
+        "improvement": 0,
+        "improvement_pct": 0.0
+      },
+      "headlines": {
+        "total": 20547,
+        "correct_original": 15567,
+        "correct_v2": 15621,
+        "accuracy_original": 75.76288509271426,
+        "accuracy_v2": 76.02569718207037,
+        "improvement": 54,
+        "improvement_pct": 0.2628120893561104
+      }
+    }
+  }
+}
