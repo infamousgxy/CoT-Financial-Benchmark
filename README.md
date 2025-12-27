@@ -67,14 +67,10 @@ CoT-Financial-Benchmark/
 ├── scripts/
 │   ├── custom_eval_v5.py         # Main evaluation script
 │   ├── improved_extractor_v2.py  # Answer extraction with dual-parser
-│   ├── h2_stratified_sampling.py # Stratified sampling for H2
-│   └── h2_scorer.py              # H2 qualitative scoring script
-├── figures/
-│   ├── h1_results.pdf            # H1 performance comparison chart
-│   └── h2_results.pdf            # H2 reasoning quality radar chart
-└── paper/
-    ├── JC3007_Project_Report.tex # LaTeX source
-    └── myref.bib                 # Bibliography
+│   └── h2_stratified_sampling.py # Stratified sampling for H2
+└── figures/
+    ├── h1_results.pdf            # H1 performance comparison chart
+    └── h2_results.pdf            # H2 reasoning quality radar chart
 ```
 
 ## Key Results

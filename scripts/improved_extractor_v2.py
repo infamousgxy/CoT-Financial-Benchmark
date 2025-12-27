@@ -339,8 +339,8 @@ def save_overall_summary(results, output_base_dir):
 
 
 if __name__ == "__main__":
-    base_dir = "/Users/guochunqu/Desktop/research_experiment/result"
-    output_base_dir = "/Users/guochunqu/Desktop/research_experiment/result_v2_improved"
+    base_dir = "./data/raw_results"  # Adjust to your input directory
+    output_base_dir = "./data/parsed_results"  # Adjust to your output directory
 
     print("=" * 60)
     print("Re-evaluating all results with improved extractor v2")

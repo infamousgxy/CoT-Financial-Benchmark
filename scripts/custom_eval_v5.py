@@ -197,7 +197,7 @@ def run_evaluation(tasks, limit=50, output_dir=None):
 
     # Create output directory
     if output_dir is None:
-        output_dir = f"/root/new_evaluation/results/v5_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
+        output_dir = f"./results/v5_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
     os.makedirs(output_dir, exist_ok=True)
     os.makedirs(os.path.join(output_dir, "details"), exist_ok=True)
 

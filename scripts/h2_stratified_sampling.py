@@ -19,7 +19,7 @@ from typing import Dict, List, Tuple, Any
 RANDOM_SEED = 42
 
 # Data source paths
-BASE_DIR = Path("/Users/guochunqu/Desktop/research_experiment/data/v2_results")
+BASE_DIR = Path("../data")  # Adjust to your data directory
 INSTRUCT_DIR = BASE_DIR / "Qwen3-30B-A3B-Instruct-2507/5tasks_full_round2_31176"
 THINKING_DIR = BASE_DIR / "Qwen3-30B-A3B-Thinking-2507/5tasks_full_round2_32617"
 
